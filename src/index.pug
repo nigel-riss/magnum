@@ -10,4 +10,162 @@ head
     
     title Magnum Barbershop
 body
-    
+    header.site-header
+        nav.main-nav
+            .logo: img(src="")
+            .site-header__menu-icon: .site-header__menu-icon__middle
+            .main-menu: ul.main-menu__menu
+                - var menuItems = ["О нас", "Услуги", "Прайс", "Команда", "Контакты"];
+                - for (var i = 0; i < 5; i++)
+                    li: a(href="#")= menuItems[i]
+
+        .hero
+            h1.hero__title Добро пожаловать в Magnum
+            p.hero__motto По-настоящему мужские Стрижки
+            .hero__buttons
+                a(href="#").button Онлайн запись
+                a(href="#").button.button--blue О нас
+
+    section.about
+        .about__hero
+            p.about__hero-title Уютный интерьер, дорогое оборудование и инструмент, бесплатный WiFi и кофе, но главное это по-настоящему мужские стрижки.
+            p.about__hero-description Мы действительно знаем толк в мужских стрижках и «ремонте» бороды. Предлагаем вам попробовать настоящее бритье. Приходите и убедитесь сами.
+
+        .about__content
+            header.about__header
+                h2.about__title Барбершоп #[strong Magnum]
+                p.about__subtitle Барбершоп Magnum — первая в Гомеле парикмахерская для мужчин. 
+            .about__features
+                mixin feature(title, text)
+                    .feature
+                        h3.feature__title= title
+                        p.feature__text= text
+                +feature("Наша команда", "Команда профессиональных мастеров по руководством шеф-мастера.")
+                +feature("Угощаем", "Тебе обязательно предложат чашечку свежемолотого кофе.")
+                +feature("Развлекаем", "Время ожидания не будет скучным, WiFi и PlayStation в твоем распоряжении!")
+
+    section.services
+        .services__hero
+            h2.services__title Услуги #[strong барбершопа]
+
+        .services__content
+            mixin service(title, subtitle, iconURL, imageURL)
+                .service
+                    .service__image: img(src=imageURL)
+                    .service__content
+                        .service__icon: img(src=iconURL)
+                        h3.service__title= title
+                        p.service__subtitle= subtitle
+            +service("Стрижки", "Мужские и детские", "#", "#")
+            +service("Бритьё", "Классическое и Королевское", "#", "#")
+            +service("Борода", "Стрижка и окрашивание", "#", "#")
+            +service("Татуировки", "Любой сложности", "#", "#")
+
+    section.check-in
+        a(href="#").button Онлайн запись
+        header.check-in__header
+            .check-in__title мужская территория 
+            .check-in__subtitle Ждем тебя в Magnum
+        
+    section.partners
+        header.partners__header
+            h2.partners__title Наши #[strong партнеры]
+        
+        .partners__content
+            mixin partner(imageURL)
+                .partner: img(src=imageURL)
+            +partner("#")
+            +partner("#")
+            +partner("#")
+            +partner("#")
+            +partner("#")
+
+    section.prices
+        header.prices__header
+            h2.prices__title Прайс
+            p.prices__subtitle Список наиболее популярных услуг нашего барбершопа
+            .prices__button: a(href="#").button.button--blue Полный Прайс
+
+        .prices__content
+            table
+                caption Голова
+                tr
+                    td Стрижка мужская
+                    td 1200
+                tr
+                    td Детская стрижка
+                    td 1000
+                tr
+                    td Стрижка папа + сын
+                    td 1200
+                tr
+                    td Стрижка под машинку
+                    td 800
+
+            table
+                caption Борода
+                tr
+                    td Стрижка бороды
+                    td 500
+                tr
+                    td Окрашивание
+                    td 600
+
+            table
+                caption Бритьё
+                tr
+                    td Классическое бритьё
+                    td 900
+                tr
+                    td Бритьё головы
+                    td 700
+
+    section.team
+        .team__wrapper
+            mixin member (name, position, photoURL)
+                article.member
+                    .member__image: img(src=photoURL)
+                    .member__hover
+                        p.member__action Записаться к мастеру
+                        a(href="#").button Онлайн запись
+                    header.member__info
+                        h3.member__name= name
+                        p.member__position= position
+            +member("Олег", "Барбер", "#")
+            +member("Дмитрий", "Барбер", "#")
+            +member("Юрий", "Барбер", "#")
+
+    section.contacts
+        header.contacts__header
+            h2.contacts__title Наши #[strong контакты]
+
+        .contacts__content
+            .contacts__text По всем интеерсующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес. #[strong  До встречи в MAGNUM]
+
+            .contact
+                .contact__title Телефон
+                .contact__text: a(href="tel:+79112345678") +7 (911) 234-56-78
+
+            .contact
+                .contact__title Электропочта
+                .contact__text: a(href="mailto:info@magnum.ru") info@magnum.ru
+            .contact
+                .contact__title Адрес
+                .contact__text г. Калининград, ул. Театральная 35
+
+        .contacts__map: img(src="")
+
+    footer.site-footer
+        .site-footer__logo-n-socials
+            .site-footer__logo: img(src="#")
+            .site-footer__socials
+                .socials
+                    h3.socials__title Мы в социальных сетях
+                    .socials__content
+                        a(href="#").social-icon.social-icon--google Google+
+                        a(href="#").social-icon.social-icon--facebook Facebook
+                        a(href="#").social-icon.social-icon--twitter Twitter
+                        a(href="#").social-icon.social-icon--pinterest Pinterest
+                        a(href="#").social-icon.social-icon--linkedin LinkedIn
+
+        .site-footer__copyrights © Все права сохранены #[br] Разработано в студии: #[a(href="#") АГОНЬ!]
