@@ -1,0 +1,25 @@
+.button {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 25px;
+
+    // typography
+    color: $blue;
+    font-size: 1rem;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    // visual
+    background-color: $white;
+    border-radius: 25px;
+
+    &--blue {
+        // typography
+        color: $white;
+
+        // visual
+        background-color: $blue;
+    }
+}

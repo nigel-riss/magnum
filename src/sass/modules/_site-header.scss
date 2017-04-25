@@ -1,0 +1,28 @@
+.site-header {
+    // positioning
+    position: relative;
+
+    // visual
+    background-color: #72645c;
+    background-image: url('./img/header-bg-l.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+
+    // border: 1px solid red;
+
+    @include atTabletsPortrait {
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            @include barberPole(30px, 100%);
+        }
+    }
+
+}

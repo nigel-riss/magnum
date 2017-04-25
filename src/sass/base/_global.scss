@@ -1,3 +1,20 @@
 html {
     // visual
 }
+
+body {
+    // box model
+    margin: 0;
+    padding: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    // box model
+    box-sizing: border-box;
+}

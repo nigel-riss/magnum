@@ -10,14 +10,12 @@ head
     
     title Magnum Barbershop
 body
-    .pole1
-    .pole2
-    .pole3
-    .pole4
     header.site-header
         nav.main-nav
-            .logo: img(src="")
+            .logo: img(src="./img/logo-h.svg")
+
             .site-header__menu-icon: .site-header__menu-icon__middle
+            
             .main-menu: ul.main-menu__menu
                 - var menuItems = ["О нас", "Услуги", "Прайс", "Команда", "Контакты"];
                 - for (var i = 0; i < 5; i++)
