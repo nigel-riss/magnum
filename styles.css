@@ -378,3 +378,87 @@ template {
   height: 300px;
   width: 300px;
   background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 10px, #ffffff 10px, #ffffff 20px, #255088 20px, #255088 30px, #ffffff 30px, #ffffff 40px); }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+.site-header {
+  position: relative;
+  background-color: #72645c;
+  background-image: url("./img/header-bg-l.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  @media (min-width: 700px) {
+    .site-header::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 30px;
+      background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 30px, #ffffff 30px, #ffffff 60px, #255088 60px, #255088 90px, #ffffff 90px, #ffffff 120px); } }
+
+.main-nav {
+  padding: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.logo {
+  height: 65px;
+  width: 328.6px;
+  max-width: 100%; }
+  .logo img {
+    height: 100%;
+    width: 100%; }
+
+.main-menu {
+  display: none; }
+
+.hero {
+  padding: 25px 15px;
+  background-color: #255088;
+  background-color: rgba(37, 80, 136, 0.8);
+  background-image: url("./img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center top; }
+  .hero__title {
+    margin: 0;
+    padding-bottom: 1em;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase; }
+  .hero__motto {
+    margin: 0;
+    padding-bottom: 1em;
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase; }
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 25px;
+  color: #255088;
+  font-size: 1rem;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border-radius: 25px; }
+  .button--blue {
+    color: #ffffff;
+    background-color: #255088; }
