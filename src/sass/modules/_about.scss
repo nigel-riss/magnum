@@ -1,0 +1,78 @@
+.about {
+
+    // hero
+    &__hero {
+        // box model
+        padding: 25px 35px;
+        // visual
+        background-color: #2d221e;
+        background-image: url('./img/about-bg-s.jpg');
+        background-size: cover;
+        // background-position: 
+    }
+
+    &__hero-title {
+        // positioning
+        position: relative;
+
+        // box model
+        margin: 0;
+        padding-bottom: 30px;
+
+        // typography
+        color: $white;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.4;
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+
+            // box model
+            height: 8px;
+            width: 80px;
+
+            // visual
+            background-color: $red;
+        }
+    }
+
+    &__hero-description {
+        // box model
+        margin: 0;
+
+        // typography
+        color: $white;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    // content
+    &__content {
+        // box model
+        padding: 25px 15px;
+    }
+
+    &__header {
+        // box model
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__subtitle {
+        @include sectionSubtitle;
+    }
+
+    &__features {
+        // box model
+        padding-right: 20px;
+    }
+}

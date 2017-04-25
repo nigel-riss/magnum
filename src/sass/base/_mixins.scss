@@ -1,5 +1,6 @@
+////////////////
 // breakpoints
-
+////////////////
 @mixin atSmall {
     @media (max-width: 699px) {
         @content;
@@ -30,7 +31,9 @@
     }
 }
 
+////////////////
 // decorations
+////////////////
 @mixin barberPole($width, $height, $size: 30px, $dir:-45deg) {
     // box model
     height: $height;
@@ -40,6 +43,52 @@
     background-image: repeating-linear-gradient($dir, $red 0px, $red $size, #ffffff $size, #ffffff $size * 2, $blue $size * 2, $blue $size * 3, #ffffff $size * 3, #ffffff $size * 4);
 }
 
-.pole1 {
-    @include barberPole(300px, 300px, 10px);
+@mixin redDot($size: 20px, $top: 0, $left: 0) {
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: $top;
+        left: $left;
+
+        // box model
+        height: $size;
+        width: $size;
+
+        // visual
+        background-color: $red;
+        border-radius: 50%;
+    }
+}
+
+////////
+// DRY
+////////
+@mixin sectionTitle {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    // typography
+    color: $titleColor;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    @include redDot(12px, 13px);
+}
+
+@mixin sectionSubtitle {
+    // box model
+    margin: 0;
+    padding-left: 20px;
+
+    // typography
+    color: $subtitleColor;
+    line-height: 1.4;
 }

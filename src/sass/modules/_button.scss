@@ -7,7 +7,9 @@
     // typography
     color: $blue;
     font-size: 1rem;
+    font-weight: 700;
     line-height: 50px;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -21,5 +23,13 @@
 
         // visual
         background-color: $blue;
+    }
+
+    &--block {
+        // box model
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 }

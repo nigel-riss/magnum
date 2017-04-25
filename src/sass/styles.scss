@@ -10,6 +10,9 @@
 @import "base/global";
 
 // modules
+//      elements
+@import "modules/button";
+
 //      header
 @import "modules/site-header";
 @import "modules/main-nav";
@@ -17,5 +20,32 @@
 @import "modules/main-menu";
 @import "modules/hero";
 
-//      elements
-@import "modules/button";
+//      about
+@import "modules/about";
+@import "modules/feature";
+
+//      services
+@import "modules/services";
+@import "modules/service";
+
+//      check-in
+@import "modules/check-in";
+
+//      partners
+@import "modules/partners";
+@import "modules/partner";
+
+//      prices
+@import "modules/prices";
+
+//      team
+@import "modules/team";
+@import "modules/member";
+
+//      contacts
+@import "modules/contacts";
+@import "modules/contact";
+
+//      footer
+@import "modules/footer";
+@import "modules/socials";

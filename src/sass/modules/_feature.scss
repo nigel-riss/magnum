@@ -1,0 +1,27 @@
+.feature {
+    // box model
+    padding-left: 20px;
+    padding-bottom: 40px;
+
+    &__title {
+        // box model
+        margin: 0;
+        padding-bottom: 5px;
+
+        // typography
+        color: $blue;
+        font-size: 1.125rem;
+        line-height: 1.5;
+    }
+
+    &__text {
+        // box model
+        margin: 0;
+
+        // typography
+        color: $copyColor;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+}

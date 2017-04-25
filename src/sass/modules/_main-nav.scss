@@ -1,6 +1,11 @@
 .main-nav {
+    // positioning
+    position: relative;
+    z-index: 2;
+
     // box model
     padding: 15px;
+    padding-right: 80px;
 
     // typography
     text-align: left;
