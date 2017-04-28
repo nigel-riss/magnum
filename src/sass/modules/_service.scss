@@ -1,0 +1,46 @@
+.service {
+    // positioning
+    position: relative;
+    
+    // box model
+    margin-top: 20px;
+
+    // visual
+    background-color: #f1f1f3;
+
+    &__image {
+        // positioning
+        position: absolute;
+    }
+
+    &__content {
+        // positioning
+        position: relative;
+
+        // box model
+        padding: 25px;
+        border: 1px solid red;
+    }
+
+    &__icon {
+
+    }
+
+    &__title {
+        // typography
+        color: $copyColor;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        // typography
+        color: #6d6e71;
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

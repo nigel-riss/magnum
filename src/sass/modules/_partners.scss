@@ -1,0 +1,12 @@
+.partners {
+    // box model
+    padding: 25px 15px;
+    
+    &__header {
+
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+}

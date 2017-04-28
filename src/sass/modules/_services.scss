@@ -1,0 +1,21 @@
+.services {
+    // box model
+    padding: 25px 15px;
+
+    // visual
+    background-color: $blue;
+
+    &__hero {
+        // box model
+
+        // visual
+        background-color: $blue;
+    }
+
+    &__title {
+        @include sectionTitle;
+
+        // typography
+        color: $white;
+    }
+}
