@@ -1,14 +1,43 @@
 .about {
-
-    // hero
     &__hero {
+        // positioning
+        position: relative;
+
         // box model
         padding: 25px 35px;
+
         // visual
         background-color: #2d221e;
         background-image: url('./img/about-bg-s.jpg');
         background-size: cover;
         // background-position: 
+
+        @include atTabletsPortrait {
+            // box model
+            height: 450px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+            padding-left: 60px;
+
+            // visual
+            background-position: center bottom;
+
+            &::before {
+                content: "";
+
+                // positioning
+                position: absolute;
+                top: -20px;
+                left: 20px;
+                z-index: -1;
+
+                // box model
+                height: 450px;
+                width: 100%;
+
+                @include barberPole(100%, 100%, 20px);
+            }
+        }
     }
 
     &__hero-title {
@@ -25,6 +54,14 @@
         font-weight: 700;
         line-height: 1.4;
 
+        @include atTabletsPortrait {
+            // box model
+            padding-bottom: 50px;
+
+            // typography
+            font-size: 1.5rem;
+        }
+
         &::after {
             content: "";
 
@@ -39,6 +76,11 @@
 
             // visual
             background-color: $red;
+
+            @include atTabletsPortrait {
+                // positioning
+                bottom: 25px;
+            }
         }
     }
 
@@ -49,18 +91,38 @@
         // typography
         color: $white;
         font-size: 1.25rem;
-        line-height: 1.4;
+        line-height: 1.5;
+
+        @include atTabletsPortrait {
+            // box model
+            width: 480px;
+
+            // typography
+            font-size: 1rem;
+            line-height: 2;
+        }
     }
 
     // content
     &__content {
         // box model
         padding: 25px 15px;
+
+        @include atTabletsPortrait {
+            padding-left: 40px;
+        }
     }
 
     &__header {
         // box model
         padding-bottom: 40px;
+
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: 240px;
+        }
     }
 
     &__title {
@@ -74,5 +136,13 @@
     &__features {
         // box model
         padding-right: 20px;
+
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 260px);
+            padding-left: 30px;
+        }
     }
 }

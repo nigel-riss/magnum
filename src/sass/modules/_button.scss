@@ -3,6 +3,8 @@
     display: inline-block;
     vertical-align: top;
     padding: 0 25px;
+    width: 200px;
+    margin-bottom: 20px;
 
     // typography
     color: $blue;
@@ -17,12 +19,22 @@
     background-color: $white;
     border-radius: 25px;
 
+    @include atTabletsPortrait {
+        // box model
+        width: 180px;
+    }
+
     &--blue {
         // typography
         color: $white;
 
         // visual
         background-color: $blue;
+    }
+
+    &--mr-20 {
+        // box model
+        margin-right: 20px;
     }
 
     &--block {

@@ -10,6 +10,17 @@
     background-color: $lightGrey;
     overflow: hidden;
 
+    @include atTabletsPortrait {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+
+        height: 200px;
+        width: 275px;
+
+        margin: 15px 10px;
+    }
+
     &__image {
         // positioning
         position: absolute;

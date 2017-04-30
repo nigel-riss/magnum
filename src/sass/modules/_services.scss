@@ -1,15 +1,34 @@
 .services {
     // box model
     padding: 25px 15px;
+    margin-bottom: 40px;
 
     // visual
     background-color: $blue;
+    // background-image: url('./img/services-bg.jpg');
+
+    @include atTabletsPortrait {
+        // visual
+        background-color: transparent;
+    }
 
     &__hero {
         // box model
 
-        // visual
-        background-color: $blue;
+
+        @include atTabletsPortrait {
+            // box model
+            height: 450px;
+            padding-left: 40px;
+            padding-top: 340px;
+            margin-bottom: 15px;
+
+            // visual
+            background-color: $blue;
+            background-image: url('./img/services-bg.jpg');
+            background-size: cover;
+            box-shadow: 0 12px 14px -10px rgba($blue, 0.6);
+        }
     }
 
     &__title {
@@ -17,5 +36,10 @@
 
         // typography
         color: $white;
+    }
+
+    &__content {
+        // typography
+        text-align: center;
     }
 }

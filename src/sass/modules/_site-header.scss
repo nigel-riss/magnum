@@ -5,6 +5,7 @@
     // box model
     height: 90vh;
     max-height: 600px;
+    padding-top: 15vh;
 
     // visual
     background-color: #72645c;
@@ -12,9 +13,6 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    // background-attachment: fixed;
-
-    // border: 1px solid red;
 
     &::after {
         content: "";
@@ -28,6 +26,10 @@
     }
 
     @include atTabletsPortrait {
+        // box model
+        padding-top: 200px;
+        margin-bottom: 200px;
+
         &::after {
             content: "";
 
@@ -36,7 +38,7 @@
             right: 0;
             top: 0;
 
-            @include barberPole(15px, 100%, 15px);
+            @include barberPole(20px, 100%, 20px);
         }
     }
 

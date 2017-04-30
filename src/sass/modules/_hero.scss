@@ -15,6 +15,19 @@
     background-size: cover;
     background-position: center top;
 
+    @include atTabletsPortrait {
+        // box model
+        height: 517px;
+        width: 569px;
+
+        margin: 0 auto;
+        padding-top: 280px;
+        padding-left: 105px;
+        
+        // visual
+        box-shadow: 0 12px 14px -10px rgba($blue, 0.6);
+    }
+
     &__title {
         // box model
         margin: 0;
@@ -28,6 +41,12 @@
         font-weight: 700;
         letter-spacing: 0.05em;
         text-transform: uppercase;
+
+        @include atTabletsPortrait {
+            // typography
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+        }
     }
 
     &__motto {
@@ -47,9 +66,31 @@
         text-transform: uppercase;
 
         @include redDot(12px, 11px);
+
+        @include atTabletsPortrait {
+            // box model
+            padding-bottom: 30px;
+
+            // typography
+            font-size: 2.25rem;
+        }
     }
 
     &__buttons {
+        // box model
+        width: 210px;
+        margin: 0 auto;
 
+        // typography
+        text-align: center;
+
+        @include atTabletsPortrait {
+            // box model
+            width: auto;
+            padding-left: 20px;
+
+            // typography
+            text-align: left;
+        }
     }
 }
