@@ -1,0 +1,23 @@
+.contacts {
+    // box model
+    padding: 25px 15px;
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__content {
+        // box model
+        padding-left: 20px;
+    }
+
+    &__text {
+        // box model
+        padding-bottom: 20px;
+        
+        // typography
+        color: $copyColor;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}

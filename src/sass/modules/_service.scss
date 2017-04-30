@@ -4,13 +4,23 @@
     
     // box model
     margin-top: 20px;
+    height: 62vw;
 
     // visual
-    background-color: #f1f1f3;
+    background-color: $lightGrey;
+    overflow: hidden;
 
     &__image {
         // positioning
         position: absolute;
+
+        // box model
+        width: 100%;
+
+        img {
+            // box model
+            width: 100%;
+        }
     }
 
     &__content {
@@ -19,7 +29,8 @@
 
         // box model
         padding: 25px;
-        border: 1px solid red;
+        height: 62vw;
+        // border: 1px solid red;
     }
 
     &__icon {
@@ -28,19 +39,29 @@
 
     &__title {
         // typography
-        color: $copyColor;
+        color: $white;
         font-size: 1rem;
         text-align: center;
         text-transform: uppercase;
+
+        @include atDesktop {
+            // typography
+            color: $copyColor;
+        }
     }
 
     &__subtitle {
         // typography
-        color: #6d6e71;
+        color: $lightGrey;
         font-size: 0.875rem;
         font-weight: 700;
         letter-spacing: 1px;
         text-align: center;
         text-transform: uppercase;
+
+        @include atDesktop {
+            // typography
+            color: #6d6e71;
+        }
     }
 }

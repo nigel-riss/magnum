@@ -1,0 +1,32 @@
+.contact {
+    // box model
+    padding-bottom: 20px;
+
+    &__title {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-bottom: 10px;
+
+        // typography
+        color: $titleColor;
+        font-size: 1rem;
+    }
+
+    &__text {
+        a {
+            // typography
+            color: $blue;
+            font-weight: 700;
+            text-decoration: none;
+
+            // visual
+            transition: all 0.3s ease-out;
+
+            &:hover {
+                // typography
+                color: $red;
+            }
+        }
+    }
+}

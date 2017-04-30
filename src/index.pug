@@ -58,10 +58,10 @@ body
                         .service__icon: img(src=iconURL)
                         h3.service__title= title
                         p.service__subtitle= subtitle
-            +service("Стрижки", "Мужские и детские", "#", "#")
-            +service("Бритьё", "Классическое и Королевское", "#", "#")
-            +service("Борода", "Стрижка и окрашивание", "#", "#")
-            +service("Татуировки", "Любой сложности", "#", "#")
+            +service("Стрижки", "Мужские и детские", "#", "./img/haircut-srv.jpg")
+            +service("Бритьё", "Классическое и Королевское", "#", "./img/shaving-srv.jpg")
+            +service("Борода", "Стрижка и окрашивание", "#", "./img/beard-srv.jpg")
+            +service("Татуировки", "Любой сложности", "#", "./img/tatoo-srv.jpg")
 
     section.check-in
         a(href="#").button Онлайн запись
@@ -84,7 +84,7 @@ body
 
     section.prices
         header.prices__header
-            h2.prices__title Прайс
+            h2.prices__title: strong Прайс
             p.prices__subtitle Список наиболее популярных услуг нашего барбершопа
             .prices__button: a(href="#").button.button--blue Полный Прайс
 
@@ -123,6 +123,8 @@ body
                     td 700
 
     section.team
+        header.team__header
+            h2.team__title Команда
         .team__wrapper
             mixin member (name, position, photoURL)
                 article.member
@@ -139,20 +141,20 @@ body
 
     section.contacts
         header.contacts__header
-            h2.contacts__title Наши #[strong контакты]
+            h2.contacts__title Наши<br> #[strong контакты]
 
         .contacts__content
-            .contacts__text По всем интеерсующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес. #[strong  До встречи в MAGNUM]
+            .contacts__text По всем интеерсующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес.<br> #[strong  До встречи в MAGNUM]
 
             .contact
-                .contact__title Телефон
+                h3.contact__title Телефон
                 .contact__text: a(href="tel:+79112345678") +7 (911) 234-56-78
 
             .contact
-                .contact__title Электропочта
+                h3.contact__title Электропочта
                 .contact__text: a(href="mailto:info@magnum.ru") info@magnum.ru
             .contact
-                .contact__title Адрес
+                h3.contact__title Адрес
                 .contact__text г. Калининград, ул. Театральная 35
 
         .contacts__map: img(src="")
