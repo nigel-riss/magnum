@@ -603,25 +603,36 @@ body {
 .service {
   position: relative;
   margin-top: 20px;
-  background-color: #f1f1f3; }
+  height: 62vw;
+  background-color: #f1f1f3;
+  overflow: hidden; }
   .service__image {
-    position: absolute; }
+    position: absolute;
+    width: 100%; }
+    .service__image img {
+      width: 100%; }
   .service__content {
     position: relative;
     padding: 25px;
-    border: 1px solid red; }
+    height: 62vw; }
   .service__title {
-    color: #434343;
+    color: #ffffff;
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase; }
+    @media (min-width: 1200px) {
+      .service__title {
+        color: #434343; } }
   .service__subtitle {
-    color: #6d6e71;
+    color: #f1f1f3;
     font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase; }
+    @media (min-width: 1200px) {
+      .service__subtitle {
+        color: #6d6e71; } }
 
 .partners {
   padding: 25px 15px; }
@@ -644,3 +655,123 @@ body {
       width: 12px;
       background-color: #c21f39;
       border-radius: 50%; }
+
+.prices__header {
+  padding: 25px 15px;
+  padding-right: 40px;
+  background-color: #f1f1f3; }
+
+.prices__title {
+  position: relative;
+  margin: 0;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  color: #323232;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase; }
+  .prices__title::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    background-color: #c21f39;
+    border-radius: 50%; }
+
+.prices__subtitle {
+  margin: 0;
+  padding-left: 20px;
+  color: #939393;
+  line-height: 1.4;
+  padding-bottom: 20px; }
+
+.prices__button {
+  padding-left: 20px; }
+
+.prices__content {
+  position: relative;
+  padding: 25px 35px;
+  padding-bottom: 1px;
+  padding-left: 50px;
+  background-color: #142945;
+  background-image: url("./img/price-bg.jpg");
+  background-size: cover;
+  background-position: center center; }
+  .prices__content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 15px;
+    background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 15px, #ffffff 15px, #ffffff 30px, #255088 30px, #255088 45px, #ffffff 45px, #ffffff 60px); }
+
+.prices table {
+  width: 100%;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-collapse: collapse; }
+
+.prices caption {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left; }
+
+.prices td {
+  padding-bottom: 5px;
+  padding-top: 10px;
+  border-bottom: 1px solid #ffffff; }
+  .prices td:nth-of-type(2) {
+    width: 45px;
+    font-weight: 700; }
+
+.contacts {
+  padding: 25px 15px; }
+  .contacts__title {
+    position: relative;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: #323232;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase; }
+    .contacts__title::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 0;
+      height: 12px;
+      width: 12px;
+      background-color: #c21f39;
+      border-radius: 50%; }
+  .contacts__content {
+    padding-left: 20px; }
+  .contacts__text {
+    padding-bottom: 20px;
+    color: #434343;
+    font-size: 1rem;
+    line-height: 1.5; }
+
+.contact {
+  padding-bottom: 20px; }
+  .contact__title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    color: #323232;
+    font-size: 1rem; }
+  .contact__text a {
+    color: #255088;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease-out; }
+    .contact__text a:hover {
+      color: #c21f39; }
