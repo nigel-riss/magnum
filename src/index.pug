@@ -52,17 +52,17 @@ body
             h2.services__title Услуги<br> #[strong барбершопа]
 
         .services__content
-            mixin service(title, subtitle, iconURL, imageURL)
+            mixin service(title, subtitle, iconClass, imageURL)
                 .service
                     .service__image: img(src=imageURL)
                     .service__content
-                        .service__icon: img(src=iconURL)
+                        .service__icon: div.icon(class=iconClass)
                         h3.service__title= title
                         p.service__subtitle= subtitle
-            +service("Стрижки", "Мужские и детские", "#", "./img/haircut-srv.jpg")
-            +service("Бритьё", "Классическое и Королевское", "#", "./img/shaving-srv.jpg")
-            +service("Борода", "Стрижка и окрашивание", "#", "./img/beard-srv.jpg")
-            +service("Татуировки", "Любой сложности", "#", "./img/tatoo-srv.jpg")
+            +service("Стрижки", "Мужские и детские", "icon-scissors", "./img/haircut-srv.jpg")
+            +service("Бритьё", "Классическое и Королевское", "icon-blade", "./img/shaving-srv.jpg")
+            +service("Борода", "Стрижка и окрашивание", "icon-razor", "./img/beard-srv.jpg")
+            +service("Татуировки", "Любой сложности", "icon-tatoo-machine", "./img/tatoo-srv.jpg")
 
     section.check-in
         a(href="#").button Онлайн запись

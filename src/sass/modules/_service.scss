@@ -45,7 +45,10 @@
     }
 
     &__icon {
-
+        // typography
+        color: $white;
+        font-size: 60px;
+        text-align: center;
     }
 
     &__title {
