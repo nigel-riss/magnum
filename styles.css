@@ -388,7 +388,7 @@ body {
 .button {
   display: inline-block;
   vertical-align: top;
-  padding: 0 25px;
+  padding: 0 20px;
   width: 200px;
   margin-bottom: 20px;
   color: #255088;
@@ -402,7 +402,7 @@ body {
   border-radius: 25px; }
   @media (min-width: 700px) {
     .button {
-      width: 180px; } }
+      width: 190px; } }
   .button--blue {
     color: #ffffff;
     background-color: #255088; }
@@ -742,6 +742,9 @@ body {
 
 .check-in {
   position: relative;
+  padding: 25px 15px;
+  padding-top: 40px;
+  text-align: center;
   background-color: #255088; }
   .check-in::after {
     content: "";
@@ -751,6 +754,26 @@ body {
     height: 15px;
     width: 100%;
     background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 15px, #ffffff 15px, #ffffff 30px, #255088 30px, #255088 45px, #ffffff 45px, #ffffff 60px); }
+  .check-in__title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #ffffff;
+    font-size: 1.25rem; }
+    .check-in__title::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -15px;
+      height: 10px;
+      width: 10px;
+      background-color: #c21f39;
+      border-radius: 50%; }
+  .check-in__subtitle {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase; }
 
 .partners {
   padding: 25px 15px; }
@@ -777,6 +800,7 @@ body {
 .prices__header {
   padding: 25px 15px;
   padding-right: 40px;
+  padding-bottom: 10px;
   background-color: #f1f1f3; }
 
 .prices__title {
@@ -893,3 +917,45 @@ body {
     transition: all 0.3s ease-out; }
     .contact__text a:hover {
       color: #c21f39; }
+
+.site-footer {
+  position: relative;
+  padding: 25px 15px;
+  padding-right: 30px;
+  background-color: #142945;
+  background-image: url("./img/footer-bg.jpg");
+  background-size: cover;
+  background-position: center center; }
+  .site-footer::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 15px;
+    background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 15px, #ffffff 15px, #ffffff 30px, #255088 30px, #255088 45px, #ffffff 45px, #ffffff 60px); }
+  .site-footer__logo-n-socials {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+  .site-footer__logo {
+    max-width: 100%; }
+    @media (min-width: 700px) {
+      .site-footer__logo {
+        height: 65px;
+        width: 328.6px; } }
+    .site-footer__logo img {
+      height: 100%;
+      width: 100%; }
+  .site-footer__copyrights {
+    padding-top: 20px;
+    color: #ffffff;
+    line-height: 1.5; }
+
+.socials {
+  text-align: center; }
+  .socials__title {
+    color: #ffffff;
+    font-size: 1rem; }
+  .socials a {
+    color: #ffffff;
+    text-decoration: none; }
