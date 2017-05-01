@@ -3,6 +3,7 @@
         // box model
         padding: 25px 15px;
         padding-right: 40px;
+        padding-bottom: 10px;
 
         // visual
         background-color: $lightGrey;
@@ -34,7 +35,7 @@
         padding-left: 50px;
 
         // visual
-        background-color: #142945;
+        background-color: $darkBlue;
         background-image: url('./img/price-bg.jpg');
         background-size: cover;
         background-position: center center;

@@ -1,0 +1,20 @@
+.socials {
+    // typography
+    text-align: center;
+
+    &__title {
+        // typography
+        color: $white;
+        font-size: 1rem;
+    }
+
+    &__content {
+
+    }
+
+    a {
+        // typography
+        color: $white;
+        text-decoration: none;
+    }
+}
