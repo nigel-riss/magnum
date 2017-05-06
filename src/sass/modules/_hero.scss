@@ -1,4 +1,7 @@
 .hero {
+    // positioning
+    position: relative;
+    
     // box model
     margin-top: 10vh;
     // margin-top: calc((100vh - 85px) / 2);
@@ -79,10 +82,11 @@
     &__buttons {
         // box model
         width: 210px;
-        margin: 0 auto;
+        padding-left: 20px;
+        // margin: 0 auto;
 
         // typography
-        text-align: center;
+        // text-align: center;
 
         @include atTabletsPortrait {
             // box model
@@ -90,7 +94,7 @@
             padding-left: 20px;
 
             // typography
-            text-align: left;
+            // text-align: left;
         }
     }
 }

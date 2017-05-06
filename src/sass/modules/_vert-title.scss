@@ -1,0 +1,38 @@
+.vert-title {
+    // positioning
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    transform-origin: 0 50%;
+    transform: rotate(-90deg);
+
+    // typography
+    color: $white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    // border: 1px solid red;
+    @include atSmall {
+        // box model
+        display: none;
+    }
+
+    &::after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: 50%;
+        right: -90px;
+
+        // box model
+        height: 1px;
+        width: 85px;
+        // border: 1px solid red;
+
+        // visual
+        background-color: $white;
+    }
+}
