@@ -17,4 +17,78 @@
     // visual
     background-color: $white;
     background-color: rgba($white, 0.8);
+
+    &__menu-icon {
+        // positioning
+        position: absolute;
+        right: 30px;
+        top: 36px;
+
+        // box model
+        height: 24px;
+        width: 24px;
+        // border: 1px solid red;
+
+        // visual
+        cursor: pointer;
+
+        @include atTabletsLandscape {
+            // box model
+            display: none;
+        }
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: 0 50%;
+
+            // box model
+            display: block;
+            height: 4px;
+            width: 24px;
+
+            // visual
+            background-color: $blue;
+            transition: transform 0.3s ease-out;
+        }
+
+        &__middle {
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 10px;
+
+            // box model
+            display: block;
+            height: 4px;
+            width: 24px;
+
+            // visual
+            background-color: $blue;
+            transition: transform 0.3s ease-out;
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform-origin: 0 50%;
+
+            // box model
+            display: block;
+            height: 4px;
+            width: 24px;
+
+            // visual
+            background-color: $blue;
+            transition: transform 0.3s ease-out;
+        }
+    }
 }

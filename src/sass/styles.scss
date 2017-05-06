@@ -3,6 +3,7 @@
 
 // fonts
 @import "fonts/magnum";
+@import "fonts/icons";
 
 // base
 @import "normalize.css";
@@ -50,3 +51,7 @@
 //      footer
 @import "modules/site-footer";
 @import "modules/socials";
+@import "modules/social-icon";
+
+//      elements
+@import "modules/vert-title";

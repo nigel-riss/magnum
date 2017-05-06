@@ -39,8 +39,9 @@
         position: relative;
 
         // box model
-        padding: 25px;
         height: 62vw;
+        padding: 25px;
+        padding-top: 40px;
         // border: 1px solid red;
     }
 
@@ -52,6 +53,9 @@
     }
 
     &__title {
+        // positioning
+        position: relative;
+
         // typography
         color: $white;
         font-size: 1rem;
@@ -61,6 +65,23 @@
         @include atDesktop {
             // typography
             color: $copyColor;
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            // box model
+            height: 2px;
+            width: 26px;
+
+            // visual
+            background-color: $red;
         }
     }
 
