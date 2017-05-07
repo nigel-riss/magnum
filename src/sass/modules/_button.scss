@@ -18,10 +18,20 @@
     // visual
     background-color: $white;
     border-radius: 25px;
+    transition: all 0.3s ease-out;
 
     @include atTabletsPortrait {
         // box model
         width: 190px;
+    }
+
+    &:hover {
+        // typography
+        color: $white;
+
+        // visual
+        background-color: $blue;
+        background-color: $red;
     }
 
     &--blue {
