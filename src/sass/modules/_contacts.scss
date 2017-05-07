@@ -2,13 +2,26 @@
     // box model
     padding: 25px 15px;
 
+    @include atTabletsPortrait {
+        // box model
+        padding-left: 40px;
+    }
+
     &__title {
         @include sectionTitle;
     }
 
     &__content {
+        // positioning
+        position: relative;
+
         // box model
         padding-left: 20px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-right: 140px;
+        }
     }
 
     &__text {

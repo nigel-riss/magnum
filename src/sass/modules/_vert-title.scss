@@ -35,4 +35,21 @@
         // visual
         background-color: $white;
     }
+
+    &--right {
+        // positioning
+        left: auto;
+        right: 40px;
+        transform: translateX(100%) rotate(-90deg);
+    }
+
+    &--blue {
+        // typography
+        color: $blue;
+
+        &::after {
+            // visual
+            background-color: $blue;
+        }
+    }
 }

@@ -40,6 +40,7 @@ body
             header.about__header
                 h2.about__title Барбершоп<br> #[strong Magnum]
                 p.about__subtitle Барбершоп Magnum — первая в Гомеле парикмахерская для мужчин. 
+                
             .about__features
                 mixin feature(title, text)
                     .feature
@@ -52,6 +53,7 @@ body
     section.services
         .services__hero
             h2.services__title Услуги<br> #[strong барбершопа]
+            .vert-title.vert-title--right Services Magnum Barbershop
 
         .services__content
             mixin service(title, subtitle, iconClass, imageURL)
@@ -92,6 +94,7 @@ body
             .prices__button: a(href="#").button.button--blue Полный Прайс
 
         .prices__content
+            .vert-title.vert-title--right Services Magnum Barbershop
             table
                 caption Голова
                 tr
@@ -147,18 +150,22 @@ body
             h2.contacts__title Наши<br> #[strong контакты]
 
         .contacts__content
+            .vert-title.vert-title--right.vert-title--blue Contacts Magnum Barbershop
+
             .contacts__text По всем интеерсующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес.<br> #[strong  До встречи в MAGNUM]
 
             .contact
-                h3.contact__title Телефон
-                .contact__text: a(href="tel:+79112345678") +7 (911) 234-56-78
+                h3.contact__title Телефоны
+                .contact__text
+                    a(href="tel:+78452577737") +7 (8452) 57-77-37 <br>
+                    a(href="tel:+79878221223") +7 (987) 822-12-23
 
             .contact
                 h3.contact__title Электропочта
                 .contact__text: a(href="mailto:info@magnum.ru") info@magnum.ru
             .contact
                 h3.contact__title Адрес
-                .contact__text г. Калининград, ул. Театральная 35
+                .contact__text г. Саратов, ул. Яблочкова, 8/10
 
         .contacts__map: img(src="")
 
@@ -169,7 +176,7 @@ body
                 .socials
                     h3.socials__title Мы в социальных сетях
                     .socials__content
-                        a(href="#").social-icon.icon-vkontakte VKontakte
-                        a(href="#").social-icon.icon-instagram Instagram
+                        a(href="#").social-icon.ico-vkontakte VKontakte
+                        a(href="#").social-icon.ico-instagram Instagram
 
         .site-footer__copyrights © Все права сохранены <br> Разработано в студии: #[a(href="#") АГОНЬ!]

@@ -4,7 +4,7 @@
     
     // box model
     margin-top: 20px;
-    height: 62vw;
+    // height: 62vw;
 
     // visual
     background-color: $lightGrey;
@@ -39,9 +39,10 @@
         position: relative;
 
         // box model
-        height: 62vw;
-        padding: 25px;
-        padding-top: 40px;
+        // height: 62vw;
+        padding: 25px 0;
+        padding-bottom: 15px;
+        // padding-top: 40px;
         // border: 1px solid red;
     }
 
@@ -88,11 +89,16 @@
     &__subtitle {
         // typography
         color: $lightGrey;
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
         font-weight: 700;
         letter-spacing: 1px;
         text-align: center;
         text-transform: uppercase;
+
+        @include atTabletsPortrait {
+            // typography
+            // font-size: 0.8125rem;
+        }
 
         @include atDesktop {
             // typography

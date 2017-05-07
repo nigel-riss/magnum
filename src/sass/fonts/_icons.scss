@@ -22,7 +22,7 @@
 }
 */
  
- [class^="icon-"]:before, [class*=" icon-"]:before {
+ [class^="ico-"]:before, [class*=" ico-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -54,5 +54,5 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.icon-instagram:before { content: '\f16d'; } /* '' */
-.icon-vkontakte:before { content: '\f189'; } /* '' */
+.ico-instagram:before { content: '\f16d'; } /* '' */
+.ico-vkontakte:before { content: '\f189'; } /* '' */

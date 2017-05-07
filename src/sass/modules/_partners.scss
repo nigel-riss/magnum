@@ -1,6 +1,11 @@
 .partners {
     // box model
     padding: 25px 15px;
+
+    @include atTabletsPortrait {
+        // box model
+        padding-left: 40px;
+    }
     
     &__header {
 

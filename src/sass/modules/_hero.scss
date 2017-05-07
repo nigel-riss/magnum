@@ -3,6 +3,8 @@
     position: relative;
     
     // box model
+    max-width: 400px;
+
     margin-top: 10vh;
     // margin-top: calc((100vh - 85px) / 2);
     margin-top: calc(25px + 5vh);
@@ -20,6 +22,7 @@
 
     @include atTabletsPortrait {
         // box model
+        max-width: none;
         height: 517px;
         width: 569px;
 
@@ -28,7 +31,7 @@
         padding-left: 105px;
         
         // visual
-        box-shadow: 0 12px 14px -10px rgba($blue, 0.6);
+        box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
     }
 
     &__title {

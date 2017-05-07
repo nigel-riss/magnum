@@ -13,8 +13,8 @@
     }
 
     &__hero {
-        // box model
-
+        // positioning
+        position: relative;
 
         @include atTabletsPortrait {
             // box model
@@ -27,7 +27,7 @@
             background-color: $blue;
             background-image: url('./img/services-bg.jpg');
             background-size: cover;
-            box-shadow: 0 12px 14px -10px rgba($blue, 0.6);
+            box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
         }
     }
 
