@@ -9,6 +9,11 @@
 
     @include atDesktop {
         // box model
+        margin: 20px 20px;
+    }
+
+    @include atDesktopLarge {
+        // box model
         margin: 20px 40px;
     }
 

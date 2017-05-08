@@ -42,6 +42,9 @@
         }
 
         @include atDesktop {
+            // positioning
+            z-index: 1;
+            
             // box model
             display: inline-block;
             vertical-align: top;
@@ -90,6 +93,10 @@
         }
 
         @include atDesktop {
+            // positioning
+            position: relative;
+            // z-index: -1;
+
             // box model
             display: inline-block;
 
