@@ -12,7 +12,7 @@ head
     title Magnum Barbershop
 body
     header.site-header
-        nav.main-nav
+        nav.main-nav: .wrapper
             .logo: img(src="./img/logo-h.svg")
 
             .main-nav__menu-icon: .main-nav__menu-icon__middle
@@ -30,16 +30,16 @@ body
                 a(href="#").button.button--blue О нас
             .vert-title Magnum Barbershop
 
-    section.about
+    section.about: .wrapper
         .about__hero
-            p.about__hero-title Уютный интерьер, дорогое оборудование и инструмент, бесплатный WiFi и кофе, но главное это по-настоящему мужские стрижки.
+            p.about__hero-title Уютный интерьер, профессиональное оборудование и инструмент, бесплатный WiFi и кофе, но главное это по-настоящему мужские стрижки.
             p.about__hero-description Мы действительно знаем толк в мужских стрижках и «ремонте» бороды. Предлагаем вам попробовать настоящее бритье. Приходите и убедитесь сами.
             .vert-title About Magnum Barbershop
 
         .about__content
             header.about__header
                 h2.about__title Барбершоп<br> #[strong Magnum]
-                p.about__subtitle Барбершоп Magnum — первая в Гомеле парикмахерская для мужчин. 
+                p.about__subtitle Барбершоп Magnum — лучшая в Саратове парикмахерская для мужчин. 
                 
             .about__features
                 mixin feature(title, text)
@@ -50,14 +50,14 @@ body
                 +feature("Угощаем", "Тебе обязательно предложат чашечку свежемолотого кофе.")
                 +feature("Развлекаем", "Время ожидания не будет скучным, WiFi и PlayStation в твоем распоряжении!")
 
-    section.services
+    section.services: .wrapper
         .services__hero
             h2.services__title Услуги<br> #[strong барбершопа]
             .vert-title.vert-title--right Services Magnum Barbershop
 
         .services__content
             mixin service(title, subtitle, iconClass, imageURL)
-                .service
+                a(href="#").service
                     .service__image: img(src=imageURL)
                     .service__content
                         .service__icon: div.icon(class=iconClass)
@@ -68,7 +68,7 @@ body
             +service("Борода", "Стрижка и окрашивание", "icon-razor", "./img/beard-srv.jpg")
             +service("Татуировки", "Любой сложности", "icon-tatoo-machine", "./img/tatoo-srv.jpg")
 
-    section.check-in
+    section.check-in: .wrapper
         a(href="#").button Онлайн запись
         header.check-in__header
             .check-in__title мужская территория 
@@ -87,7 +87,7 @@ body
             +partner("#")
             +partner("#")
 
-    section.prices
+    section.prices: .wrapper
         header.prices__header
             .prices__header-wrapper
                 h2.prices__title: strong Прайс
@@ -146,13 +146,12 @@ body
             +member("Дмитрий", "Барбер", "#")
             +member("Юрий", "Барбер", "#")
 
-    section.contacts
+    section.contacts: .wrapper
         header.contacts__header
             h2.contacts__title Наши<br> #[strong контакты]
 
         .contacts__content
-            .vert-title.vert-title--right.vert-title--blue Contacts Magnum Barbershop
-
+            .vert-title.vert-title--blue Contacts Magnum Barbershop
             .contacts__text По всем интеерсующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес.<br> #[strong  До встречи в MAGNUM]
 
             .contact
@@ -168,9 +167,10 @@ body
                 h3.contact__title Адрес
                 .contact__text г. Саратов, ул. Яблочкова, 8/10
 
-        .contacts__map: img(src="")
+        .contacts__map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.9554534817557!2d46.02650831612876!3d51.532376879639195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4114c7c0a4895657%3A0xea584b809843bd2!2z0YPQuy4g0K_QsdC70L7Rh9C60L7QstCwLCA4LCDQodCw0YDQsNGC0L7Qsiwg0KHQsNGA0LDRgtC-0LLRgdC60LDRjyDQvtCx0LsuLCA0MTAwMjg!5e0!3m2!1sru!2sru!4v1494244999304" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
 
-    footer.site-footer
+    footer.site-footer: .wrapper
         .site-footer__logo-n-socials
             .site-footer__logo: img(src="./img/logo-h-white.svg")
             .site-footer__socials

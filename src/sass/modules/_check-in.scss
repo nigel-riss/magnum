@@ -28,6 +28,12 @@
         box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
     }
 
+    @include atDesktop {
+        // box model
+        height: 190px;
+        padding-top: 80px;
+    }
+
     &::after {
         content: "";
 

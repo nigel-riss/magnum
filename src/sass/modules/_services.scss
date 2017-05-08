@@ -3,6 +3,9 @@
     padding: 25px 15px;
     margin-bottom: 40px;
 
+    // typography
+    font-size: 0;
+
     // visual
     background-color: $blue;
     // background-image: url('./img/services-bg.jpg');
@@ -10,6 +13,11 @@
     @include atTabletsPortrait {
         // visual
         background-color: transparent;
+    }
+
+    @include atDesktop {
+        // box model
+        padding-bottom: 40px;
     }
 
     &__hero {
@@ -29,6 +37,18 @@
             background-size: cover;
             box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
         }
+
+        @include atDesktop {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+
+            height: 430px;
+            width: calc(100% - 650px);
+
+            margin-right: 30px;
+            padding-top: 315px;
+        }
     }
 
     &__title {
@@ -41,5 +61,18 @@
     &__content {
         // typography
         text-align: center;
+
+        @include atDesktop {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+
+            width: calc(100% - 590px);
+            width: 620px;
+            // border: 1px solid red;
+
+            // typography
+            text-align: left;
+        }
     }
 }

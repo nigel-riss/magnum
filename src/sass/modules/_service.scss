@@ -6,6 +6,9 @@
     margin-top: 20px;
     // height: 62vw;
 
+    // typography
+    text-decoration: none;
+
     // visual
     background-color: $lightGrey;
     overflow: hidden;
@@ -21,6 +24,70 @@
         margin: 15px 10px;
     }
 
+    @include atDesktop {
+        // positioning
+        position: relative;
+
+        // box model
+        margin-top: 0;
+        margin-right: 30px;
+        margin-left: 0;
+        margin-bottom: 30px;
+
+        padding-right: 0;
+
+        // visual
+        transition: all 0.3s ease-out;
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -15px;
+
+            // visual
+            opacity: 0;
+            transition: all 0.3s ease-out;
+
+            @include barberPole(10px, 100%, 10px);
+        }
+
+        &:hover {
+            // box model
+            padding-right: 10px;
+
+            .service__image {
+                // visual
+                opacity: 1;
+            }
+
+            .service__icon {
+                // typography
+                color: $white;
+            }
+
+            .service__title {
+                // typography
+                color: $white;
+            }
+
+            .service__subtitle {
+                // typography
+                color: $lightGrey;
+            }
+
+            &::after {
+                // positioning
+                right: 0;
+                
+                // visual
+                opacity: 1;
+            }
+        }
+    }
+
     &__image {
         // positioning
         position: absolute;
@@ -31,6 +98,12 @@
         img {
             // box model
             width: 100%;
+        }
+
+        @include atDesktop {
+            // visual
+            opacity: 0;
+            transition: all 0.3s ease-out;
         }
     }
 
@@ -51,6 +124,14 @@
         color: $white;
         font-size: 60px;
         text-align: center;
+
+        @include atDesktop {
+            // typography
+            color: #6d6e71;
+
+            // visual
+            transition: all 0.3s ease-out;
+        }
     }
 
     &__title {
@@ -66,6 +147,9 @@
         @include atDesktop {
             // typography
             color: $copyColor;
+
+            // visual
+            transition: all 0.3s ease-out;
         }
 
         &::after {
@@ -103,6 +187,9 @@
         @include atDesktop {
             // typography
             color: #6d6e71;
+
+            // visual
+            transition: all 0.3s ease-out;
         }
     }
 }

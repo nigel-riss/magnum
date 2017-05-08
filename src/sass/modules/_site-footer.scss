@@ -28,6 +28,9 @@
         // box model
         padding-bottom: 20px;
 
+        // typography
+        font-size: 0;
+
         // visual
         border-bottom: 1px solid rgba($white, 0.5);
     }
@@ -38,6 +41,9 @@
 
         @include atTabletsPortrait {
             // box model
+            display: inline-block;
+            vertical-align: top;
+
             height: 65px;
             width: 328.6px;
         }
@@ -46,6 +52,19 @@
             // box model
             height: 100%;
             width: 100%;
+        }
+    }
+
+    &__socials {
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 330px);
+            // border: 1px solid red;
+
+            // typography
+            text-align: right;
         }
     }
 

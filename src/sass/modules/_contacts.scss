@@ -1,10 +1,18 @@
 .contacts {
+    // positioning
+    position: relative;
+
     // box model
     padding: 25px 15px;
 
     @include atTabletsPortrait {
         // box model
-        padding-left: 40px;
+        padding-left: 70px;
+    }
+
+    @include atDesktop {
+        // box model
+        margin-bottom: 80px;
     }
 
     &__title {
@@ -22,6 +30,33 @@
             // box model
             padding-right: 140px;
         }
+
+        @include atDesktop {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+
+            width: 500px;
+            margin-right: -110px;
+            padding-top: 40px;
+
+            // visual
+            background-color: $white;
+
+            // border: 1px solid red;
+
+            &::after {
+                content: "";
+
+                // positioning
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                // z-index: -2;
+
+                @include barberPole(100%, 20px, 20px);
+            }
+        }
     }
 
     &__text {
@@ -32,5 +67,18 @@
         color: $copyColor;
         font-size: 1rem;
         line-height: 1.5;
+    }
+
+    &__map {
+        // box model
+        display: inline-block;
+
+        height: 570px;
+        width: 700px;
+
+        margin-top: -90px;
+
+        // visual
+        box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
     }
 }

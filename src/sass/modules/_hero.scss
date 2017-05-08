@@ -34,6 +34,14 @@
         box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
     }
 
+    @include atDesktop {
+        // box model
+        margin: auto;
+        margin-left: 100px;
+
+        padding-top: 270px;
+    }
+
     &__title {
         // box model
         margin: 0;
@@ -53,6 +61,7 @@
             font-size: 1rem;
             letter-spacing: 0.2em;
         }
+
     }
 
     &__motto {
@@ -70,6 +79,7 @@
         font-weight: 700;
         line-height: 1.4;
         text-transform: uppercase;
+        white-space: nowrap;
 
         @include redDot(12px, 11px);
 
@@ -82,6 +92,16 @@
             letter-spacing: 1px;
 
             @include redDot(15px, 18px, -4px);
+        }
+
+        @include atDesktop {
+            // box model
+            padding-bottom: 20px;
+
+            // typography
+            font-size: 3.25rem;
+            letter-spacing: 3px;
+            line-height: 1.1;
         }
     }
 

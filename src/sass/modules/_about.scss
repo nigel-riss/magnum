@@ -1,4 +1,12 @@
 .about {
+    // typography
+    font-size: 0;
+
+    @include atDesktop {
+        // box model
+        padding-bottom: 70px;
+    }
+
     &__hero {
         // positioning
         position: relative;
@@ -18,6 +26,7 @@
             margin-bottom: 10px;
             margin-right: 20px;
             padding-left: 80px;
+            padding-right: 100px;
 
             // visual
             background-position: center bottom;
@@ -37,6 +46,15 @@
 
                 @include barberPole(100%, 100%, 20px);
             }
+        }
+
+        @include atDesktop {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+
+            width: 820px;
+            height: 640px;
         }
     }
 
@@ -109,7 +127,19 @@
         padding: 25px 15px;
 
         @include atTabletsPortrait {
+            // box model
             padding-left: 40px;
+        }
+
+        @include atDesktop {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+
+            width: calc(100% - 840px);
+            margin-top: -30px;
+            padding-left: 40px;
+            padding-right: 80px;
         }
     }
 
@@ -122,6 +152,11 @@
             display: inline-block;
             vertical-align: top;
             width: 240px;
+        }
+
+        @include atDesktop {
+            // box model
+            display: block;
         }
     }
 
@@ -143,6 +178,14 @@
             vertical-align: top;
             width: calc(100% - 260px);
             padding-left: 30px;
+        }
+
+        @include atDesktop {
+            // box model
+            display: block;
+            width: auto;
+
+            padding-left: 0;
         }
     }
 }

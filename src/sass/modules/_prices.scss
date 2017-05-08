@@ -1,5 +1,17 @@
 .prices {
+    // positioning
+    position: relative;
+
+    @include atDesktop {
+        // box model
+        padding-bottom: 100px;
+    }
+
     &__header {
+        // positioning
+        position: relative;
+        // z-index: -1;
+
         // box model
         padding: 25px 15px;
         padding-right: 40px;
@@ -15,6 +27,18 @@
             // box model
             padding-left: 40px;
             padding-right: 50px;
+        }
+
+        @include atDesktop {
+            // positioning
+            z-index: -2;
+
+            // box model
+            margin-left: 80px;
+            margin-right: 80px;
+
+            // visual
+            box-shadow: 0 12px 24px -10px rgba($darkBlue, 0.4);
         }
     }
 
@@ -41,6 +65,11 @@
             // box model
             width: 260px;
         }
+
+        @include atDesktop {
+            // box model
+            width: 220px;
+        }
     }
 
     &__button {
@@ -54,11 +83,22 @@
             width: 200px;
             padding-top: 28px;
         }
+
+        @include atDesktop {
+            // positioning
+            position: relative;
+            z-index: 5;
+
+            // box model
+            display: block;
+            padding-left: 0;
+        }
     }
 
     &__content {
         // positioning
         position: relative;
+        // z-index: 2;
 
         // box model
         padding: 25px 35px;
@@ -71,6 +111,9 @@
         background-size: cover;
         background-position: left center;
 
+        // other
+        
+
         @include atTabletsPortrait {
             // box model
             padding-left: 60px;
@@ -79,15 +122,26 @@
             box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
         }
 
+        @include atDesktop {
+            // box model
+            width: 810px;
+
+            margin-left: auto;
+            margin-right: 0;
+            margin-top: -150px;
+        }
+
         &::before {
             content: "";
 
             // positioning
             position: absolute;
-            left: 0;
-            top: 0;
+            left: -20px;
+            top: -20px;
+            z-index: -1;
 
-            @include barberPole(15px, 100%, 15px);
+            @include barberPole(calc(100% + 20px), calc(100% + 20px), 20px);
+            // @include barberPole(calc(100% + 20px), 170px, 20px);
         }
     }
 
