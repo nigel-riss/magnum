@@ -650,7 +650,17 @@ body {
     @media (min-width: 700px) {
       .hero__motto {
         padding-bottom: 30px;
-        font-size: 2.25rem; } }
+        font-size: 2.25rem;
+        letter-spacing: 1px; }
+        .hero__motto::before {
+          content: "";
+          position: absolute;
+          top: 18px;
+          left: -4px;
+          height: 15px;
+          width: 15px;
+          background-color: #c21f39;
+          border-radius: 50%; } }
   .hero__buttons {
     width: 210px;
     padding-left: 20px; }
