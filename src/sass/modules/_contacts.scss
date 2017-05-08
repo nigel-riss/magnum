@@ -43,8 +43,6 @@
             // visual
             background-color: $white;
 
-            // border: 1px solid red;
-
             &::after {
                 content: "";
 
@@ -52,7 +50,6 @@
                 position: absolute;
                 bottom: -20px;
                 left: 0;
-                // z-index: -2;
 
                 @include barberPole(100%, 20px, 20px);
             }
@@ -80,5 +77,10 @@
 
         // visual
         box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
+
+        @include atSmall {
+            // box model
+            display: none;
+        }
     }
 }

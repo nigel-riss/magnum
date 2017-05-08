@@ -3,14 +3,13 @@
     position: relative;
     
     // box model
+    display: block;
     margin-top: 20px;
-    // height: 62vw;
 
     // typography
     text-decoration: none;
 
     // visual
-    background-color: $lightGrey;
     overflow: hidden;
 
     @include atTabletsPortrait {
@@ -22,6 +21,7 @@
         width: 275px;
 
         margin: 15px 10px;
+        background-color: $lightGrey;
     }
 
     @include atDesktop {
@@ -91,6 +91,8 @@
     &__image {
         // positioning
         position: absolute;
+        top: 0;
+        left: 0;
 
         // box model
         width: 100%;
@@ -98,6 +100,11 @@
         img {
             // box model
             width: 100%;
+        }
+
+        @include atSmall {
+            // box model
+            display: none;
         }
 
         @include atDesktop {
@@ -112,11 +119,8 @@
         position: relative;
 
         // box model
-        // height: 62vw;
         padding: 25px 0;
         padding-bottom: 15px;
-        // padding-top: 40px;
-        // border: 1px solid red;
     }
 
     &__icon {
