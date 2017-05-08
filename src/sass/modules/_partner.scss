@@ -1,0 +1,19 @@
+.partner {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+
+    // visual
+    transition: all 0.3s ease-out;
+
+    @include atDesktop {
+        // box model
+        margin: 20px 40px;
+    }
+
+    &:hover {
+        // visual
+        opacity: 0.5;
+    }
+}

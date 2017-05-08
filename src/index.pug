@@ -17,10 +17,13 @@ body
 
             .main-nav__menu-icon: .main-nav__menu-icon__middle
 
-            .main-menu: ul.main-menu__menu
+            .main-menu: ul.main-menu__list
                 - var menuItems = ["О нас", "Услуги", "Прайс", "Команда", "Контакты"];
                 - for (var i = 0; i < 5; i++)
                     li: a(href="#")= menuItems[i]
+
+            .main-nav__button
+                a(href="#").button.button--blue Онлайн запись
 
         .hero
             h1.hero__title Добро пожаловать в Magnum
@@ -74,18 +77,17 @@ body
             .check-in__title мужская территория 
             .check-in__subtitle Ждем тебя в Magnum
         
-    section.partners
+    section.partners: .wrapper
         header.partners__header
             h2.partners__title Наши<br> #[strong партнеры]
         
         .partners__content
             mixin partner(imageURL)
-                .partner: img(src=imageURL)
-            +partner("#")
-            +partner("#")
-            +partner("#")
-            +partner("#")
-            +partner("#")
+                a(href="#").partner: img(src=imageURL)
+            +partner("./img/partners/plogo-1.png")
+            +partner("./img/partners/plogo-2.png")
+            +partner("./img/partners/plogo-3.png")
+            +partner("./img/partners/plogo-4.png")
 
     section.prices: .wrapper
         header.prices__header
@@ -95,7 +97,7 @@ body
             .prices__button: a(href="#").button.button--blue Полный Прайс
 
         .prices__content
-            .vert-title.vert-title--right Services Magnum Barbershop
+            .vert-title.vert-title--right Prices Magnum Barbershop
             table
                 caption Голова
                 tr
@@ -151,8 +153,8 @@ body
             h2.contacts__title Наши<br> #[strong контакты]
 
         .contacts__content
-            .vert-title.vert-title--blue Contacts Magnum Barbershop
-            .contacts__text По всем интеерсующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес.<br> #[strong  До встречи в MAGNUM]
+            .vert-title.vert-title--right.vert-title--blue Contacts Magnum Barbershop
+            .contacts__text По всем интересующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес.<br> #[strong  До встречи в MAGNUM]
 
             .contact
                 h3.contact__title Телефоны

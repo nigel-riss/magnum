@@ -3,16 +3,13 @@
     height: 65px;
     width: 328.6px;
     max-width: 100%;
-    // &__vertical {
-    //     // box model
-    //     height: 65px;
-    //     // width: 98.35px;
-    // }
 
-    // &__horizontal {
-    //     // box model
-    //     display: none;
-    // }
+    @include atTabletsLandscape {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        // border: 1px solid red;
+    }
 
     img {
         // box model

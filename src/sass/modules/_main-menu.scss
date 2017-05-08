@@ -1,4 +1,69 @@
 .main-menu {
     // box model
+    // visibility: hidden;
     display: none;
+
+    @include atTabletsLandscape {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        // border: 1px solid red;
+    }
+
+    &__list {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // visual
+        list-style: none;
+
+        @include atTabletsLandscape {
+            // box model
+            padding-left: 40px;
+            padding-top: 18px;
+        }
+
+        @include atDesktop {
+            // box model
+        }
+    }
+
+    li {
+        @include atTabletsLandscape {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+
+    a {
+        // box model
+        display: block;
+
+        // typography
+        color: $blue;
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        // visual
+        transition: all 0.3s ease-out;
+
+        @include atTabletsLandscape {
+            // box model
+            padding: 5px 12px;
+        }
+
+        @include atDesktop {
+            // box model
+            padding: 5px 15px;
+        }
+
+        &:hover {
+            // typography
+            color: $red;
+        }
+    }
 }

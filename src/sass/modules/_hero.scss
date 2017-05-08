@@ -35,11 +35,17 @@
     }
 
     @include atDesktop {
+        // positioning
+        transform: translateX(-200px);
         // box model
         margin: auto;
-        margin-left: 100px;
 
         padding-top: 270px;
+    }
+
+    @include atDesktopLarge {
+        // positioning
+        transform: translateX(-400px);
     }
 
     &__title {

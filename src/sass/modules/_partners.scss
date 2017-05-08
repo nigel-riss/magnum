@@ -2,16 +2,47 @@
     // box model
     padding: 25px 15px;
 
+    // typography
+    font-size: 0;
+
     @include atTabletsPortrait {
         // box model
         padding-left: 40px;
     }
+
+    @include atDesktop {
+        // box model
+        margin-bottom: 80px;
+    }
     
     &__header {
+        @include atTabletsLandscape {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 40px;
+            width: 300px;
 
+            // border: 1px solid red;
+        }
     }
 
     &__title {
         @include sectionTitle;
+    }
+
+    &__content {
+        // typography
+        text-align: center;
+
+        @include atTabletsLandscape {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+
+            width: calc(100% - 340px);
+            margin-top: -20px;
+            // border: 1px solid red;
+        }
     }
 }

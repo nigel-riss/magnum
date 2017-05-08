@@ -7,12 +7,19 @@
 
     @include atTabletsPortrait {
         // box model
-        padding-left: 70px;
+        padding-left: 20px;
     }
 
     @include atDesktop {
         // box model
         margin-bottom: 80px;
+    }
+
+    &__header {
+        @include atTabletsPortrait {
+            // box model
+            padding-left: 20px;
+        }
     }
 
     &__title {
@@ -28,7 +35,10 @@
 
         @include atTabletsPortrait {
             // box model
+            margin-right: -10px;
             padding-right: 140px;
+            padding-left: 40px;
+            padding-bottom: 10px;
         }
 
         @include atDesktop {
@@ -42,6 +52,7 @@
 
             // visual
             background-color: $white;
+            box-shadow: 0 32px 24px -10px rgba($darkBlue, 0.4);
 
             &::after {
                 content: "";
@@ -68,12 +79,7 @@
 
     &__map {
         // box model
-        display: inline-block;
-
-        height: 570px;
-        width: 700px;
-
-        margin-top: -90px;
+        height: 500px;
 
         // visual
         box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
@@ -81,6 +87,16 @@
         @include atSmall {
             // box model
             display: none;
+        }
+
+        @include atDesktop {
+            // box model
+            display: inline-block;
+
+            height: 570px;
+            width: 700px;
+            width: calc(100% - 400px);
+            margin-top: -90px;
         }
     }
 }
