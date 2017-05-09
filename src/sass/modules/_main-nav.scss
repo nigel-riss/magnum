@@ -35,8 +35,9 @@
     &__menu-icon {
         // positioning
         position: absolute;
-        right: 30px;
-        top: 36px;
+        right: 25px;
+        top: 35px;
+        z-index: 2;
 
         // box model
         height: 24px;
@@ -104,6 +105,32 @@
             background-color: $blue;
             transition: transform 0.3s ease-out;
             // border-radius: 4px;
+        }
+
+        &--close-x {
+            &::before {
+                // positioning
+                transform: rotate(45deg) scaleX(1.178);
+
+                // visual
+                background-color: $red;
+            }
+
+            .main-nav__menu-icon__middle {
+                // positioning
+                transform: scaleX(0);
+
+                // visual
+                opacity: 0;
+            }
+
+            &::after {
+                // positioning
+                transform: rotate(-45deg) scaleX(1.178);
+
+                // visual
+                background-color: $red;
+            }
         }
     }
 

@@ -554,8 +554,9 @@ body {
       padding-left: 70px; } }
   .main-nav__menu-icon {
     position: absolute;
-    right: 30px;
-    top: 36px;
+    right: 25px;
+    top: 35px;
+    z-index: 2;
     height: 24px;
     width: 24px;
     cursor: pointer; }
@@ -593,6 +594,15 @@ body {
       width: 24px;
       background-color: #255088;
       transition: transform 0.3s ease-out; }
+    .main-nav__menu-icon--close-x::before {
+      transform: rotate(45deg) scaleX(1.178);
+      background-color: #c21f39; }
+    .main-nav__menu-icon--close-x .main-nav__menu-icon__middle {
+      transform: scaleX(0);
+      opacity: 0; }
+    .main-nav__menu-icon--close-x::after {
+      transform: rotate(-45deg) scaleX(1.178);
+      background-color: #c21f39; }
   .main-nav__button {
     display: none; }
     @media (min-width: 1200px) {
@@ -604,9 +614,18 @@ body {
       margin-bottom: 0; }
 
 .logo {
+  position: relative;
   height: 65px;
   width: 328.6px;
   max-width: 100%; }
+  .logo__white {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2; }
+    @media (min-width: 900px) {
+      .logo__white {
+        display: none; } }
   @media (min-width: 900px) {
     .logo {
       display: inline-block;
@@ -616,11 +635,22 @@ body {
     width: 100%; }
 
 .main-menu {
-  display: none; }
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  padding-top: 150px;
+  background-color: rgba(12, 26, 44, 0.95); }
   @media (min-width: 900px) {
     .main-menu {
+      position: static;
       display: inline-block;
-      vertical-align: top; } }
+      vertical-align: top;
+      height: auto;
+      width: auto;
+      padding-top: 0;
+      background-color: transparent; } }
   .main-menu__list {
     margin: 0;
     padding: 0;
@@ -635,15 +665,23 @@ body {
       vertical-align: top; } }
   .main-menu a {
     display: block;
-    color: #255088;
+    margin: 5px 50px;
+    padding: 12px;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease-out; }
     @media (min-width: 900px) {
       .main-menu a {
-        padding: 5px 12px; } }
+        margin: 0;
+        padding: 5px 12px;
+        color: #255088;
+        letter-spacing: normal;
+        text-align: left; } }
     @media (min-width: 1200px) {
       .main-menu a {
         padding: 5px 15px; } }
@@ -1532,3 +1570,7 @@ body {
     color: #255088; }
     .vert-title--blue::after {
       background-color: #255088; }
+  @media (max-width: 699px) {
+    .vert-title--menu {
+      bottom: 80px;
+      display: block; } }

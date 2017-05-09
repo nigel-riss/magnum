@@ -1,8 +1,24 @@
 .logo {
+    // positioning
+    position: relative;
+
     // box model
     height: 65px;
     width: 328.6px;
     max-width: 100%;
+
+    &__white {
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+
+        @include atTabletsLandscape {
+            // box model
+            display: none;
+        }
+    }
 
     @include atTabletsLandscape {
         // box model

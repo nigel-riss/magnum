@@ -13,14 +13,18 @@ head
 body
     header.site-header
         nav.main-nav: .wrapper
-            .logo: img(src="./img/logo-h.svg")
+            .logo 
+                img(src="./img/logo-h.svg").logo__color
+                img(src="./img/logo-h-white.svg").logo__white
 
-            .main-nav__menu-icon: .main-nav__menu-icon__middle
+            .main-nav__menu-icon.main-nav__menu-icon--close-x: .main-nav__menu-icon__middle
 
-            .main-menu: ul.main-menu__list
-                - var menuItems = ["О нас", "Услуги", "Прайс", "Команда", "Контакты"];
-                - for (var i = 0; i < 5; i++)
-                    li: a(href="#")= menuItems[i]
+            .main-menu
+                //- .vert-title.vert-title--menu Menu Magnum Barbershop 
+                ul.main-menu__list
+                    - var menuItems = ["О нас", "Услуги", "Прайс", "Команда", "Контакты"];
+                    - for (var i = 0; i < 5; i++)
+                        li: a(href="#")= menuItems[i]
 
             .main-nav__button
                 a(href="#").button.button--blue Онлайн запись

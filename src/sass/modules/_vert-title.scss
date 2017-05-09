@@ -52,4 +52,14 @@
             background-color: $blue;
         }
     }
+
+    &--menu {
+        @include atSmall {
+            // positioning
+            bottom: 80px;
+
+            // box model
+            display: block;
+        }
+    }
 }
