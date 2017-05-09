@@ -7,7 +7,7 @@ function initMap() {
         scrollwheel: false,
         // mapTypeControl: false,
         // draggable: false,
-        // zoomControl: false,
+        zoomControl: true,
         scaleControl: false
     });
 
