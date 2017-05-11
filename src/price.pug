@@ -11,7 +11,8 @@ head
     
     title Magnum Barbershop
 body
-    header.site-header
+    header.site-header.site-header--inner
+        .vert-title Price Magnum Barbershop
         nav.main-nav: .wrapper
             .logo 
                 img(src="./img/logo-h.svg").logo__color
@@ -29,13 +30,16 @@ body
             .main-nav__button
                 a(href="#").button.button--blue Онлайн запись
 
-        .hero
+        .hero.hero--simple
             h1.hero__title Добро пожаловать в Magnum
-            p.hero__motto По-настоящему<br> мужские Стрижки
-            .hero__buttons
-                a(href="#").button.button--mr-20 Онлайн запись
-                a(href="#").button.button--blue О нас
-            .vert-title Magnum Barbershop
+            p.hero__motto Прайс-лист<br> на услуги
+
+    section.prices: .wrapper
+        header.prices__header
+            .prices__header-wrapper
+                h2.prices__title Барбершоп<br> #[strong Magnum]
+                p.prices__subtitle По-настоящему мужские стрижки
+            .prices__button: a(href="#").button.button--blue Полный Прайс
 
     section.about: .wrapper
         .about__hero
@@ -98,7 +102,7 @@ body
             .prices__header-wrapper
                 h2.prices__title: strong Прайс
                 p.prices__subtitle Список наиболее популярных услуг нашего барбершопа
-            .prices__button: a(href="price.html").button.button--blue Полный Прайс
+            .prices__button: a(href="#").button.button--blue Полный Прайс
 
         .prices__content
             .vert-title.vert-title--right Prices Magnum Barbershop
@@ -135,23 +139,6 @@ body
                     td Бритьё головы
                     td 700
 
-    //- section.team
-        header.team__header
-            h2.team__title Команда
-        .team__wrapper
-            mixin member (name, position, photoURL)
-                article.member
-                    .member__image: img(src=photoURL)
-                    .member__hover
-                        p.member__action Записаться к мастеру
-                        a(href="#").button Онлайн запись
-                    header.member__info
-                        h3.member__name= name
-                        p.member__position= position
-            +member("Олег", "Барбер", "#")
-            +member("Дмитрий", "Барбер", "#")
-            +member("Юрий", "Барбер", "#")
-
     section.contacts: .wrapper
         header.contacts__header
             h2.contacts__title Наши<br> #[strong контакты]
@@ -174,7 +161,6 @@ body
                 .contact__text г. Саратов, ул. Яблочкова, 8/10
 
         .contacts__map#map
-            //- iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.9554534817557!2d46.02650831612876!3d51.532376879639195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4114c7c0a4895657%3A0xea584b809843bd2!2z0YPQuy4g0K_QsdC70L7Rh9C60L7QstCwLCA4LCDQodCw0YDQsNGC0L7Qsiwg0KHQsNGA0LDRgtC-0LLRgdC60LDRjyDQvtCx0LsuLCA0MTAwMjg!5e0!3m2!1sru!2sru!4v1494244999304" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
 
     footer.site-footer: .wrapper
         .site-footer__logo-n-socials

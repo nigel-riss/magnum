@@ -48,6 +48,23 @@
         transform: translateX(-400px);
     }
 
+    &--simple {
+        // visual
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-top: 40px;
+        }
+
+        @include atDesktop {
+            // box model
+            padding-top: 60px;
+        }
+    }
+
     &__title {
         // box model
         margin: 0;
