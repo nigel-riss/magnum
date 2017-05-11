@@ -533,6 +533,8 @@ body {
   @media (min-width: 1200px) {
     .site-header {
       padding-top: 160px; } }
+  .site-header--inner {
+    max-height: 420px; }
 
 .main-nav {
   position: absolute;
@@ -719,6 +721,16 @@ body {
   @media (min-width: 1500px) {
     .hero {
       transform: translateX(-400px); } }
+  .hero--simple {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
+    @media (min-width: 700px) {
+      .hero--simple {
+        padding-top: 40px; } }
+    @media (min-width: 1200px) {
+      .hero--simple {
+        padding-top: 60px; } }
   .hero__title {
     margin: 0;
     padding-bottom: 15px;
