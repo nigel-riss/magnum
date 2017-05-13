@@ -11,9 +11,16 @@
 
     // visual
     background-color: rgba($menuBlue, 0.95);
-
+    opacity: 0;
+    transition: all 0.3s ease-out;
     visibility: hidden;
-    display: none;
+
+    &--shown {
+        // visual
+        opacity: 1;
+        visibility: visible;
+    }
+
 
     @include atTabletsLandscape {
         // positioning
@@ -29,6 +36,8 @@
 
         // visual
         background-color: transparent;
+        opacity: 1;
+        visibility: visible;
     }
 
     &__list {

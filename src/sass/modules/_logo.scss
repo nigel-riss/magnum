@@ -14,6 +14,17 @@
         top: 0;
         z-index: 2;
 
+        // visual
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        visibility: hidden;
+
+        &--shown {
+            // visual
+            opacity: 1;
+            visibility: visible;
+        }
+
         @include atTabletsLandscape {
             // box model
             display: none;
