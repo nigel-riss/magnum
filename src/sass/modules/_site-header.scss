@@ -50,5 +50,16 @@
     &--inner {
         // box model
         max-height: 420px;
+
+        @include atTabletsPortrait {
+            // box model
+            margin-bottom: 20px;
+        }
+
+        @include atDesktop {
+            // box model
+            margin-bottom: 100px;
+            padding-top: 190px;
+        }
     }
 }

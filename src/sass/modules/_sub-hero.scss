@@ -1,3 +1,32 @@
 .sub-hero {
-    border: 1px solid red;
+    // box model
+    display: none;
+    padding-left: 40px;
+
+    @include atDesktop {
+        // box model
+        display: block;
+        margin-bottom: -120px;
+    }
+
+    &__title {
+        @include sectionTitle;
+
+    }
+
+    &__subtitle {
+        // box model
+        margin: 0;
+        margin-bottom: 15px;
+        padding-left: 20px;
+
+        // typography
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    &__button {
+        // box model
+        margin-left: 20px;
+    }
 }

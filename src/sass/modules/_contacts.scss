@@ -38,7 +38,7 @@
             margin-right: -10px;
             padding-right: 140px;
             padding-left: 40px;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
         }
 
         @include atDesktop {
@@ -55,17 +55,19 @@
 
             // visual
             background-color: $white;
-            box-shadow: 0 32px 24px -10px rgba($darkBlue, 0.4);
+            box-shadow: 0 22px 24px -10px rgba($darkBlue, 0.4);
 
             &::after {
                 content: "";
 
                 // positioning
                 position: absolute;
-                bottom: -20px;
-                left: 0;
+                // bottom: -20px;
+                left: -20px;
+                top: 0;
 
-                @include barberPole(100%, 20px, 20px);
+                // @include barberPole(100%, 20px, 20px);
+                @include barberPole(20px, 100%, 20px);
             }
         }
     }

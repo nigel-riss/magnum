@@ -34,6 +34,11 @@
         box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
     }
 
+    @include atTabletsLandscape {
+        // positioning
+        transform: translateX(-130px);
+    }
+
     @include atDesktop {
         // positioning
         transform: translateX(-200px);
@@ -50,18 +55,24 @@
 
     &--simple {
         // visual
-        background-color: transparent;
+        background-color: rgba($blue, 0.84);
         background-image: none;
         box-shadow: none;
 
         @include atTabletsPortrait {
             // box model
+            padding-left: 100px;
             padding-top: 40px;
+            height: 240px;
+
+            // visual
+            // background-color: transparent;
         }
 
         @include atDesktop {
             // box model
             padding-top: 60px;
+            height: 280px;
         }
     }
 

@@ -18,7 +18,7 @@
 
     @include atDesktop {
         // box model
-        padding-bottom: 200px;
+        padding-bottom: 120px;
         padding-left: 455px;
     }
 
@@ -56,6 +56,13 @@
         }
     }
 
+    &--last {
+        @include atDesktop {
+            // box model
+            padding-bottom: 300px;
+        }
+    }
+
     &__header {
         @include atDesktop {
             // box model
@@ -87,6 +94,9 @@
         @include atDesktop {
             // positioning
             position: relative;
+
+            // box model
+            margin-bottom: 0;
 
             // typography
             font-size: 3.25rem;

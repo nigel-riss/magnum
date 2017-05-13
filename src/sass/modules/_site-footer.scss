@@ -5,6 +5,7 @@
     // box model
     padding: 25px 15px;
     padding-right: 30px;
+    padding-top: 32px;
 
     // visual
     background-color: $darkBlue;
@@ -18,10 +19,10 @@
 
         // positioning
         position: absolute;
-        right: 0;
-        top: 0;
+        left: 0;
+        top: -15px;
 
-        @include barberPole(15px, 100%, 15px);
+        @include barberPole(100%, 15px, 15px);
     }
 
     &__logo-n-socials {
