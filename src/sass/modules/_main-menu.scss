@@ -12,8 +12,8 @@
     // visual
     background-color: rgba($menuBlue, 0.95);
 
-    // visibility: hidden;
-    // display: none;
+    visibility: hidden;
+    display: none;
 
     @include atTabletsLandscape {
         // positioning

@@ -643,7 +643,9 @@ body {
   height: 100vh;
   width: 100%;
   padding-top: 150px;
-  background-color: rgba(12, 26, 44, 0.95); }
+  background-color: rgba(12, 26, 44, 0.95);
+  visibility: hidden;
+  display: none; }
   @media (min-width: 900px) {
     .main-menu {
       position: static;
@@ -910,7 +912,7 @@ body {
   .about__subtitle {
     margin: 0;
     padding-left: 20px;
-    color: #939393;
+    color: #777777;
     font-size: 1rem;
     line-height: 1.5; }
   .about__features {
@@ -1230,12 +1232,17 @@ body {
         vertical-align: top;
         width: calc(100% - 340px);
         margin-top: -20px; } }
+    @media (min-width: 900px) {
+      .partners__content--full {
+        width: 100%; } }
 
 .partner {
   display: inline-block;
   vertical-align: top;
   margin: 20px;
   transition: all 0.3s ease-out; }
+  .partner img {
+    max-width: 100%; }
   @media (min-width: 1200px) {
     .partner {
       margin: 20px 20px; } }
@@ -1299,7 +1306,7 @@ body {
   .prices__subtitle {
     margin: 0;
     padding-left: 20px;
-    color: #939393;
+    color: #777777;
     font-size: 1rem;
     line-height: 1.5;
     padding-bottom: 20px; }
@@ -1384,6 +1391,43 @@ body {
         .prices td:nth-of-type(1) {
           letter-spacing: 2px; } }
     .prices td:nth-of-type(2) {
+      width: 45px;
+      font-weight: 700; }
+
+.price-section {
+  padding: 25px 15px; }
+  @media (min-width: 700px) {
+    .price-section {
+      padding: 25px 40px; } }
+  .price-section__title {
+    color: #323232;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase; }
+    .price-section__title::before {
+      content: "— ";
+      color: #c21f39; }
+    @media (min-width: 700px) {
+      .price-section__title {
+        font-size: 2.25rem; } }
+  .price-section__subtitle {
+    color: #777777;
+    font-size: 1rem;
+    line-height: 1.5; }
+  .price-section table {
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    border-collapse: collapse; }
+  .price-section td {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    border-bottom: 1px solid #cccccc; }
+    .price-section td:nth-of-type(1) {
+      padding-right: 20px; }
+    .price-section td:nth-of-type(2) {
       width: 45px;
       font-weight: 700; }
 

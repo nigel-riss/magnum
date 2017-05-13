@@ -44,5 +44,15 @@
             margin-top: -20px;
             // border: 1px solid red;
         }
+
+        &--full {
+            @include atTabletsPortrait {
+                // box model
+            }
+            @include atTabletsLandscape {
+                // box model
+                width: 100%;
+            }
+        }
     }
 }

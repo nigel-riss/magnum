@@ -1,0 +1,73 @@
+.price-section {
+    // box model
+    padding: 25px 15px;
+
+    @include atTabletsPortrait {
+        // box model
+        padding: 25px 40px;
+    }
+
+    &__title {
+        // typography
+        color: $titleColor;
+        font-size: 1.75rem;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        &::before {
+            content: "— ";
+
+            // typography
+            color: $red;
+            // font-size: 2.5rem;
+        }
+
+        @include atTabletsPortrait {
+            // typography
+            font-size: 2.25rem;
+        }
+    }
+
+    &__subtitle {
+        // typography
+        color: $subtitleColor;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    table {
+        // box model
+        width: 100%;
+        margin-bottom: 2px;
+
+        // typography
+        font-size: 1rem;
+        line-height: 1.4;
+        text-transform: uppercase;
+
+        // table
+        border-collapse: collapse
+    }
+
+    td {
+        // box model
+        padding-bottom: 5px;
+        padding-top: 10px;
+
+        // visual
+        border-bottom: 1px solid $grey;
+
+        &:nth-of-type(1) {
+            // box model
+            padding-right: 20px;
+        }
+
+        &:nth-of-type(2) {
+            // box model
+            width: 45px;
+            
+            // typography
+            font-weight: 700;
+        }
+    }
+}

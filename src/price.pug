@@ -34,50 +34,66 @@ body
             h1.hero__title Добро пожаловать в Magnum
             p.hero__motto Прайс-лист<br> на услуги
 
-    section.prices: .wrapper
+    //- section.prices: .wrapper
         header.prices__header
             .prices__header-wrapper
                 h2.prices__title Барбершоп<br> #[strong Magnum]
                 p.prices__subtitle По-настоящему мужские стрижки
-            .prices__button: a(href="#").button.button--blue Полный Прайс
+            .prices__button: a(href="#").button.button--blue Онлайн запись
+    
+    section.price-section
+        header.price-section__header
+            h2.price-section__title Комплекс услуг
+            p.price-section__subtitle Хотите полностью изменить образ или привести в порядок уже сформировавшийся? Тогда вам несомненно подойдут наши комплексные услуги.
+        table.price-section__table
+            tr
+                td Стрижка + Стрижка бороды
+                td 1200
+            tr
+                td Стрижка + Классическое бритье
+                td 1000
+            tr
+                td Стрижка машинкой + Стрижка бороды
+                td 1200
+            tr
+                td Стрижка бороды + Бритье головы
+                td 800
 
-    section.about: .wrapper
-        .about__hero
-            p.about__hero-title Уютный интерьер, профессиональное оборудование и инструмент, бесплатный WiFi и кофе, но главное это по-настоящему мужские стрижки.
-            p.about__hero-description Мы действительно знаем толк в мужских стрижках и «ремонте» бороды. Предлагаем вам попробовать настоящее бритье. Приходите и убедитесь сами.
-            .vert-title About Magnum Barbershop
+    section.price-section
+        header.price-section__header
+            h2.price-section__title Стрижки
+            p.price-section__subtitle Подбор стрижки по форме лица, структуре волос, образцам фото. Работа машинкой, ножницами, триммером, подбривание шеи и висков. Удаление лишних волос из ушей, носа. Мытье головы (при необходимости до и после стрижки), укладка профессиональными средствами.
+        table.price-section__table
+            tr
+                td Стрижка мужская
+                td 1200
+            tr
+                td Детская стрижка
+                td 1000
+            tr
+                td Стрижка папа + сын
+                td 1200
+            tr
+                td Стрижка под машинку
+                td 800
 
-        .about__content
-            header.about__header
-                h2.about__title Барбершоп<br> #[strong Magnum]
-                p.about__subtitle Барбершоп Magnum — лучшая в Саратове парикмахерская для мужчин. 
-                
-            .about__features
-                mixin feature(title, text)
-                    .feature
-                        h3.feature__title= title
-                        p.feature__text= text
-                +feature("Наша команда", "Команда профессиональных мастеров по руководством шеф-мастера.")
-                +feature("Угощаем", "Тебе обязательно предложат чашечку свежемолотого кофе.")
-                +feature("Развлекаем", "Время ожидания не будет скучным, WiFi и PlayStation в твоем распоряжении!")
-
-    section.services: .wrapper
-        .services__hero
-            h2.services__title Услуги<br> #[strong барбершопа]
-            .vert-title.vert-title--right Services Magnum Barbershop
-
-        .services__content
-            mixin service(title, subtitle, iconClass, imageURL)
-                a(href="#").service
-                    .service__image: img(src=imageURL)
-                    .service__content
-                        .service__icon: div.icon(class=iconClass)
-                        h3.service__title= title
-                        p.service__subtitle= subtitle
-            +service("Стрижки", "Мужские и детские", "icon-scissors", "./img/haircut-srv.jpg")
-            +service("Бритьё", "Классическое и Королевское", "icon-blade", "./img/shaving-srv.jpg")
-            +service("Борода", "Стрижка и окрашивание", "icon-razor", "./img/beard-srv.jpg")
-            +service("Татуировки", "Любой сложности", "icon-tatoo-machine", "./img/tatoo-srv.jpg")
+    section.price-section
+        header.price-section__header
+            h2.price-section__title Борода и бритье
+            p.price-section__subtitle Статусная услуга для настоящих мужчин и целый ритуал.
+        table.price-section__table
+            tr
+                td Стрижка + Стрижка бороды
+                td 1200
+            tr
+                td Стрижка + Классическое бритье
+                td 1000
+            tr
+                td Стрижка машинкой + Стрижка бороды
+                td 1200
+            tr
+                td Стрижка бороды + Бритье головы
+                td 800
 
     section.check-in: .wrapper
         a(href="#").button Онлайн запись
@@ -86,81 +102,13 @@ body
             .check-in__subtitle Ждем тебя в Magnum
         
     section.partners: .wrapper
-        header.partners__header
-            h2.partners__title Наши<br> #[strong партнеры]
-        
-        .partners__content
+        .partners__content.partners__content--full
             mixin partner(imageURL)
                 a(href="#").partner: img(src=imageURL)
             +partner("./img/partners/plogo-1.png")
             +partner("./img/partners/plogo-2.png")
             +partner("./img/partners/plogo-3.png")
             +partner("./img/partners/plogo-4.png")
-
-    section.prices: .wrapper
-        header.prices__header
-            .prices__header-wrapper
-                h2.prices__title: strong Прайс
-                p.prices__subtitle Список наиболее популярных услуг нашего барбершопа
-            .prices__button: a(href="#").button.button--blue Полный Прайс
-
-        .prices__content
-            .vert-title.vert-title--right Prices Magnum Barbershop
-            table
-                caption Голова
-                tr
-                    td Стрижка мужская
-                    td 1200
-                tr
-                    td Детская стрижка
-                    td 1000
-                tr
-                    td Стрижка папа + сын
-                    td 1200
-                tr
-                    td Стрижка под машинку
-                    td 800
-
-            table
-                caption Борода
-                tr
-                    td Стрижка бороды
-                    td 500
-                tr
-                    td Окрашивание
-                    td 600
-
-            table
-                caption Бритьё
-                tr
-                    td Классическое бритьё
-                    td 900
-                tr
-                    td Бритьё головы
-                    td 700
-
-    section.contacts: .wrapper
-        header.contacts__header
-            h2.contacts__title Наши<br> #[strong контакты]
-
-        .contacts__content
-            .vert-title.vert-title--right.vert-title--blue Contacts Magnum Barbershop
-            .contacts__text По всем интересующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес.<br> #[strong  До встречи в MAGNUM]
-
-            .contact
-                h3.contact__title Телефоны
-                .contact__text
-                    a(href="tel:+78452577737") +7 (8452) 57-77-37 <br>
-                    a(href="tel:+79878221223") +7 (987) 822-12-23
-
-            .contact
-                h3.contact__title Электропочта
-                .contact__text: a(href="mailto:info@magnum.ru") info@magnum.ru
-            .contact
-                h3.contact__title Адрес
-                .contact__text г. Саратов, ул. Яблочкова, 8/10
-
-        .contacts__map#map
 
     footer.site-footer: .wrapper
         .site-footer__logo-n-socials
