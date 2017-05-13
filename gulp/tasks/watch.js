@@ -25,6 +25,9 @@ gulp.task('watch', function() {
     })
 
     // scripts
+    watch('./src/js/**/*.js', function() {
+        gulp.start('scriptsRefresh');
+    });
 
     // wordpress
 });
@@ -32,4 +35,8 @@ gulp.task('watch', function() {
 gulp.task('cssInject', ['styles'], function() {
     gulp.src('./dist/styles.css')
         .pipe(browserSync.stream());
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function() {
+    browserSync.reload();
 });

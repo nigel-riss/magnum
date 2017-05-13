@@ -794,6 +794,9 @@ body {
         width: auto;
         padding-left: 20px; } }
 
+.sub-hero {
+  border: 1px solid red; }
+
 .about {
   font-size: 0; }
   @media (min-width: 1200px) {
