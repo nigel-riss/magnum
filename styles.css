@@ -1257,12 +1257,12 @@ body {
   @media (min-width: 1200px) {
     .promo-item {
       height: 14.5vw;
-      padding-left: 50px; } }
+      padding-left: 50px; }
+      .promo-item:hover .promo-item__image {
+        opacity: 0; } }
   @media (min-width: 1500px) {
     .promo-item {
       height: 250px; } }
-  .promo-item:hover .promo-item__image {
-    opacity: 0; }
   .promo-item__title {
     position: relative;
     z-index: 3;
