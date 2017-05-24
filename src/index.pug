@@ -22,9 +22,11 @@ body
             .main-menu
                 //- .vert-title.vert-title--menu Menu Magnum Barbershop 
                 ul.main-menu__list
-                    - var menuItems = ["О нас", "Услуги", "Прайс", "Команда", "Контакты"];
+                    - var menuItems = ["О нас", "Услуги", "Акции", "Прайс", "Контакты"];
+                    - var menuLinks = ["about", "services", "promos", "prices", "contacts"];
                     - for (var i = 0; i < 5; i++)
-                        li: a(href="#")= menuItems[i]
+                        - let link = "#" + menuLinks[i];
+                        li: a(href= link)= menuItems[i]
 
             .main-nav__button
                 a(href="#").button.button--blue Онлайн запись
@@ -37,10 +39,10 @@ body
                 a(href="#").button.button--blue О нас
             .vert-title Magnum Barbershop
 
-    section.about: .wrapper
+    section#about.about: .wrapper
         .about__hero
             p.about__hero-title Уютный интерьер, профессиональное оборудование и инструмент, бесплатный WiFi и кофе, но главное это по-настоящему мужские стрижки.
-            p.about__hero-description Мы действительно знаем толк в мужских стрижках и «ремонте» бороды. Предлагаем тебе попробовать настоящее бритье. Приходи и убедитесь сам.
+            p.about__hero-description Мы действительно знаем толк в мужских стрижках и «ремонте» бороды. Предлагаем тебе попробовать настоящее бритье. Приходи и убедись сам.
             p.about__hero-description Стрижка - это в какой-то степени отражение твоей индивидуальности. Она может рассказать несколько занятных фактов о стиле, характере, образе жизни. Мы поможем подобрать идеальную стрижку, которая подойдет именно тебе.
             .vert-title About Magnum Barbershop
 
@@ -58,7 +60,7 @@ body
                 +feature("Угощаем", "Тебе обязательно предложат чашечку свежемолотого кофе или бокал виски.")
                 +feature("Развлекаем", "Время ожидания не будет скучным, WiFi и PlayStation в твоем распоряжении!")
 
-    section.services: .wrapper
+    section#services.services: .wrapper
         .services__hero
             h2.services__title Услуги<br> #[strong барбершопа]
             .vert-title.vert-title--right Services Magnum Barbershop
@@ -77,7 +79,7 @@ body
             +service("Борода", "Стрижка и окрашивание", "icon-razor", "./img/beard-srv.jpg")
             +service("Татуировки", "Любой сложности", "icon-tatoo-machine", "./img/tatoo-srv.jpg")
 
-    section.promos: .wrapper
+    section#promos.promos: .wrapper
         header.promos__header
             h2.promos__title Наши<br> #[strong акции]
 
@@ -112,7 +114,7 @@ body
             +partner("./img/partners/plogo-3.png")
             +partner("./img/partners/plogo-4.png")
 
-    section.prices: .wrapper
+    section#prices.prices: .wrapper
         header.prices__header
             .prices__header-wrapper
                 h2.prices__title: strong Прайс
@@ -180,13 +182,13 @@ body
             +member("Дмитрий", "Барбер", "#")
             +member("Юрий", "Барбер", "#")
 
-    section.contacts: .wrapper
+    section#contacts.contacts: .wrapper
         header.contacts__header
             h2.contacts__title Наши<br> #[strong контакты]
 
         .contacts__content
             .vert-title.vert-title--right.vert-title--blue Contacts Magnum Barbershop
-            .contacts__text По всем интересующим вас вопросам можете обратиться к меденежеру по телефону или оправить письмо на электронный адрес.<br> #[strong  До встречи в MAGNUM]
+            .contacts__text По всем интересующим вопросам можно обратиться к меденежеру по телефону или оправить письмо на электронный адрес.<br> #[strong  До встречи в MAGNUM]
 
             .contact
                 h3.contact__title Телефоны

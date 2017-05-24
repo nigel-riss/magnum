@@ -37,18 +37,18 @@
         // box model
         height: 14.5vw;
         padding-left: 50px;
+
+        &:hover {
+            .promo-item__image {
+                // visual
+                opacity: 0;
+            }
+        }
     }
 
     @include atDesktopLarge {
         // box model
         height: 250px;
-    }
-
-    &:hover {
-        .promo-item__image {
-            // visual
-            opacity: 0;
-        }
     }
 
     &__title {
