@@ -895,6 +895,9 @@ body {
         width: 820px;
         height: 640px;
         box-shadow: 0 12px 14px -10px rgba(20, 41, 69, 0.6); } }
+    @media (min-width: 1500px) {
+      .about__hero {
+        width: 920px; } }
   .about__hero-title {
     position: relative;
     margin: 0;
@@ -920,6 +923,7 @@ body {
           bottom: 25px; } }
   .about__hero-description {
     margin: 0;
+    margin-bottom: 20px;
     color: #ffffff;
     font-size: 1.25rem;
     line-height: 1.5; }
@@ -941,6 +945,10 @@ body {
         margin-top: -30px;
         padding-left: 40px;
         padding-right: 80px; } }
+    @media (min-width: 1500px) {
+      .about__content {
+        width: calc(100% - 940px);
+        padding-right: 120px; } }
   .about__header {
     padding-bottom: 40px; }
     @media (min-width: 700px) {
@@ -1176,6 +1184,146 @@ body {
       .service__subtitle {
         color: #6d6e71;
         transition: all 0.3s ease-out; } }
+
+.promos {
+  padding: 25px 15px;
+  font-size: 0; }
+  @media (min-width: 700px) {
+    .promos {
+      padding-left: 40px; } }
+  @media (min-width: 1200px) {
+    .promos {
+      margin-bottom: 80px; } }
+  @media (min-width: 1200px) {
+    .promos__header {
+      display: inline-block;
+      vertical-align: top;
+      width: 300px;
+      margin-right: 40px; } }
+  .promos__title {
+    position: relative;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: #323232;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase; }
+    .promos__title::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 0;
+      height: 12px;
+      width: 12px;
+      background-color: #c21f39;
+      border-radius: 50%; }
+    @media (min-width: 700px) {
+      .promos__title {
+        font-size: 2.25rem;
+        line-height: 1.1; } }
+  .promos__content {
+    text-align: center; }
+    @media (min-width: 900px) {
+      .promos__content {
+        margin: 0 -10px; } }
+    @media (min-width: 1200px) {
+      .promos__content {
+        display: inline-block;
+        width: calc(100% - 340px); } }
+
+.promo-item {
+  position: relative;
+  display: block;
+  height: 41.6vw;
+  margin-bottom: 15px;
+  padding: 30px;
+  text-align: left;
+  text-decoration: none; }
+  @media (min-width: 700px) {
+    .promo-item {
+      display: inline-block;
+      vertical-align: top;
+      width: 46%;
+      height: 19.1vw;
+      margin: 0 10px;
+      margin-bottom: 20px;
+      padding: 20px 30px; } }
+  @media (min-width: 900px) {
+    .promo-item {
+      margin-bottom: 30px;
+      padding: 30px; } }
+  @media (min-width: 1200px) {
+    .promo-item {
+      height: 14.5vw;
+      padding-left: 50px; } }
+  @media (min-width: 1500px) {
+    .promo-item {
+      height: 250px; } }
+  .promo-item:hover .promo-item__image {
+    opacity: 0; }
+  .promo-item__title {
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    text-transform: uppercase; }
+    @media (min-width: 1200px) {
+      .promo-item__title {
+        font-size: 1.5rem; } }
+    .promo-item__title::before {
+      content: "";
+      position: absolute;
+      left: -50px;
+      top: 11px;
+      height: 4px;
+      width: 40px;
+      background-color: #c21f39; }
+      @media (min-width: 900px) {
+        .promo-item__title::before {
+          left: -70px;
+          height: 6px;
+          width: 60px; } }
+      @media (min-width: 1200px) {
+        .promo-item__title::before {
+          left: -90px;
+          top: 13px;
+          height: 8px;
+          width: 80px; } }
+  .promo-item__subtitle {
+    position: relative;
+    z-index: 3;
+    width: 180px;
+    margin: 0;
+    padding-top: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.4; }
+  .promo-item__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    transition: all 0.3s ease-out; }
+    .promo-item__image img {
+      width: 100%; }
+  .promo-item__hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+    width: 100%; }
+    .promo-item__hover img {
+      width: 100%; }
+    @media (min-width: 1200px) {
+      .promo-item__hover {
+        display: block; } }
 
 .check-in {
   position: relative;

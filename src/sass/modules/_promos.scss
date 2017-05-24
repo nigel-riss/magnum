@@ -1,0 +1,48 @@
+.promos {
+    // box model
+    padding: 25px 15px;
+
+    // typography
+    font-size: 0;
+
+    @include atTabletsPortrait {
+        // box model
+        padding-left: 40px;
+    }
+
+    @include atDesktop {
+        // box model
+        margin-bottom: 80px;
+    }
+
+    &__header {
+        @include atDesktop {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+
+            width: 300px;
+            margin-right: 40px;
+        }
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__content {
+        // typography
+        text-align: center;
+
+        @include atTabletsLandscape {
+            // box model
+            margin: 0 -10px;
+        }
+
+        @include atDesktop {
+            // box model
+            display: inline-block;
+            width: calc(100% - 340px);
+        }
+    }
+}

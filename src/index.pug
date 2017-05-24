@@ -40,7 +40,8 @@ body
     section.about: .wrapper
         .about__hero
             p.about__hero-title Уютный интерьер, профессиональное оборудование и инструмент, бесплатный WiFi и кофе, но главное это по-настоящему мужские стрижки.
-            p.about__hero-description Мы действительно знаем толк в мужских стрижках и «ремонте» бороды. Предлагаем вам попробовать настоящее бритье. Приходите и убедитесь сами.
+            p.about__hero-description Мы действительно знаем толк в мужских стрижках и «ремонте» бороды. Предлагаем тебе попробовать настоящее бритье. Приходи и убедитесь сам.
+            p.about__hero-description Стрижка - это в какой-то степени отражение твоей индивидуальности. Она может рассказать несколько занятных фактов о стиле, характере, образе жизни. Мы поможем подобрать идеальную стрижку, которая подойдет именно тебе.
             .vert-title About Magnum Barbershop
 
         .about__content
@@ -53,8 +54,8 @@ body
                     .feature
                         h3.feature__title= title
                         p.feature__text= text
-                +feature("Отличная команда", "Команда профессиональных мастеров по руководством шеф-мастера.")
-                +feature("Угощаем", "Тебе обязательно предложат чашечку свежемолотого кофе.")
+                +feature("Отличная команда", "Команда профессиональных мастеров под руководством шеф-мастера.")
+                +feature("Угощаем", "Тебе обязательно предложат чашечку свежемолотого кофе или бокал виски.")
                 +feature("Развлекаем", "Время ожидания не будет скучным, WiFi и PlayStation в твоем распоряжении!")
 
     section.services: .wrapper
@@ -72,8 +73,26 @@ body
                         p.service__subtitle= subtitle
             +service("Стрижки", "Мужские и детские", "icon-scissors", "./img/haircut-srv.jpg")
             +service("Бритьё", "Классическое и Королевское", "icon-blade", "./img/shaving-srv.jpg")
+            br
             +service("Борода", "Стрижка и окрашивание", "icon-razor", "./img/beard-srv.jpg")
             +service("Татуировки", "Любой сложности", "icon-tatoo-machine", "./img/tatoo-srv.jpg")
+
+    section.promos: .wrapper
+        header.promos__header
+            h2.promos__title Наши<br> #[strong акции]
+
+        .promos__content 
+            mixin promo-item(title, subtitle, imageURL, hoverURL)
+                a(href="#").promo-item
+                    h3.promo-item__title!= title
+                    p.promo-item__subtitle!= subtitle
+                    .promo-item__image: img(src=imageURL)
+                    .promo-item__hover: img(src=hoverURL)
+
+            +promo-item("Первым 100 <br> клиентам", "карта постоянного клиента с 10% скидкой", "./img/promos/promo-1.jpg", "./img/promos/promo-1-h.jpg")
+            +promo-item("Каждая 5 мужская стрижка <br> в подарок", "", "./img/promos/promo-2.jpg", "./img/promos/promo-2-h.jpg")
+            +promo-item("10 посещений <br> (любые услуги)", "карта постоянного клиента с 10% скидкой", "./img/promos/promo-3.jpg", "./img/promos/promo-3-h.jpg")
+            +promo-item("Скидка 20% <br> выпускникам", "на любые услуги <br> (1 посещение)", "./img/promos/promo-4.jpg", "./img/promos/promo-4-h.jpg")
 
     section.check-in: .wrapper
         a(href="#").button Онлайн запись
@@ -103,6 +122,15 @@ body
         .prices__content
             .vert-title.vert-title--right Prices Magnum Barbershop
             table
+                caption Комплексы
+                tr
+                    td Стрижка + Стрижка бороды
+                    td 1200
+                tr
+                    td Стрижка + Классическое бритьё
+                    td 1000
+
+            table
                 caption Голова
                 tr
                     td Стрижка мужская
@@ -123,7 +151,7 @@ body
                     td Стрижка бороды
                     td 500
                 tr
-                    td Окрашивание
+                    td Окрашивание бороды
                     td 600
 
             table
@@ -163,8 +191,8 @@ body
             .contact
                 h3.contact__title Телефоны
                 .contact__text
-                    a(href="tel:+78452577737") +7 (8452) 57-77-37 <br>
-                    a(href="tel:+79878221223") +7 (987) 822-12-23
+                    a(href="tel:+78452577737") +7 8452 57-77-37 <br>
+                    a(href="tel:+79878221223") +7 987 822-12-23
 
             .contact
                 h3.contact__title Электропочта

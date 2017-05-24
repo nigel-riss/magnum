@@ -59,6 +59,10 @@
             // visual
             box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
         }
+
+        @include atDesktopLarge {
+            width: 920px;
+        }
     }
 
     &__hero-title {
@@ -108,6 +112,7 @@
     &__hero-description {
         // box model
         margin: 0;
+        margin-bottom: 20px;
 
         // typography
         color: $white;
@@ -143,6 +148,12 @@
             margin-top: -30px;
             padding-left: 40px;
             padding-right: 80px;
+        }
+
+        @include atDesktopLarge {
+            // box model
+            width: calc(100% - 940px);
+            padding-right: 120px;
         }
     }
 
