@@ -17,6 +17,10 @@ class MobileMenu {
         this.menuLinks.click(
             this.toggleTheMenu.bind(this)
         );
+
+        this.menuLinks.on('tap', 
+            this.toggleTheMenu.bind(this)
+        );
     }
 
     toggleTheMenu() {

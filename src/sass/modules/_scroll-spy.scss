@@ -1,0 +1,149 @@
+.scroll-spy {
+    // positioning
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+
+    // box model
+    display: none;
+    
+    @include atDesktopLarge {
+        // box model
+        display: block;
+    }
+
+    ul {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // list
+        list-style: none;
+    }
+
+    li {
+        // box model
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+
+    &__link {
+        // positioning
+        position: relative;
+
+        // box model
+        display: block;
+        height: 9px;
+        width: 9px;
+
+        // typography
+        font-size: 0;
+
+        // visual
+        border: 2px solid rgba($blue, 0.5);
+        border-radius: 50%;
+
+        &::before {
+            content: attr(data-label);
+
+            // positioning
+            position: absolute;
+            right: 25px;
+            top: -12px;
+            // transform: scale(0);
+            transform-origin: 100% 50%;
+
+            // box model
+            display: block;
+            height: 30px;
+            width: 100px;
+            padding: 7px 15px;
+
+            // typography
+            color: $white;
+            font-family: $mainFont;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            // visual
+            background-color: $blue;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            right: 15px;
+            top: -12px;
+            // transform: scale(0);
+
+            // box model
+            height: 30px;
+            width: 10px;
+
+            // visual
+            // background-color: $red;
+            border-left: 10px solid $blue;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+            // visual
+            background-color: $red;
+            border: 2px solid transparent;
+
+            &::before {
+                // positioning
+                right: 25px;
+                transform: scale(1);
+
+                // visual
+                opacity: 1;
+            }
+
+            &::after {
+                // positioning
+                right: 15px;
+                transform: scale(1);
+
+                // visual
+                opacity: 1;
+            }
+        }
+
+        &--current {
+            // visual
+            background-color: $red;
+            border: 2px solid transparent;
+
+
+             &::before {
+                // positioning
+                right: 25px;
+                transform: scale(1);
+
+                // visual
+                opacity: 1;
+            }
+
+            &::after {
+                // positioning
+                right: 15px;
+                transform: scale(1);
+
+                // visual
+                opacity: 1;
+            }
+        }
+    }
+}
