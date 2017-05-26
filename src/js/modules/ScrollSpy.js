@@ -3,7 +3,7 @@ import waypoints from '../../../node_modules/waypoints/lib/noframework.waypoints
 
 class ScrollSpy {
     constructor() {
-        this.navSections = $('.nav-section');
+        this.navSections = $('.nav-link');
         this.scrollSpyLinks = $('.scroll-spy__link');
         this.createWaypoints();
     }

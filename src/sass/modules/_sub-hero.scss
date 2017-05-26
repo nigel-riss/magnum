@@ -26,6 +26,10 @@
     }
 
     &__button {
+        // positioning
+        position: relative;
+        z-index: 1;
+        
         // box model
         margin-left: 20px;
     }

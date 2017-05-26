@@ -13,6 +13,7 @@
     // typography
     text-align: left;
     text-decoration: none;
+    user-select: none;
 
     @include atTabletsPortrait {
         // box model

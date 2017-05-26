@@ -10820,7 +10820,7 @@
 	    function ScrollSpy() {
 	        _classCallCheck(this, ScrollSpy);
 
-	        this.navSections = (0, _jquery2.default)('.nav-section');
+	        this.navSections = (0, _jquery2.default)('.nav-link');
 	        this.scrollSpyLinks = (0, _jquery2.default)('.scroll-spy__link');
 	        this.createWaypoints();
 	    }

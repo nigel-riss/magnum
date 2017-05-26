@@ -14,7 +14,7 @@ body
     header.site-header.site-header--inner
         .vert-title Price Magnum Barbershop
         nav.main-nav: .wrapper
-            .logo 
+            a(href="index.html").logo 
                 img(src="./img/logo-h.svg").logo__color
                 img(src="./img/logo-h-white.svg").logo__white
 
@@ -23,12 +23,15 @@ body
             .main-menu
                 //- .vert-title.vert-title--menu Menu Magnum Barbershop 
                 ul.main-menu__list
-                    - var menuItems = ["О нас", "Услуги", "Прайс", "Команда", "Контакты"];
+                    - var menuItems = ["О нас", "Услуги", "Акции", "Прайс", "Контакты"];
+                    - var menuLinks = ["about", "services", "promos", "prices", "contacts"];
                     - for (var i = 0; i < 5; i++)
-                        li: a(href="#")= menuItems[i]
+                        - let link = "index.html#" + menuLinks[i];
+                        li: a(href= link)= menuItems[i]
 
             .main-nav__button
-                a(href="#").button.button--blue Онлайн запись
+                //- a(href="#").button.button--blue Онлайн запись
+                a(href="tel:+79878221223").button.button--blue +7 987 822-12-23
 
         .hero.hero--simple
             h1.hero__title Добро пожаловать в Magnum
@@ -38,7 +41,8 @@ body
             h2.sub-hero__title Барбершоп<br> #[strong Magnum]
             p.sub-hero__subtitle По-настоящему<br> мужские стрижки
             .sub-hero__button
-                a(href="#").button.button--blue Онлайн запись
+                //- a(href="#").button.button--blue Онлайн запись
+                a(href="tel:+79878221223").button.button--blue +7 987 822-12-23
     
     .wrapper
         section.price-section.price-section--right
@@ -49,37 +53,43 @@ body
             table.price-section__table
                 tr
                     td Стрижка + Стрижка бороды
-                    td 1200
+                    td 1400
                 tr
-                    td Стрижка + Классическое бритьё
-                    td 1000
+                    td Стрижка + Опасное бритьё
+                    td 2000
                 tr
                     td Стрижка машинкой + Стрижка бороды
-                    td 1200
+                    td 2000
+                tr
+                    td Стрижка c другом
+                    td 2000
                 tr
                     td Стрижка бороды + Бритье головы
-                    td 800
+                    td 1400
 
         section.price-section
             header.price-section__header
+                a#haircut
                 h2.price-section__title Стрижки
                 p.price-section__subtitle Подбор стрижки по форме лица, структуре волос, образцам фото. Работа машинкой, ножницами, триммером, подбривание шеи и висков. Удаление лишних волос из ушей, носа. Мытье головы (при необходимости до и после стрижки), укладка профессиональными средствами.
             .price-section__image: img(src="./img/price/price-deco-2.jpg")
             table.price-section__table
                 tr
                     td Стрижка мужская
-                    td 1200
+                    td 1100
                 tr
-                    td Детская стрижка
-                    td 1000
+                    td Детская стрижка (до 12 лет)
+                    td 800
                 tr
                     td Стрижка папа + сын
-                    td 1200
+                    td 1600
                 tr
                     td Стрижка под машинку
                     td 800
 
         section.price-section.price-section--right.price-section--last
+            a#beard
+            a#shave
             header.price-section__header
                 h2.price-section__title Борода и&nbsp;бритье
                 p.price-section__subtitle Статусная услуга для настоящих мужчин и целый ритуал.
@@ -87,31 +97,32 @@ body
             table.price-section__table
                 tr
                     td Стрижка бороды
-                    td 1200
+                    td 500
                 tr
-                    td Окрашивание бороды
-                    td 1000
+                    td Камуфляж бороды
+                    td 600
                 tr
-                    td Классическое бритье
-                    td 1200
+                    td Опасное бритье
+                    td 1100
                 tr
                     td Бритье головы
-                    td 800
+                    td 1100
 
     section.check-in: .wrapper
-        a(href="#").button Онлайн запись
+        //- a(href="#").button Онлайн запись
+        a(href="tel:+79878221223").button +7 987 822-12-23
         header.check-in__header
             .check-in__title мужская территория 
             .check-in__subtitle Ждем тебя в Magnum
         
     section.partners: .wrapper
         .partners__content.partners__content--full
-            mixin partner(imageURL)
-                a(href="#").partner: img(src=imageURL)
-            +partner("./img/partners/plogo-1.png")
-            +partner("./img/partners/plogo-2.png")
-            +partner("./img/partners/plogo-3.png")
-            +partner("./img/partners/plogo-4.png")
+            mixin partner(imageURL, url)
+                a(href= url).partner: img(src=imageURL)
+            +partner("./img/partners/plogo-4.png", "http://barberwild.com/")
+            +partner("./img/partners/plogo-1.png", "#")
+            +partner("./img/partners/plogo-2.png", "#")
+            +partner("./img/partners/plogo-3.png", "#")
 
     footer.site-footer: .wrapper
         .site-footer__logo-n-socials
@@ -120,9 +131,10 @@ body
                 .socials
                     h3.socials__title Мы в социальных сетях
                     .socials__content
-                        a(href="#").social-icon.ico-vkontakte VKontakte
-                        a(href="#").social-icon.ico-instagram Instagram
+                        a(href="https://vk.com/magnum_barbershop").social-icon.ico-vkontakte VKontakte
+                        a(href="https://www.instagram.com/magnum_barbershop/").social-icon.ico-instagram Instagram
 
-        .site-footer__copyrights © Все права сохранены <br> Разработано в студии: #[a(href="#") АГОНЬ!]
+        .site-footer__copyrights © Все права сохранены 
+        //- <br> Разработано в студии: #[a(href="#") АГОНЬ!]
     script(src="./scripts/map.js")
     script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClofSbCu6EYSgaWdfCK5G1i_eUXgL4RCk&callback=initMap")

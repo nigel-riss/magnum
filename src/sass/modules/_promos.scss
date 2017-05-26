@@ -40,9 +40,28 @@
         }
 
         @include atDesktop {
+            // positioning
+            position: relative;
+
             // box model
             display: inline-block;
             width: calc(100% - 340px);
+
+            &::before {
+                content: "";
+                left: -670px;
+                top: 100px;
+                
+                // positioning
+                position: absolute;
+
+                // box model
+                height: 374px;
+                width: 647px;
+
+                // visual
+                background-image: url('./img/m.png');
+            }
         }
     }
 }

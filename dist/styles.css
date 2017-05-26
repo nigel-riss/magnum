@@ -970,6 +970,8 @@ body {
     line-height: 1.5;
     text-transform: uppercase; }
   .sub-hero__button {
+    position: relative;
+    z-index: 1;
     margin-left: 20px; }
 
 .about {
@@ -1344,8 +1346,17 @@ body {
         margin: 0 -10px; } }
     @media (min-width: 1200px) {
       .promos__content {
+        position: relative;
         display: inline-block;
-        width: calc(100% - 340px); } }
+        width: calc(100% - 340px); }
+        .promos__content::before {
+          content: "";
+          left: -670px;
+          top: 100px;
+          position: absolute;
+          height: 374px;
+          width: 647px;
+          background-image: url("./img/m.png"); } }
 
 .promo-item {
   position: relative;
@@ -1354,7 +1365,8 @@ body {
   margin-bottom: 15px;
   padding: 25px 30px;
   text-align: left;
-  text-decoration: none; }
+  text-decoration: none;
+  user-select: none; }
   @media (min-width: 700px) {
     .promo-item {
       display: inline-block;

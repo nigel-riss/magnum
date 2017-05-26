@@ -3,7 +3,7 @@ doctype html
 html(lang="en")
 head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(href="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
 
     link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext", rel="stylesheet")
@@ -29,14 +29,16 @@ body
                         li: a(href= link)= menuItems[i]
 
             .main-nav__button
-                a(href="#").button.button--blue Онлайн запись
+                //- a(href="#").button.button--blue Онлайн запись
+                a(href="tel:+79878221223").button.button--blue +7 987 822-12-23
 
         .hero
             h1.hero__title Добро пожаловать в Magnum
             p.hero__motto По-настоящему<br> мужские Стрижки
             .hero__buttons
-                a(href="#").button.button--mr-20 Онлайн запись
-                a(href="#").button.button--blue О нас
+                a(href="tel:+79878221223").button.button--mr-20 +7 987 822-12-23
+                //- a(href="#").button.button--mr-20 Онлайн запись
+                //- a(href="#").button.button--blue О нас
             .vert-title Magnum Barbershop
 
         nav.scroll-spy
@@ -47,7 +49,8 @@ body
                         - let link = "#" + menuLinks[i];
                         li: a(id= (menuLinks[i] + "-link") data-label!= menuItems[i], href= link).scroll-spy__link= menuItems[i]
 
-    section#about.about.nav-section: .wrapper
+    section.about: .wrapper
+        a#about.nav-link
         .about__hero
             p.about__hero-title Уютный интерьер, профессиональное оборудование и инструмент, бесплатный WiFi и кофе, но главное это по-настоящему мужские стрижки.
             p.about__hero-description Мы действительно знаем толк в мужских стрижках и «ремонте» бороды. Предлагаем тебе попробовать настоящее бритье. Приходи и убедись сам.
@@ -68,32 +71,35 @@ body
                 +feature("Угощаем", "Тебе обязательно предложат чашечку свежемолотого кофе или бокал виски.")
                 +feature("Развлекаем", "Время ожидания не будет скучным, WiFi и PlayStation в твоем распоряжении!")
 
-    section#services.services.nav-section: .wrapper
+    section.services: .wrapper
+        a#services.nav-link
         .services__hero
             h2.services__title Услуги<br> #[strong барбершопа]
             .vert-title.vert-title--right Services Magnum Barbershop
 
         .services__content
-            mixin service(title, subtitle, iconClass, imageURL)
-                a(href="#").service
+            mixin service(title, subtitle, iconClass, imageURL, url)
+                a(href= url).service
                     .service__image: img(src=imageURL)
                     .service__content
                         .service__icon: div.icon(class=iconClass)
                         h3.service__title= title
                         p.service__subtitle= subtitle
-            +service("Стрижки", "Мужские и детские", "icon-scissors", "./img/haircut-srv.jpg")
-            +service("Бритьё", "Классическое и Королевское", "icon-blade", "./img/shaving-srv.jpg")
+            +service("Стрижки", "Мужские и детские", "icon-scissors", "./img/haircut-srv.jpg", "price.html#haircut")
+            +service("Бритьё", "Классическое и Королевское", "icon-blade", "./img/shaving-srv.jpg", "price.html#shave")
             br
-            +service("Борода", "Стрижка и окрашивание", "icon-razor", "./img/beard-srv.jpg")
-            +service("Татуировки", "Любой сложности", "icon-tatoo-machine", "./img/tatoo-srv.jpg")
+            +service("Борода", "Стрижка и окрашивание", "icon-razor", "./img/beard-srv.jpg", "price.html#beard")
+            +service("Татуировки", "Любой сложности", "icon-tatoo-machine", "./img/tatoo-srv.jpg", "price.html#tatoo")
 
-    section#promos.promos.nav-section: .wrapper
+    section.promos: .wrapper
+        a#promos.nav-link
         header.promos__header
             h2.promos__title Наши<br> #[strong акции]
 
         .promos__content 
             mixin promo-item(title, subtitle, imageURL, hoverURL)
-                a(href="#").promo-item
+                //- a(href="#").promo-item
+                .promo-item
                     h3.promo-item__title!= title
                     p.promo-item__subtitle!= subtitle
                     .promo-item__image: img(src=imageURL)
@@ -105,7 +111,8 @@ body
             +promo-item("Скидка 20% <br> выпускникам", "на любые услуги <br> (1 посещение)", "./img/promos/promo-4.jpg", "./img/promos/promo-4-h.jpg")
 
     section.check-in: .wrapper
-        a(href="#").button Онлайн запись
+        //- a(href="#").button Онлайн запись
+        a(href="tel:+79878221223").button +7 987 822-12-23
         header.check-in__header
             .check-in__title мужская территория 
             .check-in__subtitle Ждем тебя в Magnum
@@ -115,14 +122,15 @@ body
             h2.partners__title Наши<br> #[strong партнеры]
         
         .partners__content
-            mixin partner(imageURL)
-                a(href="#").partner: img(src=imageURL)
-            +partner("./img/partners/plogo-1.png")
-            +partner("./img/partners/plogo-2.png")
-            +partner("./img/partners/plogo-3.png")
-            +partner("./img/partners/plogo-4.png")
+            mixin partner(imageURL, url)
+                a(href= url).partner: img(src=imageURL)
+            +partner("./img/partners/plogo-4.png", "http://barberwild.com/")
+            +partner("./img/partners/plogo-1.png", "#")
+            +partner("./img/partners/plogo-2.png", "#")
+            +partner("./img/partners/plogo-3.png", "#")
 
-    section#prices.prices.nav-section: .wrapper
+    section.prices: .wrapper
+        a#prices.nav-link
         header.prices__header
             .prices__header-wrapper
                 h2.prices__title: strong Прайс
@@ -135,22 +143,22 @@ body
                 caption Комплексы
                 tr
                     td Стрижка + Стрижка бороды
-                    td 1200
+                    td 1400
                 tr
-                    td Стрижка + Классическое бритьё
-                    td 1000
+                    td Стрижка + Опасное бритьё
+                    td 2000
 
             table
                 caption Голова
                 tr
                     td Стрижка мужская
-                    td 1200
+                    td 1100
                 tr
-                    td Детская стрижка
-                    td 1000
+                    td Детская стрижка (до 12 лет)
+                    td 800
                 tr
                     td Стрижка папа + сын
-                    td 1200
+                    td 1600
                 tr
                     td Стрижка под машинку
                     td 800
@@ -161,17 +169,17 @@ body
                     td Стрижка бороды
                     td 500
                 tr
-                    td Окрашивание бороды
+                    td Камуфляж бороды
                     td 600
 
             table
                 caption Бритьё
                 tr
-                    td Классическое бритьё
-                    td 900
+                    td Опасное бритьё
+                    td 1100
                 tr
                     td Бритьё головы
-                    td 700
+                    td 1100
 
     //- section.team
         header.team__header
@@ -190,7 +198,8 @@ body
             +member("Дмитрий", "Барбер", "#")
             +member("Юрий", "Барбер", "#")
 
-    section#contacts.contacts.nav-section: .wrapper
+    section.contacts: .wrapper
+        a#contacts.nav-link
         header.contacts__header
             h2.contacts__title Наши<br> #[strong контакты]
 
@@ -206,7 +215,7 @@ body
 
             .contact
                 h3.contact__title Электропочта
-                .contact__text: a(href="mailto:info@magnum.ru") info@magnum.ru
+                .contact__text: a(href="mailto:info@barbershopmagnum.ru") info@barbershopmagnum.ru
             .contact
                 h3.contact__title Адрес
                 .contact__text г. Саратов, ул. Яблочкова, 8/10
@@ -221,10 +230,11 @@ body
                 .socials
                     h3.socials__title Мы в социальных сетях
                     .socials__content
-                        a(href="#").social-icon.ico-vkontakte VKontakte
-                        a(href="#").social-icon.ico-instagram Instagram
+                        a(href="https://vk.com/magnum_barbershop").social-icon.ico-vkontakte VKontakte
+                        a(href="https://www.instagram.com/magnum_barbershop/").social-icon.ico-instagram Instagram
 
-        .site-footer__copyrights © Все права сохранены <br> Разработано в студии: #[a(href="#") АГОНЬ!]
+        .site-footer__copyrights © Все права сохранены
+        //- <br> Разработано в студии: #[a(href="#") АГОНЬ!]
     script(src="./scripts/map.js")
     script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClofSbCu6EYSgaWdfCK5G1i_eUXgL4RCk&callback=initMap")
     script(src="./scripts/app.js")

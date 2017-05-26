@@ -12,21 +12,20 @@
   <header class="site-header site-header--inner">
     <div class="vert-title">Price Magnum Barbershop</div>
     <nav class="main-nav">
-      <div class="wrapper">
-        <div class="logo"> <img class="logo__color" src="./img/logo-h.svg"><img class="logo__white" src="./img/logo-h-white.svg"></div>
+      <div class="wrapper"><a class="logo" href="index.html"> <img class="logo__color" src="./img/logo-h.svg"><img class="logo__white" src="./img/logo-h-white.svg"></a>
         <div class="main-nav__menu-icon">
           <div class="main-nav__menu-icon__middle"></div>
         </div>
         <div class="main-menu">
           <ul class="main-menu__list">
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Прайс</a></li>
-            <li><a href="#">Команда</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="index.html#about">О нас</a></li>
+            <li><a href="index.html#services">Услуги</a></li>
+            <li><a href="index.html#promos">Акции</a></li>
+            <li><a href="index.html#prices">Прайс</a></li>
+            <li><a href="index.html#contacts">Контакты</a></li>
           </ul>
         </div>
-        <div class="main-nav__button"><a class="button button--blue" href="#">Онлайн запись</a></div>
+        <div class="main-nav__button"><a class="button button--blue" href="tel:+79878221223">+7 987 822-12-23</a></div>
       </div>
     </nav>
     <div class="hero hero--simple">
@@ -38,7 +37,7 @@
     <div class="wrapper">
       <h2 class="sub-hero__title">Барбершоп<br> <strong>Magnum</strong></h2>
       <p class="sub-hero__subtitle">По-настоящему<br> мужские стрижки</p>
-      <div class="sub-hero__button"><a class="button button--blue" href="#">Онлайн запись</a></div>
+      <div class="sub-hero__button"><a class="button button--blue" href="tel:+79878221223">+7 987 822-12-23</a></div>
     </div>
   </section>
   <div class="wrapper">
@@ -51,24 +50,28 @@
       <table class="price-section__table">
         <tr>
           <td>Стрижка + Стрижка бороды</td>
-          <td>1200</td>
+          <td>1400</td>
         </tr>
         <tr>
-          <td>Стрижка + Классическое бритьё</td>
-          <td>1000</td>
+          <td>Стрижка + Опасное бритьё</td>
+          <td>2000</td>
         </tr>
         <tr>
           <td>Стрижка машинкой + Стрижка бороды</td>
-          <td>1200</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>Стрижка c другом</td>
+          <td>2000</td>
         </tr>
         <tr>
           <td>Стрижка бороды + Бритье головы</td>
-          <td>800</td>
+          <td>1400</td>
         </tr>
       </table>
     </section>
     <section class="price-section">
-      <header class="price-section__header">
+      <header class="price-section__header"><a id="haircut"></a>
         <h2 class="price-section__title">Стрижки</h2>
         <p class="price-section__subtitle">Подбор стрижки по форме лица, структуре волос, образцам фото. Работа машинкой, ножницами, триммером, подбривание шеи и висков. Удаление лишних волос из ушей, носа. Мытье головы (при необходимости до и после стрижки), укладка профессиональными средствами.</p>
       </header>
@@ -76,15 +79,15 @@
       <table class="price-section__table">
         <tr>
           <td>Стрижка мужская</td>
-          <td>1200</td>
+          <td>1100</td>
         </tr>
         <tr>
-          <td>Детская стрижка</td>
-          <td>1000</td>
+          <td>Детская стрижка (до 12 лет)</td>
+          <td>800</td>
         </tr>
         <tr>
           <td>Стрижка папа + сын</td>
-          <td>1200</td>
+          <td>1600</td>
         </tr>
         <tr>
           <td>Стрижка под машинку</td>
@@ -92,7 +95,7 @@
         </tr>
       </table>
     </section>
-    <section class="price-section price-section--right price-section--last">
+    <section class="price-section price-section--right price-section--last"><a id="beard"></a><a id="shave"></a>
       <header class="price-section__header">
         <h2 class="price-section__title">Борода и&nbsp;бритье</h2>
         <p class="price-section__subtitle">Статусная услуга для настоящих мужчин и целый ритуал.</p>
@@ -101,25 +104,25 @@
       <table class="price-section__table">
         <tr>
           <td>Стрижка бороды</td>
-          <td>1200</td>
+          <td>500</td>
         </tr>
         <tr>
-          <td>Окрашивание бороды</td>
-          <td>1000</td>
+          <td>Камуфляж бороды</td>
+          <td>600</td>
         </tr>
         <tr>
-          <td>Классическое бритье</td>
-          <td>1200</td>
+          <td>Опасное бритье</td>
+          <td>1100</td>
         </tr>
         <tr>
           <td>Бритье головы</td>
-          <td>800</td>
+          <td>1100</td>
         </tr>
       </table>
     </section>
   </div>
   <section class="check-in">
-    <div class="wrapper"><a class="button" href="#">Онлайн запись</a>
+    <div class="wrapper"><a class="button" href="tel:+79878221223">+7 987 822-12-23</a>
       <header class="check-in__header">
         <div class="check-in__title">мужская территория </div>
         <div class="check-in__subtitle">Ждем тебя в Magnum</div>
@@ -128,7 +131,7 @@
   </section>
   <section class="partners">
     <div class="wrapper">
-      <div class="partners__content partners__content--full"><a class="partner" href="#"><img src="./img/partners/plogo-1.png"></a><a class="partner" href="#"><img src="./img/partners/plogo-2.png"></a><a class="partner" href="#"><img src="./img/partners/plogo-3.png"></a><a class="partner" href="#"><img src="./img/partners/plogo-4.png"></a>
+      <div class="partners__content partners__content--full"><a class="partner" href="http://barberwild.com/"><img src="./img/partners/plogo-4.png"></a><a class="partner" href="#"><img src="./img/partners/plogo-1.png"></a><a class="partner" href="#"><img src="./img/partners/plogo-2.png"></a><a class="partner" href="#"><img src="./img/partners/plogo-3.png"></a>
       </div>
     </div>
   </section>
@@ -139,11 +142,11 @@
         <div class="site-footer__socials">
           <div class="socials">
             <h3 class="socials__title">Мы в социальных сетях</h3>
-            <div class="socials__content"><a class="social-icon ico-vkontakte" href="#">VKontakte</a><a class="social-icon ico-instagram" href="#">Instagram</a></div>
+            <div class="socials__content"><a class="social-icon ico-vkontakte" href="https://vk.com/magnum_barbershop">VKontakte</a><a class="social-icon ico-instagram" href="https://www.instagram.com/magnum_barbershop/">Instagram</a></div>
           </div>
         </div>
       </div>
-      <div class="site-footer__copyrights">© Все права сохранены <br> Разработано в студии: <a href="#">АГОНЬ!</a></div>
+      <div class="site-footer__copyrights">© Все права сохранены </div>
     </div>
   </footer>
   <script src="./scripts/map.js"></script>
