@@ -87,6 +87,7 @@
         height: 500px;
 
         // visual
+        background-color: $blue;
         box-shadow: 0 12px 14px -10px rgba($darkBlue, 0.6);
 
         @include atSmall {

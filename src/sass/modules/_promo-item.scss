@@ -15,6 +15,9 @@
     text-decoration: none;
     user-select: none;
 
+    // visual
+    background-color: $blue;
+
     @include atTabletsPortrait {
         // box model
         display: inline-block;

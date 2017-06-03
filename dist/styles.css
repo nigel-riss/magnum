@@ -1366,7 +1366,8 @@ body {
   padding: 25px 30px;
   text-align: left;
   text-decoration: none;
-  user-select: none; }
+  user-select: none;
+  background-color: #255088; }
   @media (min-width: 700px) {
     .promo-item {
       display: inline-block;
@@ -1930,6 +1931,7 @@ body {
     line-height: 1.5; }
   .contacts__map {
     height: 500px;
+    background-color: #255088;
     box-shadow: 0 12px 14px -10px rgba(20, 41, 69, 0.6); }
     @media (max-width: 699px) {
       .contacts__map {
