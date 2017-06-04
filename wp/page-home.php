@@ -233,30 +233,45 @@
                     <h2 class="promos__title">Наши<br> <strong>акции</strong></h2>
                 </header>
                 <div class="promos__content">
+                    <?php
+                        $args = array(
+                            'category_name' => 'promo'
+                        );
+
+                        query_posts($args);
+
+                        if (have_posts()) {
+                            while(have_posts()) {
+                                the_post();
+
+                                // vars
+                                $promo_title        = get_field('promo-name');
+                                $promo_subtitle     = get_field('promo-subtitle');
+                                $promo_blue_url     = get_field('promo-blue');
+                                $promo_color_url    = get_field('promo-color');
+
+                    ?>
+
                     <div class="promo-item">
-                        <h3 class="promo-item__title">Первым 100 <br> клиентам</h3>
-                        <p class="promo-item__subtitle">карта постоянного клиента с 10% скидкой</p>
-                        <div class="promo-item__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/promos/promo-1.jpg"></div>
-                        <div class="promo-item__hover"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/promos/promo-1-h.jpg"></div>
+                        <h3 class="promo-item__title">
+                            <?php echo $promo_title; ?>
+                        </h3>
+                        <p class="promo-item__subtitle">
+                            <?php echo $promo_subtitle; ?>
+                        </p>
+                        <div class="promo-item__image">
+                            <img src="<?php echo $promo_blue_url; ?>">
+                        </div>
+                        <div class="promo-item__hover">
+                            <img src="<?php echo $promo_color_url; ?>">
+                        </div>
                     </div>
-                    <div class="promo-item">
-                        <h3 class="promo-item__title">Каждая 5 мужская стрижка <br> в подарок</h3>
-                        <p class="promo-item__subtitle"></p>
-                        <div class="promo-item__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/promos/promo-2.jpg"></div>
-                        <div class="promo-item__hover"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/promos/promo-2-h.jpg"></div>
-                    </div>
-                    <div class="promo-item">
-                        <h3 class="promo-item__title">10 посещений <br> (любые услуги)</h3>
-                        <p class="promo-item__subtitle">карта постоянного клиента с 10% скидкой</p>
-                        <div class="promo-item__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/promos/promo-3.jpg"></div>
-                        <div class="promo-item__hover"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/promos/promo-3-h.jpg"></div>
-                    </div>
-                    <div class="promo-item">
-                        <h3 class="promo-item__title">Скидка 20% <br> выпускникам</h3>
-                        <p class="promo-item__subtitle">на любые услуги <br> (1 посещение)</p>
-                        <div class="promo-item__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/promos/promo-4.jpg"></div>
-                        <div class="promo-item__hover"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/promos/promo-4-h.jpg"></div>
-                    </div>
+
+
+                    <?php
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </section>

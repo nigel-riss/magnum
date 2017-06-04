@@ -1407,7 +1407,7 @@ body {
         transition: all 0.3s ease-out; } }
   @media (min-width: 1500px) {
     .promo-item {
-      height: 250px; } }
+      height: 249px; } }
   .promo-item__title {
     position: relative;
     z-index: 3;
