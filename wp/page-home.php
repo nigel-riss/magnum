@@ -14,6 +14,19 @@
     $feature_text_3     = get_field('feature-text-3');
     $feature_4          = get_field('feature-4');
     $feature_text_4     = get_field('feature-text-4');
+
+    // Price vars
+    $price_content      = get_field('price-content');
+
+    // Contacts
+    $phone_1            = get_field('phone-1');
+    $phone_link_1       = get_field('phone-link-1');
+    $phone_2            = get_field('phone-2');
+    $phone_link_2       = get_field('phone-link-2');
+    $e_mail             = get_field('e-mail');
+    $address            = get_field('address');
+    $latitude           = get_field('latitude');
+    $longitude          = get_field('longitude');
 ?>
 
     <!DOCTYPE html>
@@ -33,6 +46,10 @@
         <title>
             <?php bloginfo('name'); ?>
         </title>
+
+        <?php
+            wp_head();
+        ?>
     </head>
 
     <body>
@@ -282,60 +299,10 @@
                     </div>
                     <div class="prices__button"><a class="button button--blue" href="price.html">Полный Прайс</a></div>
                 </header>
+
                 <div class="prices__content">
                     <div class="vert-title vert-title--right">Prices Magnum Barbershop</div>
-                    <table>
-                        <caption>Комплексы</caption>
-                        <tr>
-                            <td>Стрижка + Стрижка бороды</td>
-                            <td>1400</td>
-                        </tr>
-                        <tr>
-                            <td>Стрижка + Опасное бритьё</td>
-                            <td>2000</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <caption>Голова</caption>
-                        <tr>
-                            <td>Стрижка мужская</td>
-                            <td>1100</td>
-                        </tr>
-                        <tr>
-                            <td>Детская стрижка (до 12 лет)</td>
-                            <td>800</td>
-                        </tr>
-                        <tr>
-                            <td>Стрижка папа + сын</td>
-                            <td>1600</td>
-                        </tr>
-                        <tr>
-                            <td>Стрижка под машинку</td>
-                            <td>800</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <caption>Борода</caption>
-                        <tr>
-                            <td>Стрижка бороды</td>
-                            <td>500</td>
-                        </tr>
-                        <tr>
-                            <td>Камуфляж бороды</td>
-                            <td>600</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <caption>Бритьё</caption>
-                        <tr>
-                            <td>Опасное бритьё</td>
-                            <td>1100</td>
-                        </tr>
-                        <tr>
-                            <td>Бритьё головы</td>
-                            <td>1100</td>
-                        </tr>
-                    </table>
+                    <?php echo $price_content; ?>
                 </div>
             </div>
         </section>
@@ -349,23 +316,35 @@
                 <header class="contacts__header">
                     <h2 class="contacts__title">Наши<br> <strong>контакты</strong></h2>
                 </header>
+
                 <div class="contacts__content">
                     <div class="vert-title vert-title--right vert-title--blue">Contacts Magnum Barbershop</div>
                     <div class="contacts__text">По всем интересующим вопросам ты можешь обратиться к меденежеру по телефону или оправить письмо на электронный
                         адрес.<br> <strong> До встречи в MAGNUM</strong></div>
+
                     <div class="contact">
                         <h3 class="contact__title">Телефоны</h3>
-                        <div class="contact__text"><a href="tel:+78452577737">+7 8452 57-77-37 <br></a><a href="tel:+79878221223">+7 987 822-12-23</a></div>
+                        <div class="contact__text">
+                            <a href="tel:<?php echo $phone_link_1; ?>"><?php echo $phone_1; ?><br></a>
+                            <a href="tel:<?php echo $phone_link_2; ?>"><?php echo $phone_2; ?></a>
+                        </div>
                     </div>
+
                     <div class="contact">
                         <h3 class="contact__title">Электропочта</h3>
-                        <div class="contact__text"><a href="mailto:info@barbershopmagnum.ru">info@barbershopmagnum.ru</a></div>
+                        <div class="contact__text">
+                            <a href="mailto:<?php echo $e_mail; ?>"><?php echo $e_mail; ?></a>
+                        </div>
                     </div>
+
                     <div class="contact">
                         <h3 class="contact__title">Адрес</h3>
-                        <div class="contact__text">г. Саратов, ул. Яблочкова, 8/10</div>
+                        <div class="contact__text">
+                            <?php echo $address; ?>
+                        </div>
                     </div>
                 </div>
+
                 <div class="contacts__map" id="map"></div>
             </div>
         </section>
@@ -380,9 +359,9 @@
                     <div class="site-footer__socials">
                         <div class="socials">
                             <h3 class="socials__title">Мы в социальных сетях</h3>
-                            <div class="socials__content"><a class="social-icon ico-vkontakte" href="https://vk.com/magnum_barbershop">VKontakte</a>
-                                <a
-                                    class="social-icon ico-instagram" href="https://www.instagram.com/magnum_barbershop/">Instagram</a>
+                            <div class="socials__content">
+                                <a class="social-icon ico-vkontakte" href="https://vk.com/magnum_barbershop">VKontakte</a>
+                                <a class="social-icon ico-instagram" href="https://www.instagram.com/magnum_barbershop/">Instagram</a>
                             </div>
                         </div>
                     </div>
@@ -394,6 +373,38 @@
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClofSbCu6EYSgaWdfCK5G1i_eUXgL4RCk&amp;callback=initMap"></script>
         <!--<script type="text/javascript" src="https://w15399.yclients.com/widgetJS" charset="UTF-8"></script>-->
         <script type="text/javascript" src="https://w68025.yclients.com/widgetJS" charset="UTF-8"></script>
-        <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/map.js"></script>
+
+        <!-- Map -->
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 17,
+                    center: {
+                        lat: <?php echo $latitude; ?>,
+                        lng: <?php echo $longitude; ?>
+                    },
+                    disableDefaultUI: true,
+                    scrollwheel: false,
+                    // mapTypeControl: false,
+                    // draggable: false,
+                    zoomControl: true,
+                    scaleControl: false
+                });
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    animation: google.maps.Animation.BOUNCE,
+                    position: {
+                        lat: <?php echo $latitude; ?>,
+                        lng: <?php echo $longitude; ?>
+                    }
+                });
+            }
+        </script>
+
         <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/app.js"></script>
+
+        <?php
+            wp_footer();
+        ?>
     </body>
