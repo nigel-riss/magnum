@@ -510,7 +510,9 @@ body {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 3px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: default;
+  user-select: none; }
   @media (max-width: 699px) {
     .vert-title {
       display: none; } }
@@ -880,7 +882,9 @@ body {
     font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 0.05em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: default;
+    user-select: none; }
     @media (min-width: 700px) {
       .hero__title {
         font-size: 1rem;
@@ -895,7 +899,9 @@ body {
     font-weight: 700;
     line-height: 1.4;
     text-transform: uppercase;
-    white-space: nowrap; }
+    white-space: nowrap;
+    cursor: default;
+    user-select: none; }
     .hero__motto::before {
       content: "";
       position: absolute;
@@ -1416,7 +1422,9 @@ body {
     color: #ffffff;
     font-size: 1.125rem;
     line-height: 1.4;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: default;
+    user-select: none; }
     @media (min-width: 1200px) {
       .promo-item__title {
         font-size: 1.5rem; } }
@@ -1447,7 +1455,9 @@ body {
     padding-top: 5px;
     color: #ffffff;
     font-size: 1rem;
-    line-height: 1.4; }
+    line-height: 1.4;
+    cursor: default;
+    user-select: none; }
   .promo-item__image {
     position: absolute;
     left: 0;

@@ -90,6 +90,10 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
 
+        // visual
+        cursor: default;
+        user-select: none;
+
         @include atTabletsPortrait {
             // typography
             font-size: 1rem;
@@ -114,6 +118,10 @@
         line-height: 1.4;
         text-transform: uppercase;
         white-space: nowrap;
+
+        // visual
+        cursor: default;
+        user-select: none;
 
         @include redDot(12px, 11px);
 

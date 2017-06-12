@@ -13,6 +13,10 @@
     letter-spacing: 3px;
     text-transform: uppercase;
 
+    // visual
+    cursor: default;
+    user-select: none;
+
     // border: 1px solid red;
     @include atSmall {
         // box model

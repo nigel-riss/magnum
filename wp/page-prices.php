@@ -1,32 +1,5 @@
 <?php
-    // Template Name: Home Page
-
-    // About vars
-    $about_title        = get_field('about-title');
-    $about_text_1       = get_field('about-text-1');
-    $about_text_2       = get_field('about-text-2');
-    $about_text_3       = get_field('about-text-3');
-    $feature_1          = get_field('feature-1');
-    $feature_text_1     = get_field('feature-text-1');
-    $feature_2          = get_field('feature-2');
-    $feature_text_2     = get_field('feature-text-2');
-    $feature_3          = get_field('feature-3');
-    $feature_text_3     = get_field('feature-text-3');
-    $feature_4          = get_field('feature-4');
-    $feature_text_4     = get_field('feature-text-4');
-
-    // Price vars
-    $price_content      = get_field('price-content');
-
-    // Contacts
-    $phone_1            = get_field('phone-1');
-    $phone_link_1       = get_field('phone-link-1');
-    $phone_2            = get_field('phone-2');
-    $phone_link_2       = get_field('phone-link-2');
-    $e_mail             = get_field('e-mail');
-    $address            = get_field('address');
-    $latitude           = get_field('latitude');
-    $longitude          = get_field('longitude');
+    // Template Name: Prices Page
 ?>
 
     <!DOCTYPE html>
