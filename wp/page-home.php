@@ -191,7 +191,7 @@
                     <div class="vert-title vert-title--right">Services Magnum Barbershop</div>
                 </div>
                 <div class="services__content">
-                    <a class="service" href="price.html#haircut">
+                    <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#haircut">
                         <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/haircut-srv.jpg"></div>
                         <div class="service__content">
                             <div class="service__icon">
@@ -201,7 +201,7 @@
                             <p class="service__subtitle">Мужские и детские</p>
                         </div>
                     </a>
-                    <a class="service" href="price.html#shave">
+                    <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#shave">
                         <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/shaving-srv.jpg"></div>
                         <div class="service__content">
                             <div class="service__icon">
@@ -211,7 +211,7 @@
                             <p class="service__subtitle">Классическое и Королевское</p>
                         </div>
                     </a><br>
-                    <a class="service" href="price.html#beard">
+                    <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#beard">
                         <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/beard-srv.jpg"></div>
                         <div class="service__content">
                             <div class="service__icon">
@@ -221,7 +221,7 @@
                             <p class="service__subtitle">Стрижка и окрашивание</p>
                         </div>
                     </a>
-                    <a class="service" href="price.html#tatoo">
+                    <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#tatoo">
                         <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/tatoo-srv.jpg"></div>
                         <div class="service__content">
                             <div class="service__icon">
@@ -330,7 +330,7 @@
                         <h2 class="prices__title"><strong>Прайс</strong></h2>
                         <p class="prices__subtitle">Список наиболее популярных услуг нашего барбершопа</p>
                     </div>
-                    <div class="prices__button"><a class="button button--blue" href="price.html">Полный Прайс</a></div>
+                    <div class="prices__button"><a class="button button--blue" href="<?php echo esc_url(home_url('/')); ?>prices">Полный Прайс</a></div>
                 </header>
 
                 <div class="prices__content">
@@ -403,7 +403,6 @@
             </div>
         </footer>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClofSbCu6EYSgaWdfCK5G1i_eUXgL4RCk&amp;callback=initMap"></script>
         <!--<script type="text/javascript" src="https://w15399.yclients.com/widgetJS" charset="UTF-8"></script>-->
         <script type="text/javascript" src="https://w68025.yclients.com/widgetJS" charset="UTF-8"></script>
 
@@ -436,6 +435,8 @@
         </script>
 
         <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/app.js"></script>
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClofSbCu6EYSgaWdfCK5G1i_eUXgL4RCk&amp;callback=initMap"></script>
 
         <?php
             wp_footer();

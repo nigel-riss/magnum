@@ -10838,7 +10838,7 @@
 	                            var matchingSpyLink = "#" + currentNavSection.getAttribute('id') + "-link";
 	                            self.scrollSpyLinks.removeClass('scroll-spy__link--current');
 	                            (0, _jquery2.default)(matchingSpyLink).addClass('scroll-spy__link--current');
-	                            console.log(matchingSpyLink);
+	                            // console.log((matchingSpyLink));
 	                        }
 	                    },
 	                    offset: "40%"
@@ -10851,7 +10851,7 @@
 	                            var matchingSpyLink = "#" + currentNavSection.getAttribute('id') + "-link";
 	                            self.scrollSpyLinks.removeClass('scroll-spy__link--current');
 	                            (0, _jquery2.default)(matchingSpyLink).addClass('scroll-spy__link--current');
-	                            console.log(matchingSpyLink);
+	                            // console.log((matchingSpyLink));
 	                        }
 	                    },
 	                    offset: "-20%"

@@ -19,7 +19,7 @@ class ScrollSpy {
                         let matchingSpyLink = "#" + currentNavSection.getAttribute('id') + "-link";
                         self.scrollSpyLinks.removeClass('scroll-spy__link--current');
                         $(matchingSpyLink).addClass('scroll-spy__link--current');
-                        console.log((matchingSpyLink));
+                        // console.log((matchingSpyLink));
                     }
                 },
                 offset: ("40%")
@@ -32,7 +32,7 @@ class ScrollSpy {
                         let matchingSpyLink = "#" + currentNavSection.getAttribute('id') + "-link";
                         self.scrollSpyLinks.removeClass('scroll-spy__link--current');
                         $(matchingSpyLink).addClass('scroll-spy__link--current');
-                        console.log((matchingSpyLink));
+                        // console.log((matchingSpyLink));
                     }
                 },
                 offset: ("-20%")
