@@ -80,6 +80,7 @@
                             <li><a href="#services">Услуги</a></li>
                             <li><a href="#promos">Акции</a></li>
                             <li><a href="#prices">Прайс</a></li>
+                            <li><a href="#team">Команда</a></li>
                             <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </div>
@@ -106,6 +107,8 @@
                     <li><a class="scroll-spy__link" id="services-link" data-label="Услуги" href="#services">Услуги</a></li>
                     <li><a class="scroll-spy__link" id="promos-link" data-label="Акции" href="#promos">Акции</a></li>
                     <li><a class="scroll-spy__link" id="prices-link" data-label="Прайс" href="#prices">Прайс</a></li>
+                    <li><a class="scroll-spy__link" id="team-link" data-label="Команда" href="#team">Команда</a></li>
+                    <li><a class="scroll-spy__link" id="gallery-link" data-label="Галерея" href="#gallery">Галерея</a></li>
                     <li><a class="scroll-spy__link" id="contacts-link" data-label="Контакты" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -339,6 +342,17 @@
                 </div>
             </div>
         </section>
+
+        <!--
+            Team
+        -->
+        <a class="nav-link" id="team"></a>
+        
+        <!--
+            Gallery
+        -->
+        <a class="nav-link" id="gallery"></a>
+        <?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '53' ); } ?>
 
         <!--
             Contacts

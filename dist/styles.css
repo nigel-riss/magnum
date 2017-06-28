@@ -1621,7 +1621,8 @@ body {
     opacity: 0.5; }
 
 .prices {
-  position: relative; }
+  position: relative;
+  padding-bottom: 60px; }
   @media (min-width: 1200px) {
     .prices {
       padding-bottom: 100px; } }
@@ -1875,6 +1876,120 @@ body {
     .price-section td:nth-of-type(2) {
       width: 45px;
       font-weight: 700; }
+
+.team {
+  position: relative;
+  padding: 25px 15px; }
+  @media (min-width: 700px) {
+    .team {
+      padding-left: 70px; } }
+  @media (min-width: 1200px) {
+    .team {
+      margin-bottom: 80px; } }
+  @media (min-width: 700px) {
+    .team__header {
+      padding-left: 20px; } }
+  .team__title {
+    position: relative;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: #323232;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase; }
+    .team__title::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 0;
+      height: 12px;
+      width: 12px;
+      background-color: #c21f39;
+      border-radius: 50%; }
+    @media (min-width: 700px) {
+      .team__title {
+        font-size: 2.25rem;
+        line-height: 1.1; } }
+  .team__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 0; }
+
+.member {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  margin-bottom: 60px; }
+  .member__header {
+    position: absolute;
+    z-index: 4;
+    bottom: -40px;
+    right: 0;
+    width: 200px;
+    padding-left: 40px;
+    background-color: #ffffff;
+    cursor: default;
+    user-select: none; }
+  .member__title {
+    text-transform: uppercase; }
+  .member__bpool {
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    height: 300px;
+    width: 300px;
+    background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 15px, #ffffff 15px, #ffffff 30px, #255088 30px, #255088 45px, #ffffff 45px, #ffffff 60px); }
+  .member__image {
+    position: relative;
+    z-index: 2;
+    height: 300px;
+    width: 300px; }
+    .member__image img {
+      height: 100%;
+      width: 100%; }
+  .member__overlay {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    background-color: rgba(60, 90, 150, 0.65);
+    transition: all 0.3s ease-out;
+    opacity: 0; }
+  .member__online {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: default;
+    user-select: none; }
+  .member:hover .member__overlay {
+    opacity: 1; }
+  .member:hover .member__bpool {
+    opacity: 1; }
+
+.join {
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  background-color: #255088;
+  height: 300px;
+  width: 300px;
+  background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 15px, #ffffff 15px, #ffffff 30px, #255088 30px, #255088 45px, #ffffff 45px, #ffffff 60px); }
+  .join__header {
+    height: 280px;
+    padding-top: 50px;
+    text-align: center;
+    background-color: #ffffff; }
 
 .contacts {
   position: relative;

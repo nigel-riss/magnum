@@ -2,6 +2,8 @@
     // positioning
     position: relative;
 
+    padding-bottom: 60px;
+
     @include atDesktop {
         // box model
         padding-bottom: 100px;

@@ -1,0 +1,43 @@
+.team {
+    // positioning
+    position: relative;
+
+    // box model
+    padding: 25px 15px;
+
+    @include atTabletsPortrait {
+        // box model
+        padding-left: 70px;
+    }
+
+    @include atDesktop {
+        // box model
+        margin-bottom: 80px;
+    }
+
+    &__header {
+        @include atTabletsPortrait {
+            // box model
+            padding-left: 20px;
+        }
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__content {
+        // box model
+
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        padding: 60px 0;
+
+        // @include atDesktop {
+        //     justify-content: flex-start;
+        // }
+    }
+}

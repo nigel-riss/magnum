@@ -1,0 +1,108 @@
+.member {
+    // positioning
+    position: relative;
+
+    // box model
+    height: 300px;
+    width: 300px;
+    margin-bottom: 60px;
+
+    &__header {
+        // positioning
+        position: absolute;
+        z-index: 4;
+        bottom: -40px;
+        right: 0;
+
+        // box model
+        width: 200px;
+        padding-left: 40px;
+
+        // visual
+        background-color: $white;
+        cursor: default;
+        user-select: none;
+    }
+
+    &__title {
+        // typography
+        text-transform: uppercase;
+    }
+
+    &__bpool {
+        // positioning
+        position: absolute;
+        left: 20px;
+        top: -20px;
+
+        // visual
+        transition: all 0.3s ease-out;
+        opacity: 0;
+
+        @include barberPole(300px, 300px, 15px);
+    }
+
+    &__image {
+        // positioning
+        position: relative;
+        z-index: 2;
+
+        // box model
+        height: 300px;
+        width: 300px;
+
+        img {
+            // box model
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__overlay {
+        // positioning
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        top: 0;
+
+        // box model
+        height: 300px;
+        width: 300px;
+
+        // typography
+        text-align: center;
+
+        // visual
+        background-color: rgba(#3c5a96, 0.65);
+        transition: all 0.3s ease-out;
+        opacity: 0;
+    }
+
+    &__online {
+        // box model
+        padding-top: 100px;
+        padding-bottom: 20px;
+
+        // typography
+        color: $white;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        // visual
+        cursor: default;
+        user-select: none;
+    }
+
+    &:hover {
+        .member__overlay {
+            // visual
+            opacity: 1;
+        }
+
+        .member__bpool {
+            // visual
+            opacity: 1;
+        }
+    }
+}

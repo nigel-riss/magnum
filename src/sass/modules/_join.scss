@@ -1,0 +1,26 @@
+.join {
+    // positioning
+    // position: relative;
+
+    // box model
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+
+    // visual
+    background-color: $blue;
+
+    @include barberPole(300px, 300px, 15px);
+
+    &__header {
+        // box model
+        height: 280px;
+        padding-top: 50px;
+        
+        // typography
+        text-align: center;
+
+        // visual
+        background-color: $white;
+    }
+}
