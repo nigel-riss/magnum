@@ -346,7 +346,71 @@
         <!--
             Team
         -->
-        <a class="nav-link" id="team"></a>
+        <section class="team">
+            <div class="wrapper">
+                <a class="nav-link" id="team"></a>
+                <div class="vert-title vert-title--blue">Team Magnum Barbershop</div>
+                <header class="team__header">
+                    <h2 class="team__title">Наша<br> <strong>команда</strong></h2>
+                </header>
+
+                <div class="team__content">
+
+                    <?php 
+                        $args = array(
+                            'category_name' => 'team'
+                        );
+
+                        query_posts($args);
+
+                        if (have_posts()) {
+                            while(have_posts()) {
+                                the_post();
+
+                                // vars
+                                $member_name        = get_field('name');
+                                $member_position    = get_field('position');
+                                $member_photo       = get_field('photo');
+                                $member_sign_url    = get_field('singUrl');
+                    ?>
+
+                    <article class="member">
+                        <header class="member__header">
+                            <h2 class="member__title"><?php echo $member_name; ?></h2>
+                            <p class="member__position"><?php echo $member_position; ?></p>
+                        </header>
+                        <div class="member__bpool"></div>
+                        <div class="member__image"><img src="<?php echo $member_photo; ?>"></div>
+                        <div class="member__overlay">
+                            <div class="member__online">Записаться<br> к мастеру</div><a class="button" href="tel:+79878221223">Онлайн Запись</a>
+                        </div>
+                    </article>
+
+                    <?php
+                            }
+                        }
+                    ?>
+
+                    <!--<article class="member">
+                        <header class="member__header">
+                            <h2 class="member__title">Дмитрий</h2>
+                            <p class="member__position">Барбер</p>
+                        </header>
+                        <div class="member__bpool"></div>
+                        <div class="member__image"><img src="./img/team/photo.jpg"></div>
+                        <div class="member__overlay">
+                            <div class="member__online">Записаться<br> к мастеру</div><a class="button" href="tel:+79878221223">Онлайн Запись</a>
+                        </div>
+                    </article>-->
+
+                    <artice class="join">
+                        <header class="join__header">
+                            <h2 class="join__title">Присоединяйся<br> к команде</h2><a class="button button--blue" href="tel:+79878221223">Наши вакансии</a>
+                        </header>
+                    </artice>
+                </div>
+            </div>
+        </section>
         
         <!--
             Gallery
