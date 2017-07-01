@@ -1,5 +1,10 @@
 <?php
     // Template Name: Prices Page
+
+    // Vars
+    $complex    = get_field('complex');
+    $haircut    = get_field('haircut');
+    $beard      = get_field('beard');
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +94,10 @@
                     наши комплексные услуги.</p>
             </header>
             <div class="price-section__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/price/price-deco-1.jpg"></div>
-            <table class="price-section__table">
+            <?php
+                echo $complex;
+            ?>
+            <!--<table class="price-section__table">
                 <tr>
                     <td>Стрижка + Стрижка бороды</td>
                     <td>1400</td>
@@ -110,7 +118,8 @@
                     <td>Стрижка бороды + Бритье головы</td>
                     <td>1400</td>
                 </tr>
-            </table>
+            </table>-->
+
         </section>
         <section class="price-section">
             <header class="price-section__header"><a id="haircut"></a>
@@ -120,7 +129,11 @@
                     укладка профессиональными средствами.</p>
             </header>
             <div class="price-section__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/price/price-deco-2.jpg"></div>
-            <table class="price-section__table">
+            <?php 
+                echo $haircut;
+            ?>
+
+            <!--<table class="price-section__table">
                 <tr>
                     <td>Мужская стрижка</td>
                     <td>1100</td>
@@ -145,7 +158,7 @@
                     <td>Камуфляж седины</td>
                     <td>1000</td>
                 </tr>
-            </table>
+            </table>-->
         </section>
         <section class="price-section price-section--right price-section--last"><a id="beard"></a><a id="shave"></a>
             <header class="price-section__header">
@@ -153,7 +166,10 @@
                 <p class="price-section__subtitle">Статусная услуга для настоящих мужчин и целый ритуал.</p>
             </header>
             <div class="price-section__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/price/price-deco-3.jpg"></div>
-            <table class="price-section__table">
+            <?php
+                echo $beard;
+            ?>
+            <!--<table class="price-section__table">
                 <tr>
                     <td>Капремонт бороды</td>
                     <td>600</td>
@@ -174,7 +190,7 @@
                     <td>Стрижка усов</td>
                     <td>300</td>
                 </tr>
-            </table>
+            </table>-->
         </section>
     </div>
     <section class="check-in">

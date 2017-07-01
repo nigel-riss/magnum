@@ -12,6 +12,13 @@ body {
     font-size: 16px;
 }
 
+main {
+    @include atTabletsLandscape {
+        // box model
+        margin-bottom: 80px;
+    }
+}
+
 *,
 *::before,
 *::after {

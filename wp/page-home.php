@@ -368,7 +368,7 @@
                             $member_name        = get_field('name');
                             $member_position    = get_field('position');
                             $member_photo       = get_field('photo');
-                            $member_sign_url    = get_field('singUrl');
+                            $member_id          = get_field('mem_id');
                 ?>
 
                 <article class="member">
@@ -379,7 +379,7 @@
                     <div class="member__bpool"></div>
                     <div class="member__image"><img src="<?php echo $member_photo; ?>"></div>
                     <div class="member__overlay">
-                        <div class="member__online">Записаться<br> к мастеру</div><a class="button" href="tel:+79878221223">Онлайн Запись</a>
+                        <div class="member__online">Записаться<br> к мастеру</div><a class="button ms_booking" href="#" data-url="https://w68025.yclients.com/?o=m<?php echo $member_id; ?>">Онлайн Запись</a>
                     </div>
                 </article>
 
@@ -388,11 +388,11 @@
                     }
                 ?>
 
-                <!--<artice class="join">
+                <artice class="join">
                     <header class="join__header">
-                        <h2 class="join__title">Присоединяйся<br> к команде</h2><a class="button button--blue" href="tel:+79878221223">Наши вакансии</a>
+                        <h2 class="join__title">Присоединяйся<br> к команде</h2><a class="button button--blue" href="<?php echo esc_url(home_url('/')); ?>jobs">Наши вакансии</a>
                     </header>
-                </artice>-->
+                </artice>
             </div>
         </div>
     </section>

@@ -1,0 +1,52 @@
+.job {
+    // box model
+    margin: 0 auto;
+    margin-top: 60px;
+    max-width: 800px;
+
+    &__header {
+        // box model
+        padding-left: 20px;
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__content {
+        // positioning
+        position: relative;
+
+        // box model
+        padding: 40px;
+
+        // typography
+        line-height: 1.6;
+
+        // visual
+        background-color: $lightGrey;
+
+        @include atTabletsLandscape {
+            // visual
+            box-shadow: 0 22px 24px -10px rgba($darkBlue, 0.4);
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            // bottom: -20px;
+            left: -20px;
+            top: 0;
+
+            // @include barberPole(100%, 20px, 20px);
+            @include barberPole(20px, 100%, 20px);
+        }
+
+        h3 {
+            // typography
+            color: $blue;
+        }
+    }
+}

@@ -36,7 +36,7 @@
     
     <body>
         <header class="site-header site-header--inner">
-            <div class="vert-title">Price Magnum Barbershop</div>
+            <div class="vert-title">Magnum Barbershop</div>
             <nav class="main-nav">
                 <div class="wrapper">
                     <a class="logo" href="<?php echo esc_url(home_url('')); ?>">
@@ -68,122 +68,41 @@
 
             <div class="hero hero--simple">
                 <h1 class="hero__title">Добро пожаловать в Magnum</h1>
-                <p class="hero__motto">Прайс-лист<br> на услуги</p>
+                <p class="hero__motto"><?php the_title(); ?></p>
             </div>
         </header>
 
-        <section class="sub-hero">
+        <main>
             <div class="wrapper">
-                <h2 class="sub-hero__title">Барбершоп<br> <strong>Magnum</strong></h2>
-                <p class="sub-hero__subtitle">По-настоящему<br> мужские стрижки</p>
+            
+                <?php 
+                    $args = array(
+                        'category_name' => 'job'
+                    );
+                    query_posts($args);
 
-                <div class="sub-hero__button">
-                    <!--<a class="button button--blue" href="tel:+79878221223">+7 987 822-12-23</a>-->
-                    <a class="button button--blue ms_booking" href="#">Онлайн запись</a>
-                </div>
+                    if(have_posts()) {
+                        while(have_posts()) {
+                            the_post();
+                ?>
+
+                <article class="job">
+                    <header class="job__header">
+                        <h2 class="job__title"><?php the_title(); ?></h2>
+                    </header>
+                    <div class="job__content">
+                        <?php
+                            the_content(); 
+                        ?>
+                    </div>
+                </article>
+
+                <?php
+                        }
+                    }
+                ?>
             </div>
-        </section>
-        <div class="wrapper">
-            <section class="price-section price-section--right">
-                <header class="price-section__header">
-                    <h2 class="price-section__title">Комплекс услуг</h2>
-                    <p class="price-section__subtitle">Хотите полностью изменить образ или привести в порядок уже сформировавшийся? Тогда вам несомненно подойдут
-                        наши комплексные услуги.</p>
-                </header>
-                <div class="price-section__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/price/price-deco-1.jpg"></div>
-                <table class="price-section__table">
-                    <tr>
-                        <td>Стрижка + Стрижка бороды</td>
-                        <td>1400</td>
-                    </tr>
-                    <tr>
-                        <td>Стрижка + Опасное бритьё</td>
-                        <td>1900</td>
-                    </tr>
-                    <tr>
-                        <td>Стрижка машинкой + Стрижка бороды</td>
-                        <td>900</td>
-                    </tr>
-                    <tr>
-                        <td>Стрижка друг + друг</td>
-                        <td>1900</td>
-                    </tr>
-                    <tr>
-                        <td>Стрижка бороды + Бритье головы</td>
-                        <td>1400</td>
-                    </tr>
-                </table>
-            </section>
-            <section class="price-section">
-                <header class="price-section__header"><a id="haircut"></a>
-                    <h2 class="price-section__title">Стрижки</h2>
-                    <p class="price-section__subtitle">Подбор стрижки по форме лица, структуре волос, образцам фото. Работа машинкой, ножницами, триммером, подбривание
-                        шеи и висков. Удаление лишних волос из ушей, носа. Мытье головы (при необходимости до и после стрижки),
-                        укладка профессиональными средствами.</p>
-                </header>
-                <div class="price-section__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/price/price-deco-2.jpg"></div>
-                <table class="price-section__table">
-                    <tr>
-                        <td>Мужская стрижка</td>
-                        <td>1100</td>
-                    </tr>
-                    <tr>
-                        <td>Детская стрижка (до 12 лет)</td>
-                        <td>800</td>
-                    </tr>
-                    <tr>
-                        <td>Стрижка папа + сын</td>
-                        <td>1600</td>
-                    </tr>
-                    <tr>
-                        <td>Стрижка под машинку</td>
-                        <td>500</td>
-                    </tr>
-                </table>
-            </section>
-            <section class="price-section price-section--right price-section--last"><a id="beard"></a><a id="shave"></a>
-                <header class="price-section__header">
-                    <h2 class="price-section__title">Борода и&nbsp;бритье</h2>
-                    <p class="price-section__subtitle">Статусная услуга для настоящих мужчин и целый ритуал.</p>
-                </header>
-                <div class="price-section__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/price/price-deco-3.jpg"></div>
-                <table class="price-section__table">
-                    <tr>
-                        <td>Капремонт бороды</td>
-                        <td>600</td>
-                    </tr>
-                    <tr>
-                        <td>Камуфляж бороды</td>
-                        <td>600</td>
-                    </tr>
-                    <tr>
-                        <td>Опасное бритье</td>
-                        <td>1100</td>
-                    </tr>
-                    <tr>
-                        <td>Бритье головы</td>
-                        <td>1100</td>
-                    </tr>
-                </table>
-            </section>
-        </div>
-        <section class="check-in">
-            <div class="wrapper"><a class="button" href="tel:+79878221223">+7 987 822-12-23</a>
-                <header class="check-in__header">
-                    <div class="check-in__title">мужская территория </div>
-                    <div class="check-in__subtitle">Ждем тебя в Magnum</div>
-                </header>
-            </div>
-        </section>
-        <section class="partners">
-            <div class="wrapper">
-                <div class="partners__content partners__content--full"><a class="partner" href="http://barberwild.com/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-4.png"></a><a class="partner"
-                        href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-1.png"></a><a class="partner" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-2.png"></a>
-                    <a
-                        class="partner" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-3.png"></a>
-                </div>
-            </div>
-        </section>
+        </main>
 
         <!--
             Footer
@@ -205,6 +124,8 @@
                 <div class="site-footer__copyrights">© Все права сохранены</div>
             </div>
         </footer>
+
+        <script type="text/javascript" src="https://w68025.yclients.com/widgetJS" charset="UTF-8"></script>
 
         <?php
             wp_footer();

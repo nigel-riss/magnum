@@ -457,6 +457,10 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 16px; }
 
+@media (min-width: 900px) {
+  main {
+    margin-bottom: 80px; } }
+
 *,
 *::before,
 *::after {
@@ -1990,6 +1994,54 @@ body {
     padding-top: 50px;
     text-align: center;
     background-color: #ffffff; }
+
+.job {
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 800px; }
+  .job__header {
+    padding-left: 20px; }
+  .job__title {
+    position: relative;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: #323232;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase; }
+    .job__title::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 0;
+      height: 12px;
+      width: 12px;
+      background-color: #c21f39;
+      border-radius: 50%; }
+    @media (min-width: 700px) {
+      .job__title {
+        font-size: 2.25rem;
+        line-height: 1.1; } }
+  .job__content {
+    position: relative;
+    padding: 40px;
+    line-height: 1.6;
+    background-color: #f1f1f3; }
+    @media (min-width: 900px) {
+      .job__content {
+        box-shadow: 0 22px 24px -10px rgba(20, 41, 69, 0.4); } }
+    .job__content::after {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 0;
+      height: 100%;
+      width: 20px;
+      background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 20px, #ffffff 20px, #ffffff 40px, #255088 40px, #255088 60px, #ffffff 60px, #ffffff 80px); }
+    .job__content h3 {
+      color: #255088; }
 
 .contacts {
   position: relative;
