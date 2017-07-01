@@ -29,494 +29,480 @@
     $longitude          = get_field('longitude');
 ?>
 
-    <!DOCTYPE html>
-    <html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    </html>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon-16x16.png?v=2">
+    <link rel="manifest" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/manifest.json">
+    <link rel="mask-icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon.ico?v=2">
+    <meta name="msapplication-config" content="<?php bloginfo('stylesheet_directory'); ?>/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/apple-touch-icon.png?v=2">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon-32x32.png?v=2">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon-16x16.png?v=2">
-        <link rel="manifest" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/manifest.json">
-        <link rel="mask-icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon.ico?v=2">
-        <meta name="msapplication-config" content="<?php bloginfo('stylesheet_directory'); ?>/favicon/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=2">
 
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <title>
+        <?php bloginfo('name'); ?>
+    </title>
 
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <?php
+        wp_head();
+    ?>
+</head>
 
-        <title>
-            <?php bloginfo('name'); ?>
-        </title>
-
-        <?php
-            wp_head();
-        ?>
-    </head>
-
-    <body>
-        <header class="site-header">
-            <nav class="main-nav">
-                <div class="wrapper">
-                    <div class="logo">
-                        <img class="logo__color" src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-h.svg">
-                        <img class="logo__white" src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-h-white.svg">
-                    </div>
-
-                    <div class="main-nav__menu-icon">
-                        <div class="main-nav__menu-icon__middle"></div>
-                    </div>
-
-                    <div class="main-menu">
-                        <ul class="main-menu__list">
-                            <li><a href="#about">О нас</a></li>
-                            <li><a href="#services">Услуги</a></li>
-                            <li><a href="#promos">Акции</a></li>
-                            <li><a href="#prices">Прайс</a></li>
-                            <li><a href="#team">Команда</a></li>
-                            <li><a href="#contacts">Контакты</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="main-nav__button">
-                        <!--<a class="button button--blue" href="tel:+79878221223">+7 987 822-12-23</a>-->
-                        <a class="button button--blue ms_booking" href="#">Онлайн запись</a>
-                    </div>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="wrapper">
+                <div class="logo">
+                    <img class="logo__color" src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-h.svg">
+                    <img class="logo__white" src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-h-white.svg">
                 </div>
-            </nav>
-            <div class="hero">
-                <h1 class="hero__title">Добро пожаловать в Magnum</h1>
-                <p class="hero__motto">По-настоящему<br> мужские Стрижки</p>
-                <div class="hero__buttons">
-                    <a class="button button--mr-20" href="tel:+79878221223">+7 987 822-12-23</a>
+
+                <div class="main-nav__menu-icon">
+                    <div class="main-nav__menu-icon__middle"></div>
+                </div>
+
+                <div class="main-menu">
+                    <ul class="main-menu__list">
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#promos">Акции</a></li>
+                        <li><a href="#prices">Прайс</a></li>
+                        <li><a href="#team">Команда</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="main-nav__button">
+                    <!--<a class="button button--blue" href="tel:+79878221223">+7 987 822-12-23</a>-->
                     <a class="button button--blue ms_booking" href="#">Онлайн запись</a>
                 </div>
-                <div class="vert-title">Magnum Barbershop</div>
             </div>
-
-            <nav class="scroll-spy">
-                <ul class="scroll-spy__list">
-                    <li><a class="scroll-spy__link" id="about-link" data-label="О&nbsp;нас" href="#about">О&amp;nbsp;нас</a></li>
-                    <li><a class="scroll-spy__link" id="services-link" data-label="Услуги" href="#services">Услуги</a></li>
-                    <li><a class="scroll-spy__link" id="promos-link" data-label="Акции" href="#promos">Акции</a></li>
-                    <li><a class="scroll-spy__link" id="prices-link" data-label="Прайс" href="#prices">Прайс</a></li>
-                    <li><a class="scroll-spy__link" id="team-link" data-label="Команда" href="#team">Команда</a></li>
-                    <li><a class="scroll-spy__link" id="gallery-link" data-label="Галерея" href="#gallery">Галерея</a></li>
-                    <li><a class="scroll-spy__link" id="contacts-link" data-label="Контакты" href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!--
-            About section
-        -->
-        <section class="about">
-            <div class="wrapper">
-                <a class="nav-link" id="about"></a>
-                <div class="about__hero">
-                    <p class="about__hero-title">
-                        <?php echo $about_title; ?>
-                    </p>
-
-                    <p class="about__hero-description">
-                        <?php echo $about_text_1; ?>
-                    </p>
-                    <p class="about__hero-description">
-                        <?php echo $about_text_2; ?>
-                    </p>
-                    <p class="about__hero-description">
-                        <?php echo $about_text_3; ?>
-                    </p>
-
-                    <div class="vert-title">About Magnum Barbershop</div>
-                </div>
-                <div class="about__content">
-                    <header class="about__header">
-                        <h2 class="about__title">Барбершоп<br> <strong>Magnum</strong></h2>
-                        <p class="about__subtitle">Барбершоп Magnum — лучшая в Саратове парикмахерская для мужчин. </p>
-                    </header>
-                    <div class="about__features">
-                        <div class="feature">
-                            <h3 class="feature__title">
-                                <?php echo $feature_1; ?>
-                            </h3>
-                            <p class="feature__text">
-                                <?php echo $feature_text_1; ?>
-                            </p>
-                        </div>
-
-                        <div class="feature">
-                            <h3 class="feature__title">
-                                <?php echo $feature_2; ?>
-                            </h3>
-                            <p class="feature__text">
-                                <?php echo $feature_text_2; ?>
-                            </p>
-                        </div>
-
-                        <div class="feature">
-                            <h3 class="feature__title">
-                                <?php echo $feature_3; ?>
-                            </h3>
-                            <p class="feature__text">
-                                <?php echo $feature_text_3; ?>
-                            </p>
-                        </div>
-
-                        <div class="feature">
-                            <h3 class="feature__title">
-                                <?php echo $feature_4; ?>
-                            </h3>
-                            <p class="feature__text">
-                                <?php echo $feature_text_4; ?>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        </nav>
+        <div class="hero">
+            <h1 class="hero__title">Добро пожаловать в Magnum</h1>
+            <p class="hero__motto">По-настоящему<br> мужские Стрижки</p>
+            <div class="hero__buttons">
+                <a class="button button--mr-20" href="tel:+79878221223">+7 987 822-12-23</a>
+                <a class="button button--blue ms_booking" href="#">Онлайн запись</a>
             </div>
-        </section>
+            <div class="vert-title">Magnum Barbershop</div>
+        </div>
 
-        <!--
-            Services
-        -->
-        <section class="services">
-            <div class="wrapper">
-                <a class="nav-link" id="services"></a>
-                <div class="services__hero">
-                    <h2 class="services__title">Услуги<br> <strong>барбершопа</strong></h2>
-                    <div class="vert-title vert-title--right">Services Magnum Barbershop</div>
-                </div>
-                <div class="services__content">
-                    <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#haircut">
-                        <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/haircut-srv.jpg"></div>
-                        <div class="service__content">
-                            <div class="service__icon">
-                                <div class="icon icon-scissors"></div>
-                            </div>
-                            <h3 class="service__title">Стрижки</h3>
-                            <p class="service__subtitle">Мужские и детские</p>
-                        </div>
-                    </a>
-                    <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#shave">
-                        <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/shaving-srv.jpg"></div>
-                        <div class="service__content">
-                            <div class="service__icon">
-                                <div class="icon icon-blade"></div>
-                            </div>
-                            <h3 class="service__title">Бритьё</h3>
-                            <p class="service__subtitle">Классическое и Королевское</p>
-                        </div>
-                    </a><br>
-                    <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#beard">
-                        <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/beard-srv.jpg"></div>
-                        <div class="service__content">
-                            <div class="service__icon">
-                                <div class="icon icon-razor"></div>
-                            </div>
-                            <h3 class="service__title">Борода</h3>
-                            <p class="service__subtitle">Стрижка и окрашивание</p>
-                        </div>
-                    </a>
-                    <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#tatoo">
-                        <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/tatoo-srv.jpg"></div>
-                        <div class="service__content">
-                            <div class="service__icon">
-                                <div class="icon icon-tatoo-machine"></div>
-                            </div>
-                            <h3 class="service__title">Татуировки</h3>
-                            <p class="service__subtitle">Любой сложности</p>
-                        </div>
-                    </a>
-                </div>
+        <nav class="scroll-spy">
+            <ul class="scroll-spy__list">
+                <li><a class="scroll-spy__link" id="about-link" data-label="О&nbsp;нас" href="#about">О&amp;nbsp;нас</a></li>
+                <li><a class="scroll-spy__link" id="services-link" data-label="Услуги" href="#services">Услуги</a></li>
+                <li><a class="scroll-spy__link" id="promos-link" data-label="Акции" href="#promos">Акции</a></li>
+                <li><a class="scroll-spy__link" id="prices-link" data-label="Прайс" href="#prices">Прайс</a></li>
+                <li><a class="scroll-spy__link" id="team-link" data-label="Команда" href="#team">Команда</a></li>
+                <li><a class="scroll-spy__link" id="gallery-link" data-label="Галерея" href="#gallery">Галерея</a></li>
+                <li><a class="scroll-spy__link" id="contacts-link" data-label="Контакты" href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--
+        About section
+    -->
+    <section class="about">
+        <div class="wrapper">
+            <a class="nav-link" id="about"></a>
+            <div class="about__hero">
+                <p class="about__hero-title">
+                    <?php echo $about_title; ?>
+                </p>
+
+                <p class="about__hero-description">
+                    <?php echo $about_text_1; ?>
+                </p>
+                <p class="about__hero-description">
+                    <?php echo $about_text_2; ?>
+                </p>
+                <p class="about__hero-description">
+                    <?php echo $about_text_3; ?>
+                </p>
+
+                <div class="vert-title">About Magnum Barbershop</div>
             </div>
-        </section>
-
-        <!--
-            Promos
-        -->
-        <section class="promos">
-            <div class="wrapper">
-                <a class="nav-link" id="promos"></a>
-                <header class="promos__header">
-                    <h2 class="promos__title">Наши<br> <strong>акции</strong></h2>
+            <div class="about__content">
+                <header class="about__header">
+                    <h2 class="about__title">Барбершоп<br> <strong>Magnum</strong></h2>
+                    <p class="about__subtitle">Барбершоп Magnum — лучшая в Саратове парикмахерская для мужчин. </p>
                 </header>
-                <div class="promos__content">
-                    <?php
-                        $args = array(
-                            'category_name' => 'promo'
-                        );
-
-                        query_posts($args);
-
-                        if (have_posts()) {
-                            while(have_posts()) {
-                                the_post();
-
-                                // vars
-                                $promo_title        = get_field('promo-name');
-                                $promo_subtitle     = get_field('promo-subtitle');
-                                $promo_blue_url     = get_field('promo-blue');
-                                $promo_color_url    = get_field('promo-color');
-
-                    ?>
-
-                    <div class="promo-item">
-                        <h3 class="promo-item__title">
-                            <?php echo $promo_title; ?>
+                <div class="about__features">
+                    <div class="feature">
+                        <h3 class="feature__title">
+                            <?php echo $feature_1; ?>
                         </h3>
-                        <p class="promo-item__subtitle">
-                            <?php echo $promo_subtitle; ?>
+                        <p class="feature__text">
+                            <?php echo $feature_text_1; ?>
                         </p>
-                        <div class="promo-item__image">
-                            <img src="<?php echo $promo_blue_url; ?>">
-                        </div>
-                        <div class="promo-item__hover">
-                            <img src="<?php echo $promo_color_url; ?>">
-                        </div>
                     </div>
 
+                    <div class="feature">
+                        <h3 class="feature__title">
+                            <?php echo $feature_2; ?>
+                        </h3>
+                        <p class="feature__text">
+                            <?php echo $feature_text_2; ?>
+                        </p>
+                    </div>
 
-                    <?php
-                            }
+                    <div class="feature">
+                        <h3 class="feature__title">
+                            <?php echo $feature_3; ?>
+                        </h3>
+                        <p class="feature__text">
+                            <?php echo $feature_text_3; ?>
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <h3 class="feature__title">
+                            <?php echo $feature_4; ?>
+                        </h3>
+                        <p class="feature__text">
+                            <?php echo $feature_text_4; ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        Services
+    -->
+    <section class="services">
+        <div class="wrapper">
+            <a class="nav-link" id="services"></a>
+            <div class="services__hero">
+                <h2 class="services__title">Услуги<br> <strong>барбершопа</strong></h2>
+                <div class="vert-title vert-title--right">Services Magnum Barbershop</div>
+            </div>
+            <div class="services__content">
+                <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#haircut">
+                    <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/haircut-srv.jpg"></div>
+                    <div class="service__content">
+                        <div class="service__icon">
+                            <div class="icon icon-scissors"></div>
+                        </div>
+                        <h3 class="service__title">Стрижки</h3>
+                        <p class="service__subtitle">Мужские и детские</p>
+                    </div>
+                </a>
+                <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#shave">
+                    <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/shaving-srv.jpg"></div>
+                    <div class="service__content">
+                        <div class="service__icon">
+                            <div class="icon icon-blade"></div>
+                        </div>
+                        <h3 class="service__title">Бритьё</h3>
+                        <p class="service__subtitle">Классическое и Королевское</p>
+                    </div>
+                </a><br>
+                <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#beard">
+                    <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/beard-srv.jpg"></div>
+                    <div class="service__content">
+                        <div class="service__icon">
+                            <div class="icon icon-razor"></div>
+                        </div>
+                        <h3 class="service__title">Борода</h3>
+                        <p class="service__subtitle">Стрижка и окрашивание</p>
+                    </div>
+                </a>
+                <a class="service" href="<?php echo esc_url(home_url('/')); ?>prices#tatoo">
+                    <div class="service__image"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/tatoo-srv.jpg"></div>
+                    <div class="service__content">
+                        <div class="service__icon">
+                            <div class="icon icon-tatoo-machine"></div>
+                        </div>
+                        <h3 class="service__title">Татуировки</h3>
+                        <p class="service__subtitle">Любой сложности</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        Promos
+    -->
+    <section class="promos">
+        <div class="wrapper">
+            <a class="nav-link" id="promos"></a>
+            <header class="promos__header">
+                <h2 class="promos__title">Наши<br> <strong>акции</strong></h2>
+            </header>
+            <div class="promos__content">
+                <?php
+                    $args = array(
+                        'category_name' => 'promo'
+                    );
+
+                    query_posts($args);
+
+                    if (have_posts()) {
+                        while(have_posts()) {
+                            the_post();
+
+                            // vars
+                            $promo_title        = get_field('promo-name');
+                            $promo_subtitle     = get_field('promo-subtitle');
+                            $promo_blue_url     = get_field('promo-blue');
+                            $promo_color_url    = get_field('promo-color');
+
+                ?>
+
+                <div class="promo-item">
+                    <h3 class="promo-item__title">
+                        <?php echo $promo_title; ?>
+                    </h3>
+                    <p class="promo-item__subtitle">
+                        <?php echo $promo_subtitle; ?>
+                    </p>
+                    <div class="promo-item__image">
+                        <img src="<?php echo $promo_blue_url; ?>">
+                    </div>
+                    <div class="promo-item__hover">
+                        <img src="<?php echo $promo_color_url; ?>">
+                    </div>
+                </div>
+
+
+                <?php
                         }
-                    ?>
-                </div>
-            </div>
-        </section>
-
-        <!--
-            Check-in
-        -->
-        <section class="check-in">
-            <div class="wrapper">
-                <!--<a class="button" href="tel:+79878221223">+7 987 822-12-23</a>-->
-                <a class="button ms_booking" href="#">Онлайн запись</a>
-                <header class="check-in__header">
-                    <div class="check-in__title">мужская территория </div>
-                    <div class="check-in__subtitle">Ждем тебя в Magnum</div>
-                </header>
-            </div>
-        </section>
-
-        <!--
-            Partners
-        -->
-        <section class="partners">
-            <div class="wrapper">
-                <header class="partners__header">
-                    <h2 class="partners__title">Наши<br> <strong>партнеры</strong></h2>
-                </header>
-                <div class="partners__content">
-                    <a class="partner" href="http://barberwild.com/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-4.png"></a>
-                    <a class="partner" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-1.png"></a>
-                    <a class="partner" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-2.png"></a>
-                    <a class="partner" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-3.png"></a>
-                </div>
-            </div>
-        </section>
-
-        <!--
-            Prices
-        -->
-        <section class="prices">
-            <div class="wrapper">
-                <a class="nav-link" id="prices"></a>
-                <header class="prices__header">
-                    <div class="prices__header-wrapper">
-                        <h2 class="prices__title"><strong>Прайс</strong></h2>
-                        <p class="prices__subtitle">Список наиболее популярных услуг нашего барбершопа</p>
-                    </div>
-                    <div class="prices__button"><a class="button button--blue" href="<?php echo esc_url(home_url('/')); ?>prices">Полный Прайс</a></div>
-                </header>
-
-                <div class="prices__content">
-                    <div class="vert-title vert-title--right">Prices Magnum Barbershop</div>
-                    <?php echo $price_content; ?>
-                </div>
-            </div>
-        </section>
-
-        <!--
-            Team
-        -->
-        <section class="team">
-            <div class="wrapper">
-                <a class="nav-link" id="team"></a>
-                <div class="vert-title vert-title--blue">Team Magnum Barbershop</div>
-                <header class="team__header">
-                    <h2 class="team__title">Наша<br> <strong>команда</strong></h2>
-                </header>
-
-                <div class="team__content">
-
-                    <?php 
-                        $args = array(
-                            'category_name' => 'team'
-                        );
-
-                        query_posts($args);
-
-                        if (have_posts()) {
-                            while(have_posts()) {
-                                the_post();
-
-                                // vars
-                                $member_name        = get_field('name');
-                                $member_position    = get_field('position');
-                                $member_photo       = get_field('photo');
-                                $member_sign_url    = get_field('singUrl');
-                    ?>
-
-                    <article class="member">
-                        <header class="member__header">
-                            <h2 class="member__title"><?php echo $member_name; ?></h2>
-                            <p class="member__position"><?php echo $member_position; ?></p>
-                        </header>
-                        <div class="member__bpool"></div>
-                        <div class="member__image"><img src="<?php echo $member_photo; ?>"></div>
-                        <div class="member__overlay">
-                            <div class="member__online">Записаться<br> к мастеру</div><a class="button" href="tel:+79878221223">Онлайн Запись</a>
-                        </div>
-                    </article>
-
-                    <?php
-                            }
-                        }
-                    ?>
-
-                    <!--<article class="member">
-                        <header class="member__header">
-                            <h2 class="member__title">Дмитрий</h2>
-                            <p class="member__position">Барбер</p>
-                        </header>
-                        <div class="member__bpool"></div>
-                        <div class="member__image"><img src="./img/team/photo.jpg"></div>
-                        <div class="member__overlay">
-                            <div class="member__online">Записаться<br> к мастеру</div><a class="button" href="tel:+79878221223">Онлайн Запись</a>
-                        </div>
-                    </article>-->
-
-                    <artice class="join">
-                        <header class="join__header">
-                            <h2 class="join__title">Присоединяйся<br> к команде</h2><a class="button button--blue" href="tel:+79878221223">Наши вакансии</a>
-                        </header>
-                    </artice>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-            Gallery
-        -->
-        <a class="nav-link" id="gallery"></a>
-        <?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '53' ); } ?>
-
-        <!--
-            Contacts
-        -->
-        <section class="contacts">
-            <div class="wrapper">
-                <a class="nav-link" id="contacts"></a>
-                <header class="contacts__header">
-                    <h2 class="contacts__title">Наши<br> <strong>контакты</strong></h2>
-                </header>
-
-                <div class="contacts__content">
-                    <div class="vert-title vert-title--right vert-title--blue">Contacts Magnum Barbershop</div>
-                    <div class="contacts__text">По всем интересующим вопросам ты можешь обратиться к меденежеру по телефону или оправить письмо на электронный
-                        адрес.<br> <strong> До встречи в MAGNUM</strong></div>
-
-                    <div class="contact">
-                        <h3 class="contact__title">Телефоны</h3>
-                        <div class="contact__text">
-                            <a href="tel:<?php echo $phone_link_1; ?>"><?php echo $phone_1; ?><br></a>
-                            <a href="tel:<?php echo $phone_link_2; ?>"><?php echo $phone_2; ?></a>
-                        </div>
-                    </div>
-
-                    <div class="contact">
-                        <h3 class="contact__title">Электропочта</h3>
-                        <div class="contact__text">
-                            <a href="mailto:<?php echo $e_mail; ?>"><?php echo $e_mail; ?></a>
-                        </div>
-                    </div>
-
-                    <div class="contact">
-                        <h3 class="contact__title">Адрес</h3>
-                        <div class="contact__text">
-                            <?php echo $address; ?>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contacts__map" id="map"></div>
-            </div>
-        </section>
-
-        <!--
-            Footer
-        -->
-        <footer class="site-footer">
-            <div class="wrapper">
-                <div class="site-footer__logo-n-socials">
-                    <div class="site-footer__logo"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-h-white.svg"></div>
-                    <div class="site-footer__socials">
-                        <div class="socials">
-                            <h3 class="socials__title">Мы в социальных сетях</h3>
-                            <div class="socials__content">
-                                <a class="social-icon ico-vkontakte" href="https://vk.com/magnum_barbershop">VKontakte</a>
-                                <a class="social-icon ico-instagram" href="https://www.instagram.com/magnum_barbershop/">Instagram</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="site-footer__copyrights">© Все права сохранены</div>
-            </div>
-        </footer>
-
-        <!--<script type="text/javascript" src="https://w15399.yclients.com/widgetJS" charset="UTF-8"></script>-->
-        <script type="text/javascript" src="https://w68025.yclients.com/widgetJS" charset="UTF-8"></script>
-
-        <!-- Map -->
-        <script>
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 17,
-                    center: {
-                        lat: <?php echo $latitude; ?>,
-                        lng: <?php echo $longitude; ?>
-                    },
-                    disableDefaultUI: true,
-                    scrollwheel: false,
-                    // mapTypeControl: false,
-                    // draggable: false,
-                    zoomControl: true,
-                    scaleControl: false
-                });
-
-                var marker = new google.maps.Marker({
-                    map: map,
-                    animation: google.maps.Animation.BOUNCE,
-                    position: {
-                        lat: <?php echo $latitude; ?>,
-                        lng: <?php echo $longitude; ?>
                     }
-                });
-            }
-        </script>
+                ?>
+            </div>
+        </div>
+    </section>
 
-        <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/app.js"></script>
-        
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClofSbCu6EYSgaWdfCK5G1i_eUXgL4RCk&amp;callback=initMap"></script>
+    <!--
+        Check-in
+    -->
+    <section class="check-in">
+        <div class="wrapper">
+            <!--<a class="button" href="tel:+79878221223">+7 987 822-12-23</a>-->
+            <a class="button ms_booking" href="#">Онлайн запись</a>
+            <header class="check-in__header">
+                <div class="check-in__title">мужская территория </div>
+                <div class="check-in__subtitle">Ждем тебя в Magnum</div>
+            </header>
+        </div>
+    </section>
 
-        <?php
-            wp_footer();
-        ?>
-    </body>
+    <!--
+        Partners
+    -->
+    <section class="partners">
+        <div class="wrapper">
+            <header class="partners__header">
+                <h2 class="partners__title">Наши<br> <strong>партнеры</strong></h2>
+            </header>
+            <div class="partners__content">
+                <a class="partner" href="http://barberwild.com/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-4.png"></a>
+                <a class="partner" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-1.png"></a>
+                <a class="partner" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-2.png"></a>
+                <a class="partner" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/partners/plogo-3.png"></a>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        Prices
+    -->
+    <section class="prices">
+        <div class="wrapper">
+            <a class="nav-link" id="prices"></a>
+            <header class="prices__header">
+                <div class="prices__header-wrapper">
+                    <h2 class="prices__title"><strong>Прайс</strong></h2>
+                    <p class="prices__subtitle">Список наиболее популярных услуг нашего барбершопа</p>
+                </div>
+                <div class="prices__button"><a class="button button--blue" href="<?php echo esc_url(home_url('/')); ?>prices">Полный Прайс</a></div>
+            </header>
+
+            <div class="prices__content">
+                <div class="vert-title vert-title--right">Prices Magnum Barbershop</div>
+                <?php echo $price_content; ?>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        Team
+    -->
+    <section class="team">
+        <div class="wrapper">
+            <a class="nav-link" id="team"></a>
+            <div class="vert-title vert-title--blue">Team Magnum Barbershop</div>
+            <header class="team__header">
+                <h2 class="team__title">Наша<br> <strong>команда</strong></h2>
+            </header>
+
+            <div class="team__content">
+
+                <?php 
+                    $args = array(
+                        'category_name' => 'team'
+                    );
+
+                    query_posts($args);
+
+                    if (have_posts()) {
+                        while(have_posts()) {
+                            the_post();
+
+                            // vars
+                            $member_name        = get_field('name');
+                            $member_position    = get_field('position');
+                            $member_photo       = get_field('photo');
+                            $member_sign_url    = get_field('singUrl');
+                ?>
+
+                <article class="member">
+                    <header class="member__header">
+                        <h2 class="member__title"><?php echo $member_name; ?></h2>
+                        <p class="member__position"><?php echo $member_position; ?></p>
+                    </header>
+                    <div class="member__bpool"></div>
+                    <div class="member__image"><img src="<?php echo $member_photo; ?>"></div>
+                    <div class="member__overlay">
+                        <div class="member__online">Записаться<br> к мастеру</div><a class="button" href="tel:+79878221223">Онлайн Запись</a>
+                    </div>
+                </article>
+
+                <?php
+                        }
+                    }
+                ?>
+
+                <!--<artice class="join">
+                    <header class="join__header">
+                        <h2 class="join__title">Присоединяйся<br> к команде</h2><a class="button button--blue" href="tel:+79878221223">Наши вакансии</a>
+                    </header>
+                </artice>-->
+            </div>
+        </div>
+    </section>
+    
+    <!--
+        Gallery
+    -->
+    <a class="nav-link" id="gallery"></a>
+    <?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '53' ); } ?>
+
+    <!--
+        Contacts
+    -->
+    <section class="contacts">
+        <div class="wrapper">
+            <a class="nav-link" id="contacts"></a>
+            <header class="contacts__header">
+                <h2 class="contacts__title">Наши<br> <strong>контакты</strong></h2>
+            </header>
+
+            <div class="contacts__content">
+                <div class="vert-title vert-title--right vert-title--blue">Contacts Magnum Barbershop</div>
+                <div class="contacts__text">По всем интересующим вопросам ты можешь обратиться к меденежеру по телефону или оправить письмо на электронный
+                    адрес.<br> <strong> До встречи в MAGNUM</strong></div>
+
+                <div class="contact">
+                    <h3 class="contact__title">Телефоны</h3>
+                    <div class="contact__text">
+                        <a href="tel:<?php echo $phone_link_1; ?>"><?php echo $phone_1; ?><br></a>
+                        <a href="tel:<?php echo $phone_link_2; ?>"><?php echo $phone_2; ?></a>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <h3 class="contact__title">Электропочта</h3>
+                    <div class="contact__text">
+                        <a href="mailto:<?php echo $e_mail; ?>"><?php echo $e_mail; ?></a>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <h3 class="contact__title">Адрес</h3>
+                    <div class="contact__text">
+                        <?php echo $address; ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts__map" id="map"></div>
+        </div>
+    </section>
+
+    <!--
+        Footer
+    -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="site-footer__logo-n-socials">
+                <div class="site-footer__logo"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-h-white.svg"></div>
+                <div class="site-footer__socials">
+                    <div class="socials">
+                        <h3 class="socials__title">Мы в социальных сетях</h3>
+                        <div class="socials__content">
+                            <a class="social-icon ico-vkontakte" href="https://vk.com/magnum_barbershop">VKontakte</a>
+                            <a class="social-icon ico-instagram" href="https://www.instagram.com/magnum_barbershop/">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__copyrights">© Все права сохранены</div>
+        </div>
+    </footer>
+
+    <!--<script type="text/javascript" src="https://w15399.yclients.com/widgetJS" charset="UTF-8"></script>-->
+    <script type="text/javascript" src="https://w68025.yclients.com/widgetJS" charset="UTF-8"></script>
+
+    <!-- Map -->
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: {
+                    lat: <?php echo $latitude; ?>,
+                    lng: <?php echo $longitude; ?>
+                },
+                disableDefaultUI: true,
+                scrollwheel: false,
+                // mapTypeControl: false,
+                // draggable: false,
+                zoomControl: true,
+                scaleControl: false
+            });
+
+            var marker = new google.maps.Marker({
+                map: map,
+                animation: google.maps.Animation.BOUNCE,
+                position: {
+                    lat: <?php echo $latitude; ?>,
+                    lng: <?php echo $longitude; ?>
+                }
+            });
+        }
+    </script>
+
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/scripts/app.js"></script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClofSbCu6EYSgaWdfCK5G1i_eUXgL4RCk&amp;callback=initMap"></script>
+
+    <?php
+        wp_footer();
+    ?>
+</body>
+</html>
