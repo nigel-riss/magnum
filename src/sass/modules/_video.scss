@@ -1,0 +1,17 @@
+.video {
+    // box model
+    @include barberPole(100%, 800px, 15px);
+    // max-width: 1200px;
+    // height: calc(56%);
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    // border: 10px solid red;
+
+
+    iframe {
+        // box model
+        width: 100%;
+        height: 100%;
+    }
+}

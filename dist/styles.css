@@ -2043,6 +2043,16 @@ body {
     .job__content h3 {
       color: #255088; }
 
+.video {
+  height: 800px;
+  width: 100%;
+  background-image: repeating-linear-gradient(-45deg, #c21f39 0px, #c21f39 15px, #ffffff 15px, #ffffff 30px, #255088 30px, #255088 45px, #ffffff 45px, #ffffff 60px);
+  margin: 0 auto;
+  margin-bottom: 10px; }
+  .video iframe {
+    width: 100%;
+    height: 100%; }
+
 .contacts {
   position: relative;
   padding: 25px 15px; }

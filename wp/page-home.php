@@ -25,6 +25,7 @@
     $phone_link_2       = get_field('phone-link-2');
     $e_mail             = get_field('e-mail');
     $address            = get_field('address');
+    $worktime           = get_field('worktime');
     $latitude           = get_field('latitude');
     $longitude          = get_field('longitude');
 ?>
@@ -401,6 +402,11 @@
         Gallery
     -->
     <a class="nav-link" id="gallery"></a>
+
+    <section class="video">
+        <iframe src="https://www.youtube.com/embed/F2UvC-OrcB4" frameborder="0" allowfullscreen></iframe>
+    </section>
+
     <?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '53' ); } ?>
 
     <!--
@@ -437,6 +443,13 @@
                     <h3 class="contact__title">Адрес</h3>
                     <div class="contact__text">
                         <?php echo $address; ?>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <h3 class="contact__title">Часы работы</h3>
+                    <div class="contact__text">
+                        <?php echo $worktime; ?>
                     </div>
                 </div>
             </div>
