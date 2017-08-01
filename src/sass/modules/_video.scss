@@ -1,17 +1,40 @@
 .video {
+    // positioning
+    position: relative;
+
     // box model
-    @include barberPole(100%, 800px, 15px);
-    // max-width: 1200px;
-    // height: calc(56%);
+    display: block;
     margin: 0 auto;
     margin-bottom: 10px;
+    
+    @include barberPole(100%, 380px, 15px);
 
-    // border: 10px solid red;
+    @include atTabletsPortrait {
+        @include barberPole(100%, 460px, 15px);
+    }
 
+    @include atTabletsLandscape {
+        @include barberPole(100%, 620px, 15px);
+    }
+
+    @include atDesktop {
+        @include barberPole(100%, 695px, 15px);
+    }
+
+    @include atDesktopLarge {
+        @include barberPole(100%, 880px, 15px);
+    }
 
     iframe {
+        // positioning
+        position: absolute;
+        left: 10px;
+        top: 10px;
+
         // box model
         width: 100%;
+        width: calc(100% - 20px);
         height: 100%;
+        height: calc(100% - 20px);
     }
 }

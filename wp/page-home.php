@@ -48,7 +48,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=2">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=3">
 
     <title>
         <?php bloginfo('name'); ?>
